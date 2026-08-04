@@ -2,13 +2,36 @@
 
 **Default:** `4`
 
-This parameter sets the maximum number of consecutive valid base candles that the detector may collect between the leg-in and leg-out.
+## Terms used on this page
 
-A lower value restricts detection to compact formations. A higher value allows longer consolidations to qualify.
+- **Base** — the compact pause between the approach and departure.
+- **Leg-In** — the move into the base.
+- **Leg-Out** — the move away from the base.
+- **Base quality** — a separate rating that describes how compact and clear the detected base is.
 
-The number of detected base candles is separate from the base quality grade. For example, a three-candle base may receive a stronger quality classification than a four-candle base while both remain detectable with the default setting.
+## What this setting controls
 
-## Planned visual
+It controls the amount of space available for recognizing the base and the preceding Leg-In. The current detector needs one position for the Leg-In. As a result, the default input value of `4` accepts bases containing one, two, or three actual base candles.
 
-Accepted formations with one through four base candles will be compared with a rejected formation containing five base candles.
+!!! important "Displayed value versus current behavior"
+    `Max Base Candles = 4` currently means a maximum of three base candles on the chart. A four-candle base is not completed because the detector still needs to find the Leg-In immediately before it.
 
+## If you lower the value
+
+- Only shorter and more compact pauses qualify.
+- Fewer zones are detected.
+- Extended consolidations are rejected sooner.
+
+## If you raise the value
+
+- Longer pauses can still become zones because more space is available before the Leg-In must be found.
+- More formations qualify.
+- The indicator may include broader consolidations that are less precise as trading areas.
+
+## Detection versus quality
+
+The number of candles accepted by detection is separate from the quality grade. With the current default, a base may contain up to three candles. Its quality still depends on how compact those candles are compared with the departure.
+
+## Visual for this setting
+
+Accepted bases containing one, two, and three candles will be shown next to a rejected four-candle base. The graphic will also explain why the displayed input value is one higher than the number of base candles visible on the chart.

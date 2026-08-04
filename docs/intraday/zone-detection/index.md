@@ -1,47 +1,53 @@
 # Zone Detection Overview
 
-The Intraday detector evaluates price action in the following order:
+This section explains the detection settings as they appear to a trader on the chart. It does not require knowledge of Pine Script.
 
-```text
-Leg-Out → Base → Leg-In
-```
+## Terms used in this section
 
-The implementation scans backward from a confirmed leg-out candle, collects consecutive valid base candles, and then qualifies the preceding leg-in candle.
+- **Candle body** — the distance between the open and close.
+- **Wicks** — the parts of the candle above and below its body.
+- **Candle range** — the complete distance from the candle's low to its high.
+- **ERC** — the indicator's name for a decisive expansion candle. It must have a meaningful body and be large enough compared with recent market movement.
+- **Leg-In** — the move that approaches the area where price pauses.
+- **Base** — the short pause or balance area between the approach and departure.
+- **Leg-Out** — the strong move away from the base. A zone is not confirmed until this departure appears.
+- **Demand zone** — an area created by a strong bullish departure.
+- **Supply zone** — an area created by a strong bearish departure.
+- **HTF** — a higher timeframe used to provide broader market context.
 
-## Main detection stages
+## How a zone forms on the chart
 
-### 1. Leg-Out qualification
+### 1. Price approaches
 
-The leg-out must pass both ERC conditions:
+The Leg-In brings price into the future zone area. It should be clearly larger than the candles that will form the base, but it does not need to be as strong as the final departure.
 
-```text
-Body ≥ Range × ERC Body % Threshold
-AND
-Range ≥ ATR × ERC Range ATR Multiplier
-```
+### 2. Price pauses
 
-### 2. Base qualification
+One or more compact candles form the Base. These candles represent a temporary balance before price leaves the area.
 
-Each base candle must be small relative to the leg-out and must not itself qualify as an ERC candle.
+### 3. Price departs
 
-### 3. Leg-In qualification
+A strong bullish or bearish Leg-Out confirms that price left the base with enough force. The indicator then draws a Demand or Supply zone around the base.
 
-The leg-in must be larger than the biggest base candle and must contain a sufficiently large body relative to its complete range.
+!!! note "Why a zone may appear after the move has started"
+    The indicator must wait for the departure candle to close before it can confirm the formation. This prevents an unfinished candle from being treated as a completed departure.
 
-### 4. Zone creation
+## Formation names
 
-A bullish leg-out produces a Demand candidate. A bearish leg-out produces a Supply candidate. The direction of the leg-in determines the final formation name, such as RBR, DBR, RBD, or DBD.
+- **RBR — Rally-Base-Rally:** bullish approach, pause, bullish departure.
+- **DBR — Drop-Base-Rally:** bearish approach, pause, bullish departure.
+- **RBD — Rally-Base-Drop:** bullish approach, pause, bearish departure.
+- **DBD — Drop-Base-Drop:** bearish approach, pause, bearish departure.
 
 ## Current Intraday defaults
 
-| Parameter | Default |
-| --- | ---: |
-| ERC Body % Threshold | `0.40` |
-| Base vs Leg-Out Ratio | `0.70` |
-| ERC Range ATR Multiplier | `0.70` |
-| ATR Lookback Period | `50` |
-| Max Base Candles | `4` |
-| Leg-In Body vs Base | `1.50` |
-| Leg-In Body/Range Minimum | `0.50` |
-| Flip Clean-Check Skip Bars | `0` |
-
+| Parameter | Default | What the trader controls |
+| --- | ---: | --- |
+| ERC Body % Threshold | `0.40` | How much of the departure candle should be solid body rather than wicks. |
+| Base vs Leg-Out Ratio | `0.70` | How small base candles must be compared with the departure. |
+| ERC Range ATR Multiplier | `0.70` | How large the departure must be compared with recent movement. |
+| ATR Lookback Period | `50` | How much price history is used to judge recent movement. |
+| Max Base Candles | `4` | How long the pause may last. With the current detection behavior, the default accepts up to three actual base candles. |
+| Leg-In Body vs Base | `1.50` | How distinct the approach must be from the base. |
+| Leg-In Body/Range Minimum | `0.50` | How directional the approach candle must look. |
+| Flip Clean-Check Skip Bars | `0` | How the indicator checks clean price action when classifying a Flip Zone. |

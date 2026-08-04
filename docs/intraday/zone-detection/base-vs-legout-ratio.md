@@ -2,15 +2,30 @@
 
 **Default:** `0.70`
 
-This parameter limits the body size of each base candle relative to the leg-out body.
+## Terms used on this page
 
-```text
-Base body ≤ Leg-Out body × Base vs Leg-Out Ratio
-```
+- **Base** — the compact pause before price departs.
+- **Leg-Out** — the strong departure away from the base.
+- **Body** — the solid part of a candle between its open and close.
 
-A lower value requires tighter and smaller base candles. A higher value permits larger candles inside the base.
+## What this setting controls
 
-## Planned visual
+It controls how small the candles inside the base must be when compared with the departure candle. At the default value of `0.70`, a base candle may have a body up to 70% of the Leg-Out body.
 
-Two base candles will be measured against the same leg-out: one within the permitted ratio and one above it.
+The purpose is to preserve a visible contrast between a quiet pause and a stronger departure.
 
+## If you lower the value
+
+- Bases must be tighter and calmer.
+- Fewer formations qualify.
+- The visual difference between the base and departure becomes clearer.
+
+## If you raise the value
+
+- Larger base candles are accepted.
+- More zones may appear.
+- Broad or noisy pauses can be classified as bases more easily.
+
+## Visual for this setting
+
+One Leg-Out will be compared with two possible base candles. The accepted base will remain below the selected size limit, while the rejected base will be too large.

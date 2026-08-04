@@ -2,23 +2,38 @@
 
 **Default:** `0.40`
 
-This parameter defines the minimum share of a candle's full range that must be occupied by its body before the candle can pass the body-strength condition for ERC classification.
+## Terms used on this page
 
-```text
-Body % = abs(Close - Open) / (High - Low)
-```
+- **ERC** — the indicator's name for a decisive expansion candle.
+- **Body** — the solid part between the open and close.
+- **Wicks** — the thin parts above and below the body.
+- **Leg-Out** — the departure candle that confirms price has left the base.
+- **Base** — the short pause before the departure.
 
-A lower value accepts more candles. A higher value requires cleaner candles with larger bodies and smaller combined wicks.
+## What this setting controls
 
-The parameter affects both sides of detection:
+It controls how much of a potential expansion candle must be made up of body rather than wicks. At the default value of `0.40`, the body must cover at least 40% of the candle's complete high-to-low range.
 
-- an ERC candle may become a leg-out candidate;
-- an ERC candle cannot be accepted as a base candle.
+A candle with a large body and relatively small wicks shows clearer directional commitment. A candle dominated by wicks shows more hesitation.
 
-!!! note
-    Passing the body-percentage condition is not enough. The candle must also pass the ATR-based range condition.
+## If you lower the value
 
-## Planned visual
+- More candles can be treated as expansion candles.
+- More potential zones may appear.
+- Wick-heavy and less decisive departures become easier to accept.
+- Some candles that could otherwise belong to a base may instead be treated as expansion candles.
 
-The same candle will be compared against two threshold values. Its measured body-to-range ratio will pass the lower threshold and fail the higher threshold.
+## If you raise the value
 
+- Fewer candles qualify as expansion candles.
+- Departures must look cleaner and more directional.
+- The indicator may ignore valid but less visually perfect moves.
+- More small candles remain eligible to be part of a base.
+
+## Important interaction
+
+This setting evaluates the shape of the candle, not whether the candle is large for current market conditions. The **ERC Range ATR Multiplier** performs the separate size check. Both must be satisfied before the candle is treated as a valid expansion candle.
+
+## Visual for this setting
+
+The same candle will be shown twice. Its body will pass a 40% requirement but fail a stricter 60% requirement, making the effect of the setting visible without changing the market example.

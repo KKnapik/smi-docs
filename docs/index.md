@@ -1,14 +1,16 @@
 # SMI — Smart Money Indicator
 
-This documentation explains how the Smart Money Indicator identifies, qualifies, displays, and manages Supply and Demand zones.
+This documentation explains how the Smart Money Indicator identifies, displays, and manages Supply and Demand zones from a trader's point of view.
 
 The first documentation track covers the **Intraday indicator**. Each configurable detection parameter will receive:
 
 - a plain-language explanation;
-- the exact rule used by the indicator;
+- the trading logic in plain language;
 - an explanation of stricter and more permissive values;
 - a controlled visual example;
-- implementation notes and interactions with other parameters.
+- practical interactions with other settings.
+
+You do not need to understand Pine Script or programming to use this documentation. Whenever an indicator-specific term is required, it is defined before it is used.
 
 ## Documentation status
 

@@ -2,11 +2,31 @@
 
 **Default:** `0`
 
-This parameter does not control initial Supply or Demand zone detection. It affects the later cleanliness check used when an active zone is evaluated as a potential Flip Zone.
+## Terms used on this page
 
-Increasing the value excludes additional bars near the new formation from the cleanliness window.
+- **Broken zone** — a former Supply or Demand zone that price has moved through.
+- **Flip Zone** — a new zone that forms after price breaks an opposite zone and begins using that former area from the other side.
+- **Clean price action** — movement that does not repeatedly trade through the area being evaluated.
+- **Skip bars** — the most recent candles intentionally excluded from the cleanliness check.
 
-## Planned visual
+## What this setting controls
 
-A broken zone, a new opposite zone, and the cleanliness inspection window will be shown with zero and multiple skipped bars.
+This setting does not control the creation of ordinary Supply or Demand zones. It only affects the later decision to label a setup as a Flip Zone.
 
+At the default value of `0`, every candle in the relevant inspection window is considered. Increasing the setting tells the indicator to ignore a selected number of candles nearest the new formation.
+
+## If you lower the value
+
+- More nearby price action is checked.
+- Flip classification becomes stricter.
+- A recent touch or overlap is more likely to invalidate a clean flip.
+
+## If you raise the value
+
+- More recent candles are ignored during the check.
+- Flip classification becomes more permissive.
+- Price interaction close to the new formation has less influence.
+
+## Visual for this setting
+
+A broken zone and a new opposite zone will be connected by a highlighted inspection window. A second panel will show which candles disappear from that window when skip bars are added.

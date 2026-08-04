@@ -1,14 +1,14 @@
 # Intraday Indicator
 
-The SMI Intraday indicator detects Supply and Demand formations on the chart timeframe and evaluates their market context.
+The SMI Intraday indicator looks for price areas where a clear departure suggests that buying or selling pressure was stronger than the opposing side. It then evaluates whether those areas remain relevant when price returns.
 
 ## Main areas
 
-1. **Zone detection** — identifies the leg-in, base, and leg-out structure.
-2. **Zone boundaries** — calculates proximal and distal prices.
-3. **Zone lifecycle** — validates, activates, tests, mitigates, and breaks zones.
-4. **HTF coverage** — checks whether an Intraday zone is supported by a higher-timeframe zone.
-5. **Location curve** — divides the range between the nearest Supply and Demand zones into High, Equilibrium, and Low areas.
-6. **Zone grading** — summarizes structural and contextual quality factors.
+1. **Zone detection** — finds the approach, pause, and departure that form a zone.
+2. **Zone boundaries** — marks the price area where the pause occurred.
+3. **Zone lifecycle** — tracks whether the zone is fresh, tested, consumed, or broken.
+4. **Higher-timeframe context** — checks whether the Intraday zone sits inside a broader zone.
+5. **Location curve** — shows whether price is relatively expensive, balanced, or cheap between nearby zones.
+6. **Zone grading** — summarizes the quality and context of a potential trading area.
 
 The initial documentation focuses on the input parameters that directly influence zone detection.
