@@ -37,4 +37,6 @@ The default HTF settings are deliberately more permissive because higher-timefra
 
 ## Visual for this group
 
-The same formation will be evaluated once with Intraday thresholds and once with HTF thresholds. The comparison will show why a formation may qualify as higher-timeframe context even when it would not pass the stricter Intraday settings.
+![Higher-Timeframe Detection: same formation under Intraday and HTF thresholds](../../assets/diagrams/htf-detection.svg)
+
+The example keeps every candle value unchanged. It fails the stricter Intraday defaults but passes the more permissive HTF defaults, illustrating why higher-timeframe context can exist without changing the primary Intraday formation.

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+  <title id="t">Leg-In body compared with the largest Base body</title>
+  <desc id="d">An accepted and rejected Leg-In are compared with the same largest Base body using a multiplier of 1.5.</desc>
+  <style>
+    .bg{fill:#0f172a}.panel{fill:#111c31;stroke:#334155;stroke-width:2}.h{fill:#f8fafc;font:700 30px system-ui}.sub{fill:#94a3b8;font:18px system-ui}.pt{fill:#f8fafc;font:700 23px system-ui}.txt{fill:#cbd5e1;font:16px system-ui}.lbl{fill:#e2e8f0;font:700 17px system-ui}.pass{fill:#22c55e;font:700 20px system-ui}.fail{fill:#fb7185;font:700 20px system-ui}.li{fill:#14b8a6;stroke:#2dd4bf;stroke-width:2}.bad{fill:#7f1d1d;stroke:#fb7185;stroke-width:2}.base{fill:#64748b;stroke:#94a3b8;stroke-width:2}.lo{fill:#2563eb;stroke:#60a5fa;stroke-width:2}.wickli{stroke:#2dd4bf;stroke-width:4}.wickbad{stroke:#fb7185;stroke-width:4}.wick{stroke:#94a3b8;stroke-width:3}.wicklo{stroke:#60a5fa;stroke-width:4}.ref{stroke:#fbbf24;stroke-width:3;stroke-dasharray:8 7}.gold{fill:#fde68a;font:700 16px system-ui}.chip{fill:#17233a;stroke:#475569;stroke-width:1.5}.direct{fill:#10352f;stroke:#14b8a6}.reference{fill:#382e18;stroke:#f59e0b}.note{fill:#172033;stroke:#475569;stroke-width:1.5}
+  </style>
+  <rect class="bg" width="1200" height="680" rx="20"/>
+  <text class="h" x="48" y="50">Leg-In Body vs Base — what is being checked?</text>
+  <text class="sub" x="48" y="80">Example threshold: Leg-In body ≥ largest Base body × 1.50</text>
+  <rect class="chip direct" x="48" y="104" width="340" height="66" rx="12"/><text class="lbl" x="68" y="132">LEG-IN — DIRECT CHECK</text><text class="txt" x="68" y="155">Its body must stand out.</text>
+  <rect class="chip reference" x="430" y="104" width="340" height="66" rx="12"/><text class="lbl" x="450" y="132">BASE — REFERENCE</text><text class="txt" x="450" y="155">Largest Base body sets the target.</text>
+  <rect class="chip" x="812" y="104" width="340" height="66" rx="12"/><text class="lbl" x="832" y="132">LEG-OUT — NOT CHECKED</text><text class="txt" x="832" y="155">Uses ERC settings.</text>
+  <rect class="panel" x="48" y="194" width="540" height="380" rx="16"/><rect class="panel" x="612" y="194" width="540" height="380" rx="16"/>
+  <text class="pt" x="76" y="232">PASS — Leg-In stands out</text><text class="pass" x="76" y="262">1.80× ≥ 1.50×</text>
+  <text class="pt" x="640" y="232">FAIL — Leg-In too similar</text><text class="fail" x="640" y="262">1.30× &lt; 1.50×</text>
+  <line class="wickli" x1="148" y1="304" x2="148" y2="486"/><rect class="li" x="122" y="326" width="52" height="126" rx="3"/>
+  <line class="wick" x1="278" y1="382" x2="278" y2="466"/><rect class="base" x="256" y="400" width="44" height="70" rx="3"/>
+  <line class="wicklo" x1="438" y1="290" x2="438" y2="482"/><rect class="lo" x="408" y="314" width="60" height="142" rx="3"/>
+  <line class="ref" x1="232" y1="365" x2="326" y2="365"/><text class="gold" x="220" y="348">1.50× TARGET</text>
+  <text class="lbl" x="116" y="526">LEG-IN</text><text class="lbl" x="252" y="526">BASE</text><text class="lbl" x="400" y="526">LEG-OUT</text>
+  <line class="wickbad" x1="712" y1="344" x2="712" y2="480"/><rect class="bad" x="686" y="361" width="52" height="91" rx="3"/>
+  <line class="wick" x1="842" y1="382" x2="842" y2="466"/><rect class="base" x="820" y="400" width="44" height="70" rx="3"/>
+  <line class="wicklo" x1="1002" y1="290" x2="1002" y2="482"/><rect class="lo" x="972" y="314" width="60" height="142" rx="3"/>
+  <line class="ref" x1="796" y1="365" x2="890" y2="365"/><text class="gold" x="784" y="348">1.50× TARGET</text>
+  <text class="lbl" x="680" y="526">LEG-IN</text><text class="lbl" x="816" y="526">BASE</text><text class="lbl" x="964" y="526">LEG-OUT</text>
+  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/><text class="txt" x="72" y="628">Only the Leg-In is qualified. The largest Base body supplies the comparison size; the Leg-Out does not affect this test.</text>
+</svg>

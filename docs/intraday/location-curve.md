@@ -39,4 +39,6 @@ These labels describe relative location, not an automatic buy or sell signal.
 
 ## Visual for this group
 
-A Supply zone and Demand zone will anchor the three colored location bands, with the ATR gap filter and width control shown separately.
+![Location Curve: Supply and Demand anchors, ATR gap, and display width](../assets/diagrams/location-curve.svg)
+
+The nearest qualifying Supply and Demand zones provide the vertical anchors. The gap filter decides whether the curve may be shown, while width changes only how far the three bands extend horizontally.

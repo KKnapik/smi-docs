@@ -40,4 +40,6 @@ This setting checks candle size. **ERC Body % Threshold** separately checks whet
 
 ## Visual for this setting
 
-The candle's full range will be placed next to the recent ATR reference. One example will clear the selected requirement and another will fall short.
+![ERC Range ATR Multiplier: Leg-Out range compared with ATR](../../assets/diagrams/erc-range-atr-multiplier.svg)
+
+The complete **Leg-Out** range is checked directly against the ATR-based requirement. The Base is affected only indirectly when a candle becomes an ERC; the Leg-In is not tested.

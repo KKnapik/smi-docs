@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="t d">
+  <title id="t">Location Curve display settings</title>
+  <desc id="d">Nearest active Supply and Demand zones anchor three equal location bands, while visibility, maximum ATR gap, and horizontal width control only the display.</desc>
+  <style>
+    .bg{fill:#0f172a}.panel{fill:#111c31;stroke:#334155;stroke-width:2}.h{fill:#f8fafc;font:700 30px system-ui}.sub{fill:#94a3b8;font:18px system-ui}.txt{fill:#cbd5e1;font:16px system-ui}.lbl{fill:#e2e8f0;font:700 16px system-ui}.tiny{fill:#94a3b8;font:14px system-ui}.supply{fill:#7f1d1d;fill-opacity:.65;stroke:#fb7185;stroke-width:2}.demand{fill:#064e3b;fill-opacity:.75;stroke:#2dd4bf;stroke-width:2}.high{fill:#ef4444;fill-opacity:.35}.eq{fill:#f59e0b;fill-opacity:.35}.low{fill:#22c55e;fill-opacity:.35}.band{stroke:#cbd5e1;stroke-opacity:.45}.anchor{stroke:#f8fafc;stroke-width:2;stroke-dasharray:8 6}.measure{stroke:#fbbf24;stroke-width:3}.gold{fill:#fde68a;font:700 16px system-ui}.c{fill:#475569;stroke:#94a3b8;stroke-width:2}.wick{stroke:#94a3b8;stroke-width:3}.chip{fill:#17233a;stroke:#475569;stroke-width:1.5}.note{fill:#172033;stroke:#475569;stroke-width:1.5}
+  </style>
+  <rect class="bg" width="1200" height="720" rx="20"/>
+  <text class="h" x="48" y="50">Location Curve — display and market context only</text>
+  <text class="sub" x="48" y="80">The curve uses zones that already exist; it does not qualify Leg-In, Base, or Leg-Out</text>
+  <rect class="chip" x="48" y="104" width="340" height="72" rx="12"/><text class="lbl" x="68" y="132">SHOW LOCATION CURVE</text><text class="txt" x="68" y="158">Shows or hides all three bands.</text>
+  <rect class="chip" x="430" y="104" width="340" height="72" rx="12"/><text class="lbl" x="450" y="132">MAX LOCATION GAP</text><text class="txt" x="450" y="158">Visibility limit measured in ATR.</text>
+  <rect class="chip" x="812" y="104" width="340" height="72" rx="12"/><text class="lbl" x="832" y="132">CURVE WIDTH</text><text class="txt" x="832" y="158">Horizontal display width in bars.</text>
+  <rect class="panel" x="48" y="200" width="1104" height="420" rx="16"/>
+  <rect class="supply" x="92" y="236" width="500" height="54" rx="5"/><text class="lbl" x="108" y="268">NEAREST ACTIVE SUPPLY ZONE</text>
+  <rect class="demand" x="92" y="526" width="500" height="54" rx="5"/><text class="lbl" x="108" y="558">NEAREST ACTIVE DEMAND ZONE</text>
+  <g><line class="wick" x1="148" y1="318" x2="148" y2="374"/><rect class="c" x="136" y="334" width="24" height="22"/><line class="wick" x1="196" y1="342" x2="196" y2="402"/><rect class="c" x="184" y="358" width="24" height="24"/><line class="wick" x1="244" y1="366" x2="244" y2="430"/><rect class="c" x="232" y="382" width="24" height="26"/><line class="wick" x1="292" y1="392" x2="292" y2="454"/><rect class="c" x="280" y="410" width="24" height="24"/><line class="wick" x1="340" y1="418" x2="340" y2="480"/><rect class="c" x="328" y="436" width="24" height="24"/><line class="wick" x1="388" y1="392" x2="388" y2="458"/><rect class="c" x="376" y="414" width="24" height="22"/></g>
+  <line class="anchor" x1="592" y1="236" x2="1094" y2="236"/><line class="anchor" x1="592" y1="580" x2="1094" y2="580"/>
+  <text class="tiny" x="604" y="228">SUPPLY DISTAL ANCHOR</text><text class="tiny" x="604" y="600">DEMAND DISTAL ANCHOR</text>
+  <rect class="high" x="760" y="236" width="300" height="115"/><rect class="eq" x="760" y="351" width="300" height="114"/><rect class="low" x="760" y="465" width="300" height="115"/>
+  <line class="band" x1="760" y1="351" x2="1060" y2="351"/><line class="band" x1="760" y1="465" x2="1060" y2="465"/>
+  <text class="lbl" x="846" y="298">HIGH (EXPENSIVE)</text><text class="lbl" x="861" y="414">EQUILIBRIUM</text><text class="lbl" x="866" y="529">LOW (CHEAP)</text>
+  <line class="measure" x1="720" y1="242" x2="720" y2="574"/><line class="measure" x1="708" y1="242" x2="732" y2="242"/><line class="measure" x1="708" y1="574" x2="732" y2="574"/><text class="gold" x="620" y="414">GAP ≤ ATR × 20</text>
+  <line class="measure" x1="766" y1="554" x2="1054" y2="554"/><line class="measure" x1="766" y1="544" x2="766" y2="564"/><line class="measure" x1="1054" y1="544" x2="1054" y2="564"/><text class="gold" x="844" y="546">WIDTH = 50 BARS</text>
+  <rect class="note" x="48" y="642" width="1104" height="54" rx="12"/><text class="txt" x="72" y="674">If the anchor gap is too large, the curve is hidden. Changing width changes only the horizontal boxes, never price levels or zones.</text>
+</svg>

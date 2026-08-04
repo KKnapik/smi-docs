@@ -41,4 +41,6 @@ The number of candles accepted by detection is separate from the quality grade. 
 
 ## Visual for this setting
 
-Accepted bases containing one, two, and three candles will be shown next to a rejected four-candle base. The graphic will also explain why the displayed input value is one higher than the number of base candles visible on the chart.
+![Maximum Base Candles: current accepted and rejected candle counts](../../assets/diagrams/max-base-candles.svg)
+
+With the current detector, input value `4` leaves four scan positions for the Base and preceding Leg-In. Bases containing one, two, or three candles can qualify; a four-candle Base leaves no position for the Leg-In and is rejected.

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+  <title id="t">Flip clean-check skip bars</title>
+  <desc id="d">The same candles between an older broken zone and a newer opposite zone are checked with zero skipped bars and with two bars nearest the new formation skipped.</desc>
+  <defs><pattern id="skip" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#253044"/><line y2="10" stroke="#64748b" stroke-width="3"/></pattern></defs>
+  <style>
+    .bg{fill:#0f172a}.panel{fill:#111c31;stroke:#334155;stroke-width:2}.h{fill:#f8fafc;font:700 30px system-ui}.sub{fill:#94a3b8;font:18px system-ui}.pt{fill:#f8fafc;font:700 23px system-ui}.txt{fill:#cbd5e1;font:16px system-ui}.lbl{fill:#e2e8f0;font:700 16px system-ui}.pass{fill:#22c55e;font:700 20px system-ui}.fail{fill:#fb7185;font:700 20px system-ui}.zone-old{fill:#7f1d1d;fill-opacity:.55;stroke:#fb7185;stroke-width:2}.zone-new{fill:#064e3b;fill-opacity:.7;stroke:#2dd4bf;stroke-width:2}.c{fill:#64748b;stroke:#94a3b8;stroke-width:2}.hit{fill:#be123c;stroke:#fb7185;stroke-width:2}.wick{stroke:#94a3b8;stroke-width:3}.wickhit{stroke:#fb7185;stroke-width:4}.window{fill:#2563eb;fill-opacity:.08;stroke:#60a5fa;stroke-width:2;stroke-dasharray:8 6}.skipped{fill:url(#skip);stroke:#94a3b8;stroke-width:1.5}.chip{fill:#382e18;stroke:#f59e0b;stroke-width:1.5}.note{fill:#172033;stroke:#475569;stroke-width:1.5}
+  </style>
+  <rect class="bg" width="1200" height="680" rx="20"/>
+  <text class="h" x="48" y="50">Flip Clean-Check Skip Bars — what changes?</text>
+  <text class="sub" x="48" y="80">Only Flip Zone classification is affected; ordinary Leg-In, Base, and Leg-Out detection is unchanged</text>
+  <rect class="chip" x="48" y="104" width="1104" height="66" rx="12"/><text class="lbl" x="68" y="132">FLIP ZONE — CLEANLINESS WINDOW ONLY</text><text class="txt" x="68" y="155">Increasing the value ignores candles nearest the newer formation before checking intersections with the older broken zone.</text>
+  <rect class="panel" x="48" y="194" width="540" height="380" rx="16"/><rect class="panel" x="612" y="194" width="540" height="380" rx="16"/>
+  <text class="pt" x="76" y="232">Skip Bars = 0</text><text class="fail" x="76" y="260">NOT CLEAN — interaction found</text>
+  <rect class="zone-old" x="76" y="336" width="150" height="52" rx="4"/><text class="lbl" x="88" y="368">BROKEN ZONE</text>
+  <rect class="zone-new" x="454" y="414" width="106" height="58" rx="4"/><text class="lbl" x="469" y="448">NEW ZONE</text>
+  <rect class="window" x="228" y="292" width="224" height="218" rx="8"/>
+  <line class="wick" x1="256" y1="310" x2="256" y2="380"/><rect class="c" x="244" y="330" width="24" height="28"/><line class="wick" x1="302" y1="300" x2="302" y2="370"/><rect class="c" x="290" y="320" width="24" height="26"/><line class="wick" x1="348" y1="330" x2="348" y2="416"/><rect class="c" x="336" y="348" width="24" height="34"/><line class="wickhit" x1="394" y1="350" x2="394" y2="444"/><rect class="hit" x="382" y="380" width="24" height="36"/>
+  <text class="txt" x="240" y="536">All candles in the window are inspected.</text><text class="fail" x="350" y="404">INTERSECTS</text>
+  <text class="pt" x="640" y="232">Skip Bars = 2</text><text class="pass" x="640" y="260">CLEAN — nearest 2 ignored</text>
+  <rect class="zone-old" x="640" y="336" width="150" height="52" rx="4"/><text class="lbl" x="652" y="368">BROKEN ZONE</text>
+  <rect class="zone-new" x="1018" y="414" width="106" height="58" rx="4"/><text class="lbl" x="1033" y="448">NEW ZONE</text>
+  <rect class="window" x="792" y="292" width="132" height="218" rx="8"/>
+  <line class="wick" x1="820" y1="310" x2="820" y2="380"/><rect class="c" x="808" y="330" width="24" height="28"/><line class="wick" x1="866" y1="300" x2="866" y2="370"/><rect class="c" x="854" y="320" width="24" height="26"/>
+  <rect class="skipped" x="926" y="292" width="90" height="218" rx="8"/><line class="wick" x1="944" y1="330" x2="944" y2="416"/><rect class="c" x="932" y="348" width="24" height="34"/><line class="wickhit" x1="990" y1="350" x2="990" y2="444"/><rect class="hit" x="978" y="380" width="24" height="36"/><text class="lbl" x="938" y="490">SKIPPED</text>
+  <text class="txt" x="804" y="536">The inspected window starts earlier.</text>
+  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/><text class="txt" x="72" y="628">The skipped candles are not deleted and the zones are not changed. They are excluded only from this Flip cleanliness decision.</text>
+</svg>

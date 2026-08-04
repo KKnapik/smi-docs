@@ -32,4 +32,6 @@ At the default value of `0`, every candle in the relevant inspection window is c
 
 ## Visual for this setting
 
-A broken zone and a new opposite zone will be connected by a highlighted inspection window. A second panel will show which candles disappear from that window when skip bars are added.
+![Flip Clean-Check Skip Bars: inspected and skipped candles](../../assets/diagrams/flip-clean-check-skip-bars.svg)
+
+With `0`, the complete window between the formations is inspected. Increasing the value excludes candles nearest the newer formation from this cleanliness decision; it does not remove candles or change either zone.

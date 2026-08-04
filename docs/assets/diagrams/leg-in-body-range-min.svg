@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+  <title id="t">Leg-In body to range minimum</title>
+  <desc id="d">Two Leg-In candles with identical complete ranges compare a 60 percent body that passes with a 30 percent body that fails a 50 percent threshold.</desc>
+  <style>
+    .bg{fill:#0f172a}.panel{fill:#111c31;stroke:#334155;stroke-width:2}.h{fill:#f8fafc;font:700 30px system-ui}.sub{fill:#94a3b8;font:18px system-ui}.pt{fill:#f8fafc;font:700 23px system-ui}.txt{fill:#cbd5e1;font:16px system-ui}.lbl{fill:#e2e8f0;font:700 17px system-ui}.pass{fill:#22c55e;font:700 20px system-ui}.fail{fill:#fb7185;font:700 20px system-ui}.up{fill:#14b8a6;stroke:#2dd4bf;stroke-width:2}.bad{fill:#7f1d1d;stroke:#fb7185;stroke-width:2}.wickup{stroke:#2dd4bf;stroke-width:4}.wickbad{stroke:#fb7185;stroke-width:4}.fade{fill:#475569;stroke:#64748b;stroke-width:2}.wickfade{stroke:#64748b;stroke-width:3}.measure{stroke:#fbbf24;stroke-width:3}.gold{fill:#fde68a;font:700 16px system-ui}.chip{fill:#17233a;stroke:#475569;stroke-width:1.5}.direct{fill:#10352f;stroke:#14b8a6}.note{fill:#172033;stroke:#475569;stroke-width:1.5}
+  </style>
+  <rect class="bg" width="1200" height="680" rx="20"/>
+  <text class="h" x="48" y="50">Leg-In Body/Range Minimum — what is being checked?</text>
+  <text class="sub" x="48" y="80">Example threshold: Leg-In body ≥ 50% of its own complete range</text>
+  <rect class="chip direct" x="48" y="104" width="340" height="66" rx="12"/><text class="lbl" x="68" y="132">LEG-IN — DIRECT CHECK</text><text class="txt" x="68" y="155">Body shape is tested.</text>
+  <rect class="chip" x="430" y="104" width="340" height="66" rx="12"/><text class="lbl" x="450" y="132">BASE — NOT CHECKED</text><text class="txt" x="450" y="155">Uses Base conditions.</text>
+  <rect class="chip" x="812" y="104" width="340" height="66" rx="12"/><text class="lbl" x="832" y="132">LEG-OUT — NOT CHECKED</text><text class="txt" x="832" y="155">Uses ERC conditions.</text>
+  <rect class="panel" x="48" y="194" width="540" height="380" rx="16"/><rect class="panel" x="612" y="194" width="540" height="380" rx="16"/>
+  <text class="pt" x="76" y="232">PASS — directional Leg-In</text><text class="pass" x="76" y="262">60% ≥ 50%</text>
+  <text class="pt" x="640" y="232">FAIL — wick-heavy Leg-In</text><text class="fail" x="640" y="262">30% &lt; 50%</text>
+  <line class="wickup" x1="180" y1="292" x2="180" y2="492"/><rect class="up" x="150" y="332" width="60" height="120" rx="3"/>
+  <line class="measure" x1="256" y1="292" x2="256" y2="492"/><line class="measure" x1="246" y1="292" x2="266" y2="292"/><line class="measure" x1="246" y1="492" x2="266" y2="492"/><text class="gold" x="274" y="398">RANGE</text>
+  <line class="measure" x1="382" y1="332" x2="382" y2="452"/><line class="measure" x1="372" y1="332" x2="392" y2="332"/><line class="measure" x1="372" y1="452" x2="392" y2="452"/><text class="gold" x="400" y="398">BODY</text>
+  <text class="lbl" x="147" y="532">LEG-IN</text>
+  <line class="wickbad" x1="744" y1="292" x2="744" y2="492"/><rect class="bad" x="714" y="362" width="60" height="60" rx="3"/>
+  <line class="measure" x1="820" y1="292" x2="820" y2="492"/><line class="measure" x1="810" y1="292" x2="830" y2="292"/><line class="measure" x1="810" y1="492" x2="830" y2="492"/><text class="gold" x="838" y="398">RANGE</text>
+  <line class="measure" x1="946" y1="362" x2="946" y2="422"/><line class="measure" x1="936" y1="362" x2="956" y2="362"/><line class="measure" x1="936" y1="422" x2="956" y2="422"/><text class="gold" x="964" y="398">BODY</text>
+  <text class="lbl" x="711" y="532">LEG-IN</text>
+  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/><text class="txt" x="72" y="628">Both candles have the same range. Only the Leg-In body proportion changes; Base and Leg-Out are unaffected by this setting.</text>
+</svg>

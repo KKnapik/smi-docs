@@ -35,4 +35,6 @@ The purpose is to preserve a visible contrast between a quiet pause and a strong
 
 ## Visual for this setting
 
-One Leg-Out will be compared with two possible base candles. The accepted base will remain below the selected size limit, while the rejected base will be too large.
+![Base versus Leg-Out Ratio: accepted and rejected Base candle](../../assets/diagrams/base-vs-legout-ratio.svg)
+
+The **Base** body is checked directly. The **Leg-Out** body only supplies the comparison size, and the Leg-In is not tested by this parameter.

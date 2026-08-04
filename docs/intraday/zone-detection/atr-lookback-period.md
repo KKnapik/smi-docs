@@ -37,4 +37,6 @@ The same numerical value represents different amounts of time on different chart
 
 ## Visual for this setting
 
-The same price sequence will show a short lookback reacting quickly and a long lookback remaining smoother, followed by the difference in the required departure size.
+![ATR Lookback Period: faster and smoother volatility response](../../assets/diagrams/atr-lookback-period.svg)
+
+A lower lookback reacts faster to the same change in recent movement. A higher lookback produces a smoother ATR reference, so the ATR-based ERC size requirement also changes more gradually.

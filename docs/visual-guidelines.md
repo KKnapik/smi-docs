@@ -14,7 +14,8 @@ When a parameter has both a direct and indirect effect, both must be stated expl
 
 ## Standard format
 
-- 16:9 PNG output.
+- SVG output embedded directly in Markdown.
+- Use a wide chart format close to 16:9. A taller SVG is allowed for grouped settings when it materially improves label readability.
 - Dark chart background consistent with TradingView.
 - Exact candle counts and visually correct proportions.
 - Green for an accepted example and red for a rejected example.
@@ -22,6 +23,7 @@ When a parameter has both a direct and indirect effect, both must be stated expl
 - A short practical takeaway beneath the visual.
 - No decorative candles that could be mistaken for part of a formation.
 - No Pine Script expressions, variable names, or source-code fragments.
+- Include accessible SVG title/description text and meaningful Markdown alt text.
 
 ## Comparison principle
 

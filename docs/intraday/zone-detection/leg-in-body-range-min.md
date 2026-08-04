@@ -36,4 +36,6 @@ This setting evaluates the shape of the Leg-In candle. **Leg-In Body vs Base** s
 
 ## Visual for this setting
 
-Two Leg-In candles with the same total range but different body sizes will show why one is accepted and the other is rejected.
+![Leg-In Body to Range Minimum: accepted and rejected Leg-In shape](../../assets/diagrams/leg-in-body-range-min.svg)
+
+Both examples have the same complete range. Only the **Leg-In** body proportion changes; the Base and Leg-Out are not checked by this parameter.

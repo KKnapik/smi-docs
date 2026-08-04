@@ -33,4 +33,6 @@ It controls how clearly the **Leg-In** candle must stand out from the candles in
 
 ## Visual for this setting
 
-The largest candle body inside the base will be used as a visual reference. One Leg-In will exceed the selected multiple, while another will remain too small.
+![Leg-In Body versus Base: accepted and rejected Leg-In body](../../assets/diagrams/leg-in-body-vs-base.svg)
+
+The **Leg-In** is checked directly. The largest **Base** body provides the comparison size, while the Leg-Out is not part of this test.
