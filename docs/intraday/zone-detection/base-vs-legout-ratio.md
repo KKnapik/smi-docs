@@ -1,6 +1,6 @@
-# Base vs Leg-Out Ratio
+# Max. Base Body Size (% of Leg-Out)
 
-**Default:** `0.70`
+**Default:** `70%`
 
 !!! info "Applies to: BASE"
     **BASE — direct effect:** every base candle is checked against this setting.
@@ -17,7 +17,7 @@
 
 ## What this setting controls
 
-It controls how small each candle inside the **Base** must be when compared with the **Leg-Out** candle. At the default value of `0.70`, a base candle may have a body up to 70% of the Leg-Out body.
+It controls how small each candle inside the **Base** must be when compared with the **Leg-Out** candle. At the default value of `70`, a base candle may have a body up to 70% of the Leg-Out body.
 
 The purpose is to preserve a visible contrast between a quiet pause and a stronger departure.
 
@@ -35,6 +35,6 @@ The purpose is to preserve a visible contrast between a quiet pause and a strong
 
 ## Visual for this setting
 
-![Base versus Leg-Out Ratio: accepted and rejected Base candle](../../assets/diagrams/base-vs-legout-ratio.svg)
+![Maximum Base Body Size: accepted and rejected Base candle](../../assets/diagrams/base-vs-legout-ratio.svg)
 
 The **Base** body is checked directly. The **Leg-Out** body only supplies the comparison size, and the Leg-In is not tested by this parameter.

@@ -22,12 +22,12 @@ The default HTF settings are deliberately more permissive because higher-timefra
 
 | Parameter | Applies to | Default | Trader-facing meaning |
 | --- | --- | ---: | --- |
-| HTF ERC Body % | **HTF LEG-OUT + BASE** | `0.30` | Directly checks the departure body. Indirectly prevents an HTF Extended Range Candle from being used as a base candle. It does not qualify the Leg-In. |
-| HTF Base/Leg-Out Ratio | **HTF BASE** | `0.85` | Checks base bodies against the HTF Leg-Out body. It does not qualify the Leg-In. |
-| HTF ERC ATR Multiplier | **HTF LEG-OUT + BASE** | `0.50` | Directly checks departure size and indirectly affects base eligibility. It does not qualify the Leg-In. |
-| HTF Max Base Candles | **HTF BASE** | `6` | Leaves room for up to five actual HTF base candles before the Leg-In must be found. |
-| HTF Leg-In Body vs Base | **HTF LEG-IN** | `1.30` | Checks whether the HTF Leg-In is large enough compared with the biggest base body. |
-| HTF Leg-In Body/Range Minimum | **HTF LEG-IN** | `0.40` | Checks whether the HTF Leg-In body is large enough relative to its own candle range. |
+| HTF Min. Leg-Out Body Size (% of Range) | **HTF LEG-OUT + BASE** | `30%` | Directly checks the departure body. Indirectly prevents an HTF Extended Range Candle from being used as a base candle. It does not qualify the Leg-In. |
+| HTF Max. Base Body Size (% of Leg-Out) | **HTF BASE** | `85%` | Checks base bodies against the HTF Leg-Out body. It does not qualify the Leg-In. |
+| HTF Min. Leg-Out Range (ATR ×) | **HTF LEG-OUT + BASE** | `0.50` | Directly checks departure size and indirectly affects base eligibility. It does not qualify the Leg-In. |
+| HTF Max. Base Candles | **HTF BASE** | `6` | Leaves room for up to five actual HTF base candles before the Leg-In must be found. |
+| HTF Min. Leg-In Body Size (× Largest Base Body) | **HTF LEG-IN** | `1.30` | Checks whether the HTF Leg-In is large enough compared with the biggest base body. |
+| HTF Min. Leg-In Body Size (% of Range) | **HTF LEG-IN** | `40%` | Checks whether the HTF Leg-In body is large enough relative to its own candle range. |
 
 ## What traders will notice
 

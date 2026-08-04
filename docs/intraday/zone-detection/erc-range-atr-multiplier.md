@@ -1,4 +1,4 @@
-# ERC Range ATR Multiplier
+# Min. Leg-Out Range (ATR ×)
 
 **Default:** `0.70`
 
@@ -36,10 +36,10 @@ This prevents an ordinary small candle from being treated as a meaningful depart
 
 ## Important interaction
 
-This setting checks candle size. **ERC Body % Threshold** separately checks whether the candle is directional rather than dominated by wicks. A valid expansion candle must pass both checks.
+This setting checks candle size. **Min. Leg-Out Body Size (% of Range)** separately checks whether the candle is directional rather than dominated by wicks. A valid expansion candle must pass both checks.
 
 ## Visual for this setting
 
-![ERC Range ATR Multiplier: Leg-Out range compared with ATR](../../assets/diagrams/erc-range-atr-multiplier.svg)
+![Minimum Leg-Out Range: Leg-Out range compared with ATR](../../assets/diagrams/erc-range-atr-multiplier.svg)
 
 The complete **Leg-Out** range is checked directly against the ATR-based requirement. The Base is affected only indirectly when a candle becomes an ERC; the Leg-In is not tested.

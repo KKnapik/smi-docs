@@ -8,7 +8,7 @@
   <text class="h" x="48" y="50">Location Curve — display and market context only</text>
   <text class="sub" x="48" y="80">The curve uses zones that already exist; it does not qualify Leg-In, Base, or Leg-Out</text>
   <rect class="chip" x="48" y="104" width="340" height="72" rx="12"/><text class="lbl" x="68" y="132">SHOW LOCATION CURVE</text><text class="txt" x="68" y="158">Shows or hides all three bands.</text>
-  <rect class="chip" x="430" y="104" width="340" height="72" rx="12"/><text class="lbl" x="450" y="132">MAX LOCATION GAP</text><text class="txt" x="450" y="158">Visibility limit measured in ATR.</text>
+  <rect class="chip" x="430" y="104" width="340" height="72" rx="12"/><text class="lbl" x="450" y="132">MAX. LOCATION GAP (ATR ×)</text><text class="txt" x="450" y="158">Visibility limit measured in ATR.</text>
   <rect class="chip" x="812" y="104" width="340" height="72" rx="12"/><text class="lbl" x="832" y="132">CURVE WIDTH</text><text class="txt" x="832" y="158">Horizontal display width in bars.</text>
   <rect class="panel" x="48" y="200" width="1104" height="420" rx="16"/>
   <rect class="supply" x="92" y="236" width="500" height="54" rx="5"/><text class="lbl" x="108" y="268">NEAREST ACTIVE SUPPLY ZONE</text>

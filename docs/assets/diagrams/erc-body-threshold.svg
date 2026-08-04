@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title description">
-  <title id="title">ERC Body Percentage Threshold comparison</title>
+  <title id="title">Minimum Leg-Out body size comparison</title>
   <desc id="description">Two simplified Rally-Base-Rally formations compare a Leg-Out candle that passes a 40 percent body threshold with one that fails it.</desc>
 
   <defs>
@@ -36,7 +36,7 @@
   </defs>
 
   <rect class="bg" width="1200" height="680" rx="20"/>
-  <text class="heading" x="48" y="50">ERC Body % Threshold — what is being checked?</text>
+  <text class="heading" x="48" y="50">Min. Leg-Out Body Size (% of Range)</text>
   <text class="muted" x="48" y="80">Example threshold: 40% of the candle's complete High-to-Low range</text>
 
   <rect class="chip" x="48" y="104" width="330" height="66" rx="12"/>
@@ -96,11 +96,11 @@
   <rect class="base" x="830" y="418" width="24" height="22" rx="2"/>
   <!-- Failing formation: Leg-Out, 25% body -->
   <line class="wick-up" x1="938" y1="286" x2="938" y2="486"/>
-  <rect class="up" x="914" y="386" width="48" height="50" rx="3"/>
+  <rect class="up" x="914" y="396" width="48" height="50" rx="3"/>
   <line class="measure" x1="998" y1="286" x2="998" y2="486" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
   <text class="measure-text" x="1010" y="378">RANGE</text>
-  <line class="measure" x1="1086" y1="386" x2="1086" y2="436" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <text class="measure-text" x="1040" y="418">BODY</text>
+  <line class="measure" x1="1086" y1="396" x2="1086" y2="446" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="measure-text" x="1040" y="428">BODY</text>
 
   <text class="label" x="99" y="530">LEG-IN</text>
   <text class="label" x="209" y="530">BASE</text>
@@ -110,6 +110,6 @@
   <text class="label" x="902" y="530">LEG-OUT</text>
 
   <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/>
-  <text class="note-text" x="72" y="619">Important: passing this body test alone does not confirm an ERC.</text>
-  <text class="note-text" x="72" y="642">The candle must also pass ERC Range ATR Multiplier — the separate size-versus-volatility check.</text>
+  <text class="note-text" x="72" y="619">Both examples keep the ATR size condition constant. Only the Leg-Out body share changes.</text>
+  <text class="note-text" x="72" y="642">The candle must still pass Min. Leg-Out Range (ATR ×) before it becomes an Extended Range Candle.</text>
 </svg>

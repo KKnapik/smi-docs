@@ -1,4 +1,4 @@
-# ATR Lookback Period
+# Avg. Price Range Period (Bars)
 
 **Default:** `50`
 
@@ -11,7 +11,7 @@
 
 ## Terms used on this page
 
-- **ATR** — a measure of the market's typical candle movement.
+- **ATR — Average True Range** — the technical calculation used by the indicator to estimate the market's typical recent price range.
 - **Lookback period** — the number of previous candles used to calculate that typical movement.
 - **ERC — Extended Range Candle** — a decisive expansion candle with enough body and size compared with recent movement.
 
@@ -37,6 +37,6 @@ The same numerical value represents different amounts of time on different chart
 
 ## Visual for this setting
 
-![ATR Lookback Period: faster and smoother volatility response](../../assets/diagrams/atr-lookback-period.svg)
+![Average Price Range Period: faster and smoother volatility response](../../assets/diagrams/atr-lookback-period.svg)
 
 A lower lookback reacts faster to the same change in recent movement. A higher lookback produces a smoother ATR reference, so the ATR-based ERC size requirement also changes more gradually.

@@ -1,4 +1,4 @@
-# Leg-In Body vs Base
+# Min. Leg-In Body Size (× Largest Base Body)
 
 **Default:** `1.50`
 
@@ -33,6 +33,6 @@ It controls how clearly the **Leg-In** candle must stand out from the candles in
 
 ## Visual for this setting
 
-![Leg-In Body versus Base: accepted and rejected Leg-In body](../../assets/diagrams/leg-in-body-vs-base.svg)
+![Minimum Leg-In Body Size versus Largest Base Body: accepted and rejected Leg-In](../../assets/diagrams/leg-in-body-vs-base.svg)
 
 The **Leg-In** is checked directly. The largest **Base** body provides the comparison size, while the Leg-Out is not part of this test.

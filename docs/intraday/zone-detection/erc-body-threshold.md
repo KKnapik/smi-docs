@@ -1,6 +1,6 @@
-# ERC Body % Threshold
+# Min. Leg-Out Body Size (% of Range)
 
-**Default:** `0.40`
+**Default:** `40%`
 
 !!! info "Applies to: LEG-OUT + BASE"
     **LEG-OUT — direct effect:** this setting helps decide whether the departure candle is a valid Extended Range Candle.
@@ -20,7 +20,7 @@
 
 ## What this setting controls
 
-It controls how much of a potential **Leg-Out** candle must be made up of body rather than wicks. At the default value of `0.40`, the body must cover at least 40% of the candle's complete high-to-low range.
+It controls how much of a potential **Leg-Out** candle must be made up of body rather than wicks. At the default value of `40`, the body must cover at least 40% of the candle's complete high-to-low range.
 
 A candle with a large body and relatively small wicks shows clearer directional commitment. A candle dominated by wicks shows more hesitation.
 
@@ -40,10 +40,10 @@ A candle with a large body and relatively small wicks shows clearer directional 
 
 ## Important interaction
 
-This setting evaluates the shape of the candle, not whether the candle is large for current market conditions. The **ERC Range ATR Multiplier** performs the separate size check. Both must be satisfied before the candle is treated as a valid expansion candle.
+This setting evaluates the shape of the candle, not whether the candle is large for current market conditions. **Min. Leg-Out Range (ATR ×)** performs the separate size check. Both must be satisfied before the candle is treated as a valid expansion candle.
 
 ## Visual for this setting
 
-![ERC Body Percentage Threshold: Leg-Out pass and fail comparison](../../assets/diagrams/erc-body-threshold.svg)
+![Minimum Leg-Out Body Size: Leg-Out pass and fail comparison](../../assets/diagrams/erc-body-threshold.svg)
 
 The highlighted **Leg-Out** is the candle directly checked by this parameter. The **Base** is affected only indirectly: if a candle passes both ERC tests, it cannot remain part of the Base. The Leg-In is not tested by this setting.

@@ -17,7 +17,7 @@ When a parameter has both a direct and indirect effect, both must be stated expl
 - Use a wide chart format close to 16:9. A taller SVG is allowed for grouped settings when it materially improves label readability.
 - Dark chart background consistent with TradingView.
 - Exact candle counts and visually correct proportions.
-- Green for an accepted example and red for a rejected example.
+- Use green and red for PASS/FAIL status labels or panel borders, never to change candle direction between comparison panels.
 - Plain-language labels placed directly next to the relevant candle or zone.
 - A short practical takeaway beneath the visual.
 - No decorative candles that could be mistaken for part of a formation.
@@ -26,7 +26,9 @@ When a parameter has both a direct and indirect effect, both must be stated expl
 
 ## Comparison principle
 
-When explaining a threshold, the preferred graphic uses the same candle or formation on both sides. Only the documented input value changes. Each unfamiliar term must be explained in the page legend before it appears in the graphic.
+When explaining a threshold, change exactly one tested property at a time. Keep candle direction, color, unaffected ratios, surrounding formation, and all secondary conditions constant. If body heights are compared, align them to a shared measurement baseline and draw the requirement as a vertical bracket rather than a floating price level.
+
+PASS and FAIL may be illustrated either by changing the documented input against one fixed formation or by changing only the tested candle property against one fixed input. Never change both at once. Each unfamiliar term must be explained in the page legend before it appears in the graphic.
 
 ## Validation
 

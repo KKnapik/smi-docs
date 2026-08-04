@@ -45,10 +45,10 @@ A strong bullish or bearish Leg-Out confirms that price left the base with enoug
 
 | Parameter | Applies to | Default | What the trader controls |
 | --- | --- | ---: | --- |
-| ERC Body % Threshold | **LEG-OUT + BASE** | `0.40` | Directly qualifies the departure. Indirectly prevents an Extended Range Candle from being used as a base candle. It does not qualify the Leg-In. |
-| Base vs Leg-Out Ratio | **BASE** | `0.70` | Controls how small each base body must be compared with the Leg-Out body. |
-| ERC Range ATR Multiplier | **LEG-OUT + BASE** | `0.70` | Directly checks whether the departure is large enough. Indirectly affects whether a candle can remain part of the base. It does not qualify the Leg-In. |
-| ATR Lookback Period | **LEG-OUT + BASE** | `50` | Sets the recent-volatility reference used for Extended Range Candle classification. |
-| Max Base Candles | **BASE** | `4` | Controls how long the pause may last. With the current behavior, the default accepts up to three actual base candles before the Leg-In must be found. |
-| Leg-In Body vs Base | **LEG-IN** | `1.50` | Controls how distinct the Leg-In body must be from the largest base body. |
-| Leg-In Body/Range Minimum | **LEG-IN** | `0.50` | Controls how directional the Leg-In candle must look. |
+| Min. Leg-Out Body Size (% of Range) | **LEG-OUT + BASE** | `40%` | Directly qualifies the departure. Indirectly prevents an Extended Range Candle from being used as a base candle. It does not qualify the Leg-In. |
+| Max. Base Body Size (% of Leg-Out) | **BASE** | `70%` | Controls how small each base body must be compared with the Leg-Out body. |
+| Min. Leg-Out Range (ATR ×) | **LEG-OUT + BASE** | `0.70` | Directly checks whether the departure is large enough. Indirectly affects whether a candle can remain part of the base. It does not qualify the Leg-In. |
+| Avg. Price Range Period (Bars) | **LEG-OUT + BASE** | `50` | Sets how many bars are used for the recent-movement reference behind Extended Range Candle classification. |
+| Max. Base Candles | **BASE** | `4` | Controls how long the pause may last. With the current behavior, the default accepts up to three actual base candles before the Leg-In must be found. |
+| Min. Leg-In Body Size (× Largest Base Body) | **LEG-IN** | `1.50` | Controls how distinct the Leg-In body must be from the largest base body. |
+| Min. Leg-In Body Size (% of Range) | **LEG-IN** | `50%` | Controls how directional the Leg-In candle must look. |

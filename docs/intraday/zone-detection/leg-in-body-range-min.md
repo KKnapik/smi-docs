@@ -1,6 +1,6 @@
-# Leg-In Body/Range Minimum
+# Min. Leg-In Body Size (% of Range)
 
-**Default:** `0.50`
+**Default:** `50%`
 
 !!! info "Applies to: LEG-IN only"
     **LEG-IN — direct effect:** this setting decides whether the approach candle is directional enough.
@@ -16,7 +16,7 @@
 
 ## What this setting controls
 
-It controls how directional the **Leg-In** candle must look. At the default value of `0.50`, at least half of the candle's complete range must be body.
+It controls how directional the **Leg-In** candle must look. At the default value of `50`, at least half of the candle's complete range must be body.
 
 ## If you lower the value
 
@@ -32,10 +32,10 @@ It controls how directional the **Leg-In** candle must look. At the default valu
 
 ## Important distinction
 
-This setting evaluates the shape of the Leg-In candle. **Leg-In Body vs Base** separately checks whether the Leg-In is large enough compared with the base. The approach must pass both checks.
+This setting evaluates the shape of the Leg-In candle. **Min. Leg-In Body Size (× Largest Base Body)** separately checks whether the Leg-In is large enough compared with the base. The approach must pass both checks.
 
 ## Visual for this setting
 
-![Leg-In Body to Range Minimum: accepted and rejected Leg-In shape](../../assets/diagrams/leg-in-body-range-min.svg)
+![Minimum Leg-In Body Size as Percentage of Range: accepted and rejected Leg-In shape](../../assets/diagrams/leg-in-body-range-min.svg)
 
 Both examples have the same complete range. Only the **Leg-In** body proportion changes; the Base and Leg-Out are not checked by this parameter.

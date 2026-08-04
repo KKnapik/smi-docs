@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
-  <title id="t">ATR lookback response comparison</title>
-  <desc id="d">The same volatility change is evaluated with a lower and higher ATR lookback to show faster versus smoother response.</desc>
+  <title id="t">Average Price Range Period response comparison</title>
+  <desc id="d">The same volatility change is evaluated with a shorter and longer Average Price Range Period to show faster versus smoother ATR response.</desc>
   <style>
     .bg{fill:#0f172a}.panel{fill:#111c31;stroke:#334155;stroke-width:2}.h{fill:#f8fafc;font:700 30px system-ui}.sub{fill:#94a3b8;font:18px system-ui}.pt{fill:#f8fafc;font:700 23px system-ui}.txt{fill:#cbd5e1;font:16px system-ui}.lbl{fill:#e2e8f0;font:700 16px system-ui}.fast{fill:#fbbf24;font:700 19px system-ui}.slow{fill:#60a5fa;font:700 19px system-ui}.bar{fill:#475569}.hot{fill:#14b8a6}.linefast{fill:none;stroke:#fbbf24;stroke-width:5}.lineslow{fill:none;stroke:#60a5fa;stroke-width:5}.req{fill:#382e18;stroke:#f59e0b;stroke-width:1.5}.chip{fill:#17233a;stroke:#475569;stroke-width:1.5}.direct{fill:#10352f;stroke:#14b8a6}.indirect{fill:#382e18;stroke:#f59e0b}.note{fill:#172033;stroke:#475569;stroke-width:1.5}.grid{stroke:#243247}
   </style>
   <rect class="bg" width="1200" height="680" rx="20"/>
-  <text class="h" x="48" y="50">ATR Lookback Period — what changes?</text>
+  <text class="h" x="48" y="50">Avg. Price Range Period (Bars) — what changes?</text>
   <text class="sub" x="48" y="80">The same recent volatility change produces a faster or smoother ATR reference</text>
   <rect class="chip direct" x="48" y="104" width="340" height="66" rx="12"/><text class="lbl" x="68" y="132">LEG-OUT — DIRECT EFFECT</text><text class="txt" x="68" y="155">Changes the required ERC size.</text>
   <rect class="chip indirect" x="430" y="104" width="340" height="66" rx="12"/><text class="lbl" x="450" y="132">BASE — INDIRECT EFFECT</text><text class="txt" x="450" y="155">Changes ERC exclusion.</text>
   <rect class="chip" x="812" y="104" width="340" height="66" rx="12"/><text class="lbl" x="832" y="132">LEG-IN — NOT CHECKED</text><text class="txt" x="832" y="155">Does not use ATR.</text>
   <rect class="panel" x="48" y="194" width="540" height="378" rx="16"/><rect class="panel" x="612" y="194" width="540" height="378" rx="16"/>
-  <text class="pt" x="76" y="232">Lower lookback</text><text class="fast" x="76" y="260">REACTS FASTER</text><text class="pt" x="640" y="232">Higher lookback</text><text class="slow" x="640" y="260">SMOOTHER REFERENCE</text>
+  <text class="pt" x="76" y="232">Shorter period</text><text class="fast" x="76" y="260">REACTS FASTER</text><text class="pt" x="640" y="232">Longer period</text><text class="slow" x="640" y="260">SMOOTHER REFERENCE</text>
   <line class="grid" x1="76" y1="328" x2="560" y2="328"/><line class="grid" x1="76" y1="448" x2="560" y2="448"/><line class="grid" x1="640" y1="328" x2="1124" y2="328"/><line class="grid" x1="640" y1="448" x2="1124" y2="448"/>
   <g><rect class="bar" x="94" y="416" width="24" height="32"/><rect class="bar" x="132" y="410" width="24" height="38"/><rect class="bar" x="170" y="414" width="24" height="34"/><rect class="bar" x="208" y="408" width="24" height="40"/><rect class="bar" x="246" y="412" width="24" height="36"/><rect class="hot" x="284" y="342" width="24" height="106"/><rect class="hot" x="322" y="326" width="24" height="122"/><rect class="hot" x="360" y="350" width="24" height="98"/><rect class="hot" x="398" y="336" width="24" height="112"/><rect class="hot" x="436" y="344" width="24" height="104"/></g>
   <path class="linefast" d="M94 400 C190 402 230 400 270 397 C315 382 344 350 390 340 C430 334 470 338 530 336"/><text class="fast" x="392" y="316">ATR rises quickly</text>

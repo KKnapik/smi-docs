@@ -2,10 +2,10 @@
   <title id="t">ERC range compared with ATR</title>
   <desc id="d">Two Leg-Out candles are compared with a minimum range equal to 70 percent of ATR.</desc>
   <style>
-    .bg{fill:#0f172a}.panel{fill:#111c31;stroke:#334155;stroke-width:2}.h{fill:#f8fafc;font:700 30px system-ui}.sub{fill:#94a3b8;font:18px system-ui}.pt{fill:#f8fafc;font:700 23px system-ui}.txt{fill:#cbd5e1;font:16px system-ui}.lbl{fill:#e2e8f0;font:700 17px system-ui}.pass{fill:#22c55e;font:700 20px system-ui}.fail{fill:#fb7185;font:700 20px system-ui}.up{fill:#14b8a6;stroke:#2dd4bf;stroke-width:2}.bad{fill:#7f1d1d;stroke:#fb7185;stroke-width:2}.wickup{stroke:#2dd4bf;stroke-width:4}.wickbad{stroke:#fb7185;stroke-width:4}.atr{stroke:#60a5fa;stroke-width:4}.req{stroke:#fbbf24;stroke-width:3;stroke-dasharray:8 7}.blue{fill:#93c5fd;font:700 16px system-ui}.gold{fill:#fde68a;font:700 16px system-ui}.chip{fill:#17233a;stroke:#475569;stroke-width:1.5}.direct{fill:#10352f;stroke:#14b8a6}.indirect{fill:#382e18;stroke:#f59e0b}.note{fill:#172033;stroke:#475569;stroke-width:1.5}
+    .bg{fill:#0f172a}.panel{fill:#111c31;stroke:#334155;stroke-width:2}.h{fill:#f8fafc;font:700 30px system-ui}.sub{fill:#94a3b8;font:18px system-ui}.pt{fill:#f8fafc;font:700 23px system-ui}.txt{fill:#cbd5e1;font:16px system-ui}.lbl{fill:#e2e8f0;font:700 17px system-ui}.pass{fill:#22c55e;font:700 20px system-ui}.fail{fill:#fb7185;font:700 20px system-ui}.up{fill:#14b8a6;stroke:#2dd4bf;stroke-width:2}.wickup{stroke:#2dd4bf;stroke-width:4}.atr{stroke:#60a5fa;stroke-width:4}.req{stroke:#fbbf24;stroke-width:3;stroke-dasharray:8 7}.blue{fill:#93c5fd;font:700 16px system-ui}.gold{fill:#fde68a;font:700 16px system-ui}.chip{fill:#17233a;stroke:#475569;stroke-width:1.5}.direct{fill:#10352f;stroke:#14b8a6}.indirect{fill:#382e18;stroke:#f59e0b}.note{fill:#172033;stroke:#475569;stroke-width:1.5}
   </style>
   <rect class="bg" width="1200" height="680" rx="20"/>
-  <text class="h" x="48" y="50">ERC Range ATR Multiplier — what is being checked?</text>
+  <text class="h" x="48" y="50">Min. Leg-Out Range (ATR ×)</text>
   <text class="sub" x="48" y="80">Example threshold: Leg-Out complete range ≥ ATR × 0.70</text>
   <rect class="chip" x="48" y="104" width="340" height="66" rx="12"/><text class="lbl" x="68" y="132">LEG-IN — NOT CHECKED</text><text class="txt" x="68" y="155">Does not need ERC strength.</text>
   <rect class="chip indirect" x="430" y="104" width="340" height="66" rx="12"/><text class="lbl" x="450" y="132">BASE — INDIRECT EFFECT</text><text class="txt" x="450" y="155">A confirmed ERC is excluded.</text>
@@ -18,6 +18,6 @@
   <line class="wickup" x1="388" y1="315" x2="388" y2="485"/><rect class="up" x="356" y="344" width="64" height="108" rx="3"/><text class="lbl" x="351" y="530">LEG-OUT</text>
   <line class="atr" x1="716" y1="300" x2="716" y2="500"/><line class="atr" x1="704" y1="300" x2="728" y2="300"/><line class="atr" x1="704" y1="500" x2="728" y2="500"/><text class="blue" x="672" y="522">1.00 ATR</text>
   <line class="req" x1="810" y1="330" x2="1080" y2="330"/><line class="req" x1="810" y1="470" x2="1080" y2="470"/><text class="gold" x="814" y="320">REQUIRED RANGE = 0.70 ATR</text>
-  <line class="wickbad" x1="952" y1="345" x2="952" y2="455"/><rect class="bad" x="920" y="365" width="64" height="70" rx="3"/><text class="lbl" x="915" y="530">LEG-OUT</text>
-  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/><text class="txt" x="72" y="628">This is the size test. ERC Body % Threshold separately checks the candle's directional body shape.</text>
+  <line class="wickup" x1="952" y1="345" x2="952" y2="455"/><rect class="up" x="920" y="365" width="64" height="70" rx="3"/><text class="lbl" x="915" y="530">LEG-OUT</text>
+  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/><text class="txt" x="72" y="628">Both examples preserve the same body/range shape. Only the complete Leg-Out range changes relative to ATR.</text>
 </svg>

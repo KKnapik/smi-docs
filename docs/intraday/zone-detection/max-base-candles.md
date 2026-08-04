@@ -1,4 +1,4 @@
-# Max Base Candles
+# Max. Base Candles
 
 **Default:** `4`
 
@@ -21,7 +21,7 @@
 It controls the amount of space available for recognizing the base and the preceding Leg-In. The current detector needs one position for the Leg-In. As a result, the default input value of `4` accepts bases containing one, two, or three actual base candles.
 
 !!! important "Displayed value versus current behavior"
-    `Max Base Candles = 4` currently means a maximum of three base candles on the chart. A four-candle base is not completed because the detector still needs to find the Leg-In immediately before it.
+    `Max. Base Candles = 4` currently means a maximum of three base candles on the chart. A four-candle base is not completed because the detector still needs to find the Leg-In immediately before it.
 
 ## If you lower the value
 
