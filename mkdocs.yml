@@ -1,0 +1,54 @@
+site_name: CampusTrading Documentation
+site_description: Technical documentation for CampusTrading Supply & Demand indicators.
+site_url: https://kknapik.github.io/campustrading-docs/
+repo_url: https://github.com/KKnapik/campustrading-docs
+repo_name: KKnapik/campustrading-docs
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: green
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Intraday Indicator:
+      - Overview: intraday/index.md
+      - Zone Detection:
+          - Overview: intraday/zone-detection/index.md
+          - ERC Body % Threshold: intraday/zone-detection/erc-body-threshold.md
+          - Base vs Leg-Out Ratio: intraday/zone-detection/base-vs-legout-ratio.md
+          - ERC Range ATR Multiplier: intraday/zone-detection/erc-range-atr-multiplier.md
+          - ATR Lookback Period: intraday/zone-detection/atr-lookback-period.md
+          - Max Base Candles: intraday/zone-detection/max-base-candles.md
+          - Leg-In Body vs Base: intraday/zone-detection/leg-in-body-vs-base.md
+          - Leg-In Body/Range Minimum: intraday/zone-detection/leg-in-body-range-min.md
+          - Flip Clean-Check Skip Bars: intraday/zone-detection/flip-clean-check-skip-bars.md
+          - HTF Detection: intraday/zone-detection/htf-detection.md
+      - Location Curve: intraday/location-curve.md
+  - Swing Indicator: swing/index.md
+  - Visual Guidelines: visual-guidelines.md
+  - Glossary: glossary.md
+
