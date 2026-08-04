@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title description">
+  <title id="title">ERC Body Percentage Threshold comparison</title>
+  <desc id="description">Two simplified Rally-Base-Rally formations compare a Leg-Out candle that passes a 40 percent body threshold with one that fails it.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .panel { fill: #111c31; stroke: #334155; stroke-width: 2; }
+      .grid { stroke: #243247; stroke-width: 1; }
+      .muted { fill: #94a3b8; font: 18px system-ui, -apple-system, sans-serif; }
+      .small { fill: #cbd5e1; font: 16px system-ui, -apple-system, sans-serif; }
+      .label { fill: #e2e8f0; font: 600 18px system-ui, -apple-system, sans-serif; }
+      .heading { fill: #f8fafc; font: 700 30px system-ui, -apple-system, sans-serif; }
+      .panel-title { fill: #f8fafc; font: 700 23px system-ui, -apple-system, sans-serif; }
+      .pass { fill: #22c55e; font: 700 18px system-ui, -apple-system, sans-serif; }
+      .fail { fill: #fb7185; font: 700 18px system-ui, -apple-system, sans-serif; }
+      .up { fill: #14b8a6; stroke: #2dd4bf; stroke-width: 2; }
+      .down { fill: #f43f5e; stroke: #fb7185; stroke-width: 2; }
+      .wick-up { stroke: #2dd4bf; stroke-width: 4; }
+      .wick-down { stroke: #fb7185; stroke-width: 4; }
+      .base { fill: #64748b; stroke: #94a3b8; stroke-width: 2; }
+      .wick-base { stroke: #94a3b8; stroke-width: 3; }
+      .measure { stroke: #fbbf24; stroke-width: 3; fill: none; }
+      .measure-text { fill: #fde68a; font: 700 16px system-ui, -apple-system, sans-serif; }
+      .chip { fill: #17233a; stroke: #475569; stroke-width: 1.5; }
+      .chip-direct { fill: #10352f; stroke: #14b8a6; stroke-width: 1.5; }
+      .chip-indirect { fill: #382e18; stroke: #f59e0b; stroke-width: 1.5; }
+      .chip-title { fill: #f8fafc; font: 700 16px system-ui, -apple-system, sans-serif; }
+      .chip-copy { fill: #cbd5e1; font: 14px system-ui, -apple-system, sans-serif; }
+      .note { fill: #172033; stroke: #475569; stroke-width: 1.5; }
+      .note-text { fill: #cbd5e1; font: 16px system-ui, -apple-system, sans-serif; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="680" rx="20"/>
+  <text class="heading" x="48" y="50">ERC Body % Threshold — what is being checked?</text>
+  <text class="muted" x="48" y="80">Example threshold: 40% of the candle's complete High-to-Low range</text>
+
+  <rect class="chip" x="48" y="104" width="330" height="66" rx="12"/>
+  <text class="chip-title" x="68" y="130">LEG-IN — NOT CHECKED</text>
+  <text class="chip-copy" x="68" y="153">Uses its own Leg-In settings.</text>
+
+  <rect class="chip-indirect" x="435" y="104" width="330" height="66" rx="12"/>
+  <text class="chip-title" x="455" y="130">BASE — INDIRECT EFFECT</text>
+  <text class="chip-copy" x="455" y="153">A confirmed ERC cannot be a Base candle.</text>
+
+  <rect class="chip-direct" x="822" y="104" width="330" height="66" rx="12"/>
+  <text class="chip-title" x="842" y="130">LEG-OUT — DIRECT CHECK</text>
+  <text class="chip-copy" x="842" y="153">Body ÷ complete range is tested here.</text>
+
+  <rect class="panel" x="48" y="194" width="540" height="378" rx="16"/>
+  <rect class="panel" x="612" y="194" width="540" height="378" rx="16"/>
+
+  <text class="panel-title" x="76" y="230">PASS — directional Leg-Out</text>
+  <text class="pass" x="76" y="258">60% ≥ 40%</text>
+  <text class="panel-title" x="640" y="230">FAIL — wick-heavy Leg-Out</text>
+  <text class="fail" x="640" y="258">25% &lt; 40%</text>
+
+  <line class="grid" x1="76" y1="300" x2="560" y2="300"/>
+  <line class="grid" x1="76" y1="372" x2="560" y2="372"/>
+  <line class="grid" x1="76" y1="444" x2="560" y2="444"/>
+  <line class="grid" x1="640" y1="300" x2="1124" y2="300"/>
+  <line class="grid" x1="640" y1="372" x2="1124" y2="372"/>
+  <line class="grid" x1="640" y1="444" x2="1124" y2="444"/>
+
+  <!-- Passing formation: Leg-In -->
+  <line class="wick-up" x1="126" y1="390" x2="126" y2="490"/>
+  <rect class="up" x="111" y="416" width="30" height="52" rx="2"/>
+  <!-- Passing formation: Base, 3 candles -->
+  <line class="wick-base" x1="190" y1="398" x2="190" y2="462"/>
+  <rect class="base" x="178" y="420" width="24" height="20" rx="2"/>
+  <line class="wick-base" x1="234" y1="404" x2="234" y2="468"/>
+  <rect class="base" x="222" y="428" width="24" height="18" rx="2"/>
+  <line class="wick-base" x1="278" y1="400" x2="278" y2="460"/>
+  <rect class="base" x="266" y="418" width="24" height="22" rx="2"/>
+  <!-- Passing formation: Leg-Out, 60% body -->
+  <line class="wick-up" x1="374" y1="286" x2="374" y2="486"/>
+  <rect class="up" x="350" y="326" width="48" height="120" rx="3"/>
+  <line class="measure" x1="434" y1="286" x2="434" y2="486" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="measure-text" x="446" y="378">RANGE</text>
+  <line class="measure" x1="522" y1="326" x2="522" y2="446" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="measure-text" x="476" y="392">BODY</text>
+
+  <!-- Failing formation: Leg-In -->
+  <line class="wick-up" x1="690" y1="390" x2="690" y2="490"/>
+  <rect class="up" x="675" y="416" width="30" height="52" rx="2"/>
+  <!-- Failing formation: Base, 3 candles -->
+  <line class="wick-base" x1="754" y1="398" x2="754" y2="462"/>
+  <rect class="base" x="742" y="420" width="24" height="20" rx="2"/>
+  <line class="wick-base" x1="798" y1="404" x2="798" y2="468"/>
+  <rect class="base" x="786" y="428" width="24" height="18" rx="2"/>
+  <line class="wick-base" x1="842" y1="400" x2="842" y2="460"/>
+  <rect class="base" x="830" y="418" width="24" height="22" rx="2"/>
+  <!-- Failing formation: Leg-Out, 25% body -->
+  <line class="wick-up" x1="938" y1="286" x2="938" y2="486"/>
+  <rect class="up" x="914" y="386" width="48" height="50" rx="3"/>
+  <line class="measure" x1="998" y1="286" x2="998" y2="486" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="measure-text" x="1010" y="378">RANGE</text>
+  <line class="measure" x1="1086" y1="386" x2="1086" y2="436" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="measure-text" x="1040" y="418">BODY</text>
+
+  <text class="label" x="99" y="530">LEG-IN</text>
+  <text class="label" x="209" y="530">BASE</text>
+  <text class="label" x="338" y="530">LEG-OUT</text>
+  <text class="label" x="663" y="530">LEG-IN</text>
+  <text class="label" x="773" y="530">BASE</text>
+  <text class="label" x="902" y="530">LEG-OUT</text>
+
+  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/>
+  <text class="note-text" x="72" y="619">Important: passing this body test alone does not confirm an ERC.</text>
+  <text class="note-text" x="72" y="642">The candle must also pass ERC Range ATR Multiplier — the separate size-versus-volatility check.</text>
+</svg>

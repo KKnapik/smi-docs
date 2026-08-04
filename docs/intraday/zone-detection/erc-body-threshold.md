@@ -44,4 +44,6 @@ This setting evaluates the shape of the candle, not whether the candle is large 
 
 ## Visual for this setting
 
-The same candle will be shown twice. Its body will pass a 40% requirement but fail a stricter 60% requirement, making the effect of the setting visible without changing the market example.
+![ERC Body Percentage Threshold: Leg-Out pass and fail comparison](../../assets/diagrams/erc-body-threshold.svg)
+
+The highlighted **Leg-Out** is the candle directly checked by this parameter. The **Base** is affected only indirectly: if a candle passes both ERC tests, it cannot remain part of the Base. The Leg-In is not tested by this setting.
