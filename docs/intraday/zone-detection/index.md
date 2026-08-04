@@ -52,4 +52,3 @@ A strong bullish or bearish Leg-Out confirms that price left the base with enoug
 | Max Base Candles | **BASE** | `4` | Controls how long the pause may last. With the current behavior, the default accepts up to three actual base candles before the Leg-In must be found. |
 | Leg-In Body vs Base | **LEG-IN** | `1.50` | Controls how distinct the Leg-In body must be from the largest base body. |
 | Leg-In Body/Range Minimum | **LEG-IN** | `0.50` | Controls how directional the Leg-In candle must look. |
-| Flip Clean-Check Skip Bars | **FLIP ZONE** | `0` | Controls the cleanliness check used only for Flip Zone classification. |

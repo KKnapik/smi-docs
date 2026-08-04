@@ -7,7 +7,6 @@ Every page and graphic must identify the affected formation component before exp
 - **LEG-OUT**
 - **BASE**
 - **LEG-IN**
-- **FLIP ZONE**
 - **DISPLAY / CONTEXT**
 
 When a parameter has both a direct and indirect effect, both must be stated explicitly. For example, ERC settings directly qualify the Leg-Out and indirectly determine whether a candle is excluded from the Base.
