@@ -2,7 +2,7 @@
 
 The SMI Intraday indicator looks for price areas where a clear departure suggests that buying or selling pressure was stronger than the opposing side. It then evaluates whether those areas remain relevant when price returns.
 
-**Current chart name:** `v2.0.0 SMI - Intraday`
+**Current chart name:** `v2.0.0 SMI — Smart Money Indicator — Intraday`
 
 ## Main areas
 
