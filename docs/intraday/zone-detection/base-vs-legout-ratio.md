@@ -2,6 +2,13 @@
 
 **Default:** `0.70`
 
+!!! info "Applies to: BASE"
+    **BASE — direct effect:** every base candle is checked against this setting.
+
+    **LEG-OUT — reference only:** the Leg-Out body provides the size used for comparison, but this setting does not qualify the Leg-Out itself.
+
+    **LEG-IN — no effect:** the Leg-In uses separate settings.
+
 ## Terms used on this page
 
 - **Base** — the compact pause before price departs.
@@ -10,7 +17,7 @@
 
 ## What this setting controls
 
-It controls how small the candles inside the base must be when compared with the departure candle. At the default value of `0.70`, a base candle may have a body up to 70% of the Leg-Out body.
+It controls how small each candle inside the **Base** must be when compared with the **Leg-Out** candle. At the default value of `0.70`, a base candle may have a body up to 70% of the Leg-Out body.
 
 The purpose is to preserve a visible contrast between a quiet pause and a stronger departure.
 

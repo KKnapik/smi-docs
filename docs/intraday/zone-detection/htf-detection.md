@@ -1,10 +1,13 @@
 # Higher-Timeframe Detection
 
+!!! info "Applies to: HTF LEG-OUT, BASE, and LEG-IN"
+    These are higher-timeframe versions of the component settings. Each HTF input applies only to the formation component named in the table below. They do not change the primary Intraday formation directly.
+
 ## Terms used on this page
 
 - **HTF — Higher Timeframe** — a broader chart interval used to provide market context.
 - **Coverage** — confirmation that an Intraday zone overlaps a relevant higher-timeframe zone.
-- **ERC** — the indicator's name for a decisive expansion candle.
+- **ERC — Extended Range Candle** — a decisive expansion candle with a meaningful body and enough size compared with recent market movement.
 - **Base** — the compact pause before price departs.
 - **Leg-In** — the approach into the base.
 - **Leg-Out** — the departure away from the base.
@@ -17,14 +20,14 @@ The default HTF settings are deliberately more permissive because higher-timefra
 
 ## Current defaults
 
-| Parameter | Default | Trader-facing meaning |
-| --- | ---: | --- |
-| HTF ERC Body % | `0.30` | The departure body must cover at least 30% of the full HTF candle. Raising it requires cleaner departures. |
-| HTF Base/Leg-Out Ratio | `0.85` | Base bodies may be relatively large compared with the HTF departure. Lowering it requires tighter bases. |
-| HTF ERC ATR Multiplier | `0.50` | The departure must reach at least half of the recent HTF volatility reference. Raising it requires a larger expansion. |
-| HTF Max Base Candles | `6` | Under the current behavior, this leaves room for up to five actual HTF base candles and the preceding Leg-In. Lowering it restricts detection to shorter pauses. |
-| HTF Leg-In Body vs Base | `1.30` | The approach must be at least 1.3 times the largest base body. Raising it requires a more distinct approach. |
-| HTF Leg-In Body/Range Minimum | `0.40` | At least 40% of the approach candle must be body. Raising it filters out more wick-heavy approaches. |
+| Parameter | Applies to | Default | Trader-facing meaning |
+| --- | --- | ---: | --- |
+| HTF ERC Body % | **HTF LEG-OUT + BASE** | `0.30` | Directly checks the departure body. Indirectly prevents an HTF Extended Range Candle from being used as a base candle. It does not qualify the Leg-In. |
+| HTF Base/Leg-Out Ratio | **HTF BASE** | `0.85` | Checks base bodies against the HTF Leg-Out body. It does not qualify the Leg-In. |
+| HTF ERC ATR Multiplier | **HTF LEG-OUT + BASE** | `0.50` | Directly checks departure size and indirectly affects base eligibility. It does not qualify the Leg-In. |
+| HTF Max Base Candles | **HTF BASE** | `6` | Leaves room for up to five actual HTF base candles before the Leg-In must be found. |
+| HTF Leg-In Body vs Base | **HTF LEG-IN** | `1.30` | Checks whether the HTF Leg-In is large enough compared with the biggest base body. |
+| HTF Leg-In Body/Range Minimum | **HTF LEG-IN** | `0.40` | Checks whether the HTF Leg-In body is large enough relative to its own candle range. |
 
 ## What traders will notice
 

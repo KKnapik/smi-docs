@@ -2,6 +2,9 @@
 
 **Default:** `0`
 
+!!! info "Applies to: FLIP ZONE classification only"
+    This setting does not qualify the **LEG-IN**, **BASE**, or **LEG-OUT** of an ordinary Supply or Demand formation. It is used only after zones already exist and the indicator evaluates a possible Flip Zone.
+
 ## Terms used on this page
 
 - **Broken zone** — a former Supply or Demand zone that price has moved through.

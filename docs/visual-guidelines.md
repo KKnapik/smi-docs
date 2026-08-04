@@ -2,6 +2,16 @@
 
 Every parameter graphic should answer one trader question: **what changes on the chart when I change this setting?** All unrelated conditions should remain constant.
 
+Every page and graphic must identify the affected formation component before explaining the setting:
+
+- **LEG-OUT**
+- **BASE**
+- **LEG-IN**
+- **FLIP ZONE**
+- **DISPLAY / CONTEXT**
+
+When a parameter has both a direct and indirect effect, both must be stated explicitly. For example, ERC settings directly qualify the Leg-Out and indirectly determine whether a candle is excluded from the Base.
+
 ## Standard format
 
 - 16:9 PNG output.

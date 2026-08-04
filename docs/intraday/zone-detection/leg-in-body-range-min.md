@@ -2,6 +2,11 @@
 
 **Default:** `0.50`
 
+!!! info "Applies to: LEG-IN only"
+    **LEG-IN — direct effect:** this setting decides whether the approach candle is directional enough.
+
+    **BASE and LEG-OUT — no effect:** neither component is qualified by this setting.
+
 ## Terms used on this page
 
 - **Leg-In** — the move that approaches the future zone area.
@@ -11,7 +16,7 @@
 
 ## What this setting controls
 
-It controls how directional the Leg-In candle must look. At the default value of `0.50`, at least half of the candle's complete range must be body.
+It controls how directional the **Leg-In** candle must look. At the default value of `0.50`, at least half of the candle's complete range must be body.
 
 ## If you lower the value
 

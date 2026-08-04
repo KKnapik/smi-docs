@@ -2,6 +2,13 @@
 
 **Default:** `1.50`
 
+!!! info "Applies to: LEG-IN"
+    **LEG-IN — direct effect:** this setting decides whether the approach body is large enough.
+
+    **BASE — reference only:** the largest base body provides the comparison size.
+
+    **LEG-OUT — no effect:** this setting does not qualify the departure.
+
 ## Terms used on this page
 
 - **Leg-In** — the move that approaches the future zone area.
@@ -10,7 +17,7 @@
 
 ## What this setting controls
 
-It controls how clearly the approach candle must stand out from the candles inside the base. At the default value of `1.50`, the Leg-In body must be at least one and a half times the size of the largest body in the base.
+It controls how clearly the **Leg-In** candle must stand out from the candles inside the **Base**. At the default value of `1.50`, the Leg-In body must be at least one and a half times the size of the largest body in the base.
 
 ## If you lower the value
 

@@ -1,5 +1,8 @@
 # Location Curve
 
+!!! info "Applies to: DISPLAY AND MARKET CONTEXT only"
+    These settings do not qualify the **LEG-IN**, **BASE**, or **LEG-OUT**, and they do not create or resize zones. They only control the Location Curve drawn from zones that already exist.
+
 ## Terms used on this page
 
 - **Supply zone** — an area above price where selling pressure previously caused a strong departure.

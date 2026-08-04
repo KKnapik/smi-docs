@@ -2,9 +2,17 @@
 
 **Default:** `0.40`
 
+!!! info "Applies to: LEG-OUT + BASE"
+    **LEG-OUT — direct effect:** this setting helps decide whether the departure candle is a valid Extended Range Candle.
+
+    **BASE — indirect effect:** a candle classified as an Extended Range Candle cannot be used as a base candle.
+
+    **LEG-IN — no effect:** the Leg-In is qualified by its own two Leg-In settings.
+
 ## Terms used on this page
 
-- **ERC** — the indicator's name for a decisive expansion candle.
+- **ERC — Extended Range Candle** — a decisive expansion candle with a meaningful body and enough size compared with recent market movement.
+- **ATR — Average True Range** — a measure of how much price has typically moved over recent candles.
 - **Body** — the solid part between the open and close.
 - **Wicks** — the thin parts above and below the body.
 - **Leg-Out** — the departure candle that confirms price has left the base.
@@ -12,7 +20,7 @@
 
 ## What this setting controls
 
-It controls how much of a potential expansion candle must be made up of body rather than wicks. At the default value of `0.40`, the body must cover at least 40% of the candle's complete high-to-low range.
+It controls how much of a potential **Leg-Out** candle must be made up of body rather than wicks. At the default value of `0.40`, the body must cover at least 40% of the candle's complete high-to-low range.
 
 A candle with a large body and relatively small wicks shows clearer directional commitment. A candle dominated by wicks shows more hesitation.
 

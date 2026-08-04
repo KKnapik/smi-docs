@@ -2,16 +2,23 @@
 
 **Default:** `0.70`
 
+!!! info "Applies to: LEG-OUT + BASE"
+    **LEG-OUT — direct effect:** this setting helps decide whether the departure is large enough to be an Extended Range Candle.
+
+    **BASE — indirect effect:** a candle that becomes an Extended Range Candle cannot be accepted as part of the base.
+
+    **LEG-IN — no effect:** the Leg-In does not need to pass the Extended Range Candle test.
+
 ## Terms used on this page
 
-- **ERC** — the indicator's name for a decisive expansion candle.
+- **ERC — Extended Range Candle** — a decisive expansion candle with a meaningful body and enough size compared with recent market movement.
 - **Candle range** — the complete distance from the candle's low to its high.
 - **ATR** — a measure of how much price has typically moved over recent candles.
 - **Leg-Out** — the departure candle that confirms price has left the base.
 
 ## What this setting controls
 
-It controls how large a potential departure must be compared with recent market movement. At the default value of `0.70`, the complete candle must cover at least 70% of the current ATR reference.
+It controls how large a potential **Leg-Out** must be compared with recent market movement. At the default value of `0.70`, the complete candle must cover at least 70% of the current ATR reference.
 
 This prevents an ordinary small candle from being treated as a meaningful departure simply because its body looks clean.
 

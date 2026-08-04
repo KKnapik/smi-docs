@@ -2,6 +2,13 @@
 
 **Default:** `4`
 
+!!! info "Applies to: BASE"
+    **BASE — direct effect:** this setting controls how much room is available for consecutive base candles.
+
+    **LEG-IN — position effect:** the detector must still find the Leg-In immediately before the base, which is why the current default value of `4` results in at most three visible base candles.
+
+    **LEG-OUT — no strength effect:** this setting does not make the departure easier or harder to qualify.
+
 ## Terms used on this page
 
 - **Base** — the compact pause between the approach and departure.

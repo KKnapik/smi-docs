@@ -7,12 +7,14 @@ This section explains the detection settings as they appear to a trader on the c
 - **Candle body** — the distance between the open and close.
 - **Wicks** — the parts of the candle above and below its body.
 - **Candle range** — the complete distance from the candle's low to its high.
-- **ERC** — the indicator's name for a decisive expansion candle. It must have a meaningful body and be large enough compared with recent market movement.
+- **ERC — Extended Range Candle** — a decisive expansion candle. It must have a meaningful body and be large enough compared with recent market movement.
+- **ATR — Average True Range** — a measure of how much price has typically moved over recent candles.
 - **Leg-In** — the move that approaches the area where price pauses.
 - **Base** — the short pause or balance area between the approach and departure.
 - **Leg-Out** — the strong move away from the base. A zone is not confirmed until this departure appears.
 - **Demand zone** — an area created by a strong bullish departure.
 - **Supply zone** — an area created by a strong bearish departure.
+- **Flip Zone** — a zone created when price breaks an opposite zone and begins using that former area from the other side.
 - **HTF** — a higher timeframe used to provide broader market context.
 
 ## How a zone forms on the chart
@@ -41,13 +43,13 @@ A strong bullish or bearish Leg-Out confirms that price left the base with enoug
 
 ## Current Intraday defaults
 
-| Parameter | Default | What the trader controls |
-| --- | ---: | --- |
-| ERC Body % Threshold | `0.40` | How much of the departure candle should be solid body rather than wicks. |
-| Base vs Leg-Out Ratio | `0.70` | How small base candles must be compared with the departure. |
-| ERC Range ATR Multiplier | `0.70` | How large the departure must be compared with recent movement. |
-| ATR Lookback Period | `50` | How much price history is used to judge recent movement. |
-| Max Base Candles | `4` | How long the pause may last. With the current detection behavior, the default accepts up to three actual base candles. |
-| Leg-In Body vs Base | `1.50` | How distinct the approach must be from the base. |
-| Leg-In Body/Range Minimum | `0.50` | How directional the approach candle must look. |
-| Flip Clean-Check Skip Bars | `0` | How the indicator checks clean price action when classifying a Flip Zone. |
+| Parameter | Applies to | Default | What the trader controls |
+| --- | --- | ---: | --- |
+| ERC Body % Threshold | **LEG-OUT + BASE** | `0.40` | Directly qualifies the departure. Indirectly prevents an Extended Range Candle from being used as a base candle. It does not qualify the Leg-In. |
+| Base vs Leg-Out Ratio | **BASE** | `0.70` | Controls how small each base body must be compared with the Leg-Out body. |
+| ERC Range ATR Multiplier | **LEG-OUT + BASE** | `0.70` | Directly checks whether the departure is large enough. Indirectly affects whether a candle can remain part of the base. It does not qualify the Leg-In. |
+| ATR Lookback Period | **LEG-OUT + BASE** | `50` | Sets the recent-volatility reference used for Extended Range Candle classification. |
+| Max Base Candles | **BASE** | `4` | Controls how long the pause may last. With the current behavior, the default accepts up to three actual base candles before the Leg-In must be found. |
+| Leg-In Body vs Base | **LEG-IN** | `1.50` | Controls how distinct the Leg-In body must be from the largest base body. |
+| Leg-In Body/Range Minimum | **LEG-IN** | `0.50` | Controls how directional the Leg-In candle must look. |
+| Flip Clean-Check Skip Bars | **FLIP ZONE** | `0` | Controls the cleanliness check used only for Flip Zone classification. |
