@@ -1,6 +1,6 @@
-# CampusTrading Documentation
+# SMI — Smart Money Indicator Documentation
 
-Source repository for the CampusTrading Supply & Demand documentation.
+Source repository for the Smart Money Indicator Supply & Demand documentation.
 
 The documentation is written in Markdown, built with Material for MkDocs, and published through GitHub Pages.
 
@@ -20,4 +20,3 @@ Open `http://127.0.0.1:8000` in a browser.
 ```bash
 mkdocs build --strict
 ```
-

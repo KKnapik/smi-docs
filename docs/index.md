@@ -1,6 +1,6 @@
-# CampusTrading Supply & Demand
+# SMI — Smart Money Indicator
 
-This documentation explains how the CampusTrading Supply & Demand indicators identify, qualify, display, and manage price zones.
+This documentation explains how the Smart Money Indicator identifies, qualifies, displays, and manages Supply and Demand zones.
 
 The first documentation track covers the **Intraday indicator**. Each configurable detection parameter will receive:
 
@@ -30,4 +30,3 @@ The Swing section will document swing-level Supply & Demand analysis and lower-t
 
 !!! warning "Educational material"
     This documentation describes indicator behavior. It is not financial advice and does not guarantee trading performance.
-

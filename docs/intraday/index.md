@@ -1,6 +1,6 @@
 # Intraday Indicator
 
-The CampusTrading Intraday indicator detects Supply and Demand formations on the chart timeframe and evaluates their market context.
+The SMI Intraday indicator detects Supply and Demand formations on the chart timeframe and evaluates their market context.
 
 ## Main areas
 
@@ -12,4 +12,3 @@ The CampusTrading Intraday indicator detects Supply and Demand formations on the
 6. **Zone grading** — summarizes structural and contextual quality factors.
 
 The initial documentation focuses on the input parameters that directly influence zone detection.
-

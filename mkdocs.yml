@@ -1,8 +1,8 @@
-site_name: CampusTrading Documentation
-site_description: Technical documentation for CampusTrading Supply & Demand indicators.
-site_url: https://kknapik.github.io/campustrading-docs/
-repo_url: https://github.com/KKnapik/campustrading-docs
-repo_name: KKnapik/campustrading-docs
+site_name: SMI — Smart Money Indicator
+site_description: Technical documentation for the Smart Money Indicator.
+site_url: https://kknapik.github.io/smi-docs/
+repo_url: https://github.com/KKnapik/smi-docs
+repo_name: KKnapik/smi-docs
 
 theme:
   name: material
@@ -51,4 +51,3 @@ nav:
   - Swing Indicator: swing/index.md
   - Visual Guidelines: visual-guidelines.md
   - Glossary: glossary.md
-
