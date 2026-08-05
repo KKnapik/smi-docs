@@ -27,7 +27,7 @@ The indicator selects the nearest active Demand zone below price and the nearest
 | --- | ---: | --- |
 | Show Location Curve | `true` | Shows or hides the High, Equilibrium, and Low bands. It does not affect zone detection. |
 | Max. Location Gap (ATR ×) | `20` | Prevents the curve from being displayed when the selected zones are unusually far apart compared with recent movement. A lower value hides the curve more often. |
-| Location Curve Width | `50` | Changes only the horizontal width of the colored bands. It does not change prices, zone selection, or trading logic. |
+| Location Curve Width (Bars) | `50` | Changes only the horizontal width of the colored bands. It does not change prices, zone selection, or trading logic. |
 
 ## How to read it
 

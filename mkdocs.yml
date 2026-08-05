@@ -36,6 +36,8 @@ nav:
   - Home: index.md
   - Intraday Indicator:
       - Overview: intraday/index.md
+      - All Settings at a Glance: intraday/all-settings.md
+      - RAW Data Table Guide: intraday/raw-data-table.md
       - Zone Detection:
           - Overview: intraday/zone-detection/index.md
           - Min. Leg-Out Body Size (% of Range): intraday/zone-detection/erc-body-threshold.md

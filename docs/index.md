@@ -24,6 +24,8 @@ The Intraday section documents lower-timeframe zone detection, higher-timeframe 
 
 [Open the Intraday documentation](intraday/index.md)
 
+[Open all Intraday settings at a glance](intraday/all-settings.md) · [Debug a zone with the RAW Data Table](intraday/raw-data-table.md)
+
 ### Swing indicator
 
 The Swing section will document swing-level Supply & Demand analysis and lower-timeframe entry confirmation.
