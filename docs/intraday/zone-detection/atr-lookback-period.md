@@ -2,7 +2,7 @@
 
 **Default:** `50`
 
-!!! info "Applies to: LEG-OUT + BASE (including HTF detection)"
+!!! info "Applies to: LEG-OUT + BASE"
     **LEG-OUT — direct effect:** the lookback creates the volatility reference used to judge departure size.
 
     **BASE — indirect effect:** it also influences whether a possible base candle is classified as an Extended Range Candle and therefore rejected from the base.

@@ -45,7 +45,6 @@ nav:
           - Max. Base Candles: intraday/zone-detection/max-base-candles.md
           - Min. Leg-In Body Size (× Largest Base Body): intraday/zone-detection/leg-in-body-vs-base.md
           - Min. Leg-In Body Size (% of Range): intraday/zone-detection/leg-in-body-range-min.md
-          - HTF Detection: intraday/zone-detection/htf-detection.md
       - Location Curve: intraday/location-curve.md
   - Swing Indicator: swing/index.md
   - Visual Guidelines: visual-guidelines.md

@@ -19,5 +19,5 @@
   <g><rect class="bar" x="658" y="416" width="24" height="32"/><rect class="bar" x="696" y="410" width="24" height="38"/><rect class="bar" x="734" y="414" width="24" height="34"/><rect class="bar" x="772" y="408" width="24" height="40"/><rect class="bar" x="810" y="412" width="24" height="36"/><rect class="hot" x="848" y="342" width="24" height="106"/><rect class="hot" x="886" y="326" width="24" height="122"/><rect class="hot" x="924" y="350" width="24" height="98"/><rect class="hot" x="962" y="336" width="24" height="112"/><rect class="hot" x="1000" y="344" width="24" height="104"/></g>
   <path class="lineslow" d="M658 400 C760 401 814 400 850 396 C900 390 960 376 1094 365"/><text class="slow" x="922" y="348">ATR changes gradually</text>
   <rect class="req" x="640" y="480" width="484" height="58" rx="10"/><text class="txt" x="660" y="506">ERC minimum range changes more smoothly</text><text class="slow" x="660" y="528">ATR × 0.70</text>
-  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/><text class="txt" x="72" y="628">The lookback changes the volatility reference, not candle direction. The same ATR reference is also used by HTF detection.</text>
+  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/><text class="txt" x="72" y="628">The period changes the recent-movement reference, not candle direction.</text>
 </svg>
