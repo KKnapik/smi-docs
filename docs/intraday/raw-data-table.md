@@ -35,7 +35,7 @@ The `D: Leg-Out` row shows:
 
 The body condition passes, and the range exceeds the reference currently shown in the table:
 
-- Body share: `203.41 ÷ 244.45 = 83.2%`, above the default minimum of `40%`.
+- Leg-Out Body Size (% of Range): `203.41 ÷ 244.45 = 83.2%`, above the default minimum of `40%`.
 - Complete range: `244.45`, above the required `122.79`.
 
 ## 3. Check the Base
@@ -67,7 +67,7 @@ The `D: Leg-In` row shows:
 
 Both Leg-In conditions pass:
 
-- Body share: `103.69 ÷ 155.44 = 66.7%`, above the default minimum of `50%`.
+- Leg-In Body Size (% of Range): `103.69 ÷ 155.44 = 66.7%`, above the default minimum of `50%`.
 - Size versus Base: `103.69 ÷ 36.15 = 2.87×`, above the default minimum of `1.50×`.
 
 ## Result for this example

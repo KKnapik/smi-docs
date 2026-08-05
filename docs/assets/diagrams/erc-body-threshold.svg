@@ -110,6 +110,6 @@
   <text class="label" x="902" y="530">LEG-OUT</text>
 
   <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/>
-  <text class="note-text" x="72" y="619">Both examples keep the ATR size condition constant. Only the Leg-Out body share changes.</text>
+  <text class="note-text" x="72" y="619">Both examples keep the ATR size condition constant. Only Leg-Out Body Size (% of Range) changes.</text>
   <text class="note-text" x="72" y="642">The candle must still pass Min. Leg-Out Range (ATR ×) before it becomes an Extended Range Candle.</text>
 </svg>
