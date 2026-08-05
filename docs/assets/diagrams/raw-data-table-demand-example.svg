@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">RAW Data Table with an active Demand zone example</title>
+  <desc id="desc">A TradingView-style RAW Data Table showing ATR 175.41, minimum Leg-Out range 122.79, populated Demand rows, empty Supply rows, and five callouts comparing the Demand candle measurements with the default zone-detection thresholds.</desc>
+
+  <rect width="1200" height="660" rx="22" fill="#111827"/>
+  <text x="38" y="42" fill="#F4F7FB" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">RAW Data Table — active Demand example</text>
+  <text x="38" y="68" fill="#9AA7BA" font-family="Inter, Arial, sans-serif" font-size="15">Exact values reproduced from the TradingView table</text>
+
+  <!-- Table background -->
+  <rect x="38" y="92" width="690" height="486" rx="6" fill="#30333D" stroke="#667085" stroke-width="1"/>
+
+  <!-- Row fills -->
+  <rect x="38" y="146" width="690" height="54" fill="#353943"/>
+  <rect x="38" y="200" width="690" height="54" fill="#30333D"/>
+  <rect x="38" y="254" width="690" height="54" fill="#122F32" opacity="0.72"/>
+  <rect x="38" y="308" width="690" height="54" fill="#0F3838" opacity="0.82"/>
+  <rect x="38" y="362" width="690" height="54" fill="#122F32" opacity="0.72"/>
+  <rect x="38" y="416" width="690" height="54" fill="#3B222B" opacity="0.72"/>
+  <rect x="38" y="470" width="690" height="54" fill="#3B222B" opacity="0.72"/>
+  <rect x="38" y="524" width="690" height="54" fill="#3B222B" opacity="0.72"/>
+
+  <!-- Grid -->
+  <g stroke="#6B7280" stroke-width="1">
+    <line x1="38" y1="146" x2="728" y2="146"/>
+    <line x1="38" y1="200" x2="728" y2="200"/>
+    <line x1="38" y1="254" x2="728" y2="254"/>
+    <line x1="38" y1="308" x2="728" y2="308"/>
+    <line x1="38" y1="362" x2="728" y2="362"/>
+    <line x1="38" y1="416" x2="728" y2="416"/>
+    <line x1="38" y1="470" x2="728" y2="470"/>
+    <line x1="38" y1="524" x2="728" y2="524"/>
+    <line x1="286" y1="92" x2="286" y2="578"/>
+    <line x1="378" y1="200" x2="378" y2="578"/>
+    <line x1="470" y1="200" x2="470" y2="578"/>
+    <line x1="586" y1="200" x2="586" y2="578"/>
+  </g>
+
+  <!-- General values -->
+  <g font-family="Inter, Arial, sans-serif" font-size="17">
+    <text x="162" y="126" text-anchor="middle" fill="#9CA3AF">Pure ATR</text>
+    <text x="507" y="126" text-anchor="middle" fill="#F3F4F6">175.41</text>
+    <text x="50" y="181" fill="#FFB000" font-weight="600">Min. Range (ATR*Mult)</text>
+    <text x="507" y="181" text-anchor="middle" fill="#FFB000" font-weight="600">122.79</text>
+  </g>
+
+  <!-- Column headers -->
+  <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#F3F4F6">
+    <text x="50" y="234">RAW Parameter</text>
+    <text x="332" y="234" text-anchor="middle">BODY</text>
+    <text x="424" y="234" text-anchor="middle">RANGE</text>
+    <text x="528" y="234" text-anchor="middle">OPEN</text>
+    <text x="657" y="234" text-anchor="middle">RATIO (%)</text>
+  </g>
+
+  <!-- Demand rows -->
+  <g font-family="Inter, Arial, sans-serif" font-size="17" fill="#00B8A9">
+    <text x="162" y="288" text-anchor="middle">D: Leg-In</text>
+    <text x="332" y="288" text-anchor="middle">103.69</text>
+    <text x="424" y="288" text-anchor="middle">155.44</text>
+    <text x="528" y="288" text-anchor="middle">5896.68</text>
+    <text x="657" y="288" text-anchor="middle">66.7%</text>
+
+    <text x="162" y="342" text-anchor="middle" font-weight="700">D: Leg-Out</text>
+    <text x="332" y="342" text-anchor="middle" font-weight="700">203.41</text>
+    <text x="424" y="342" text-anchor="middle" font-weight="700">244.45</text>
+    <text x="528" y="342" text-anchor="middle" font-weight="700">5969.67</text>
+    <text x="657" y="342" text-anchor="middle" font-weight="700">83.2%</text>
+
+    <text x="162" y="396" text-anchor="middle">D: Base Max</text>
+    <text x="332" y="396" text-anchor="middle">36.15</text>
+    <text x="424" y="396" text-anchor="middle">98.27</text>
+    <text x="528" y="396" text-anchor="middle">6004.00</text>
+    <text x="657" y="396" text-anchor="middle">17.8%</text>
+  </g>
+
+  <!-- Supply rows -->
+  <g font-family="Inter, Arial, sans-serif" font-size="17" fill="#FF3B57">
+    <text x="162" y="450" text-anchor="middle">S: Leg-In</text>
+    <text x="332" y="450" text-anchor="middle">0.00</text>
+    <text x="424" y="450" text-anchor="middle">0.00</text>
+    <text x="528" y="450" text-anchor="middle">NaN</text>
+    <text x="657" y="450" text-anchor="middle">.0%</text>
+
+    <text x="162" y="504" text-anchor="middle">S: Leg-Out</text>
+    <text x="332" y="504" text-anchor="middle">0.00</text>
+    <text x="424" y="504" text-anchor="middle">0.00</text>
+    <text x="528" y="504" text-anchor="middle">NaN</text>
+    <text x="657" y="504" text-anchor="middle">.0%</text>
+
+    <text x="162" y="558" text-anchor="middle">S: Base Max</text>
+    <text x="332" y="558" text-anchor="middle">0.00</text>
+    <text x="424" y="558" text-anchor="middle">0.00</text>
+    <text x="528" y="558" text-anchor="middle">NaN</text>
+    <text x="657" y="558" text-anchor="middle">.0%</text>
+  </g>
+
+  <!-- Highlight the values being checked -->
+  <rect x="42" y="151" width="682" height="44" rx="5" fill="none" stroke="#FFB000" stroke-width="2" stroke-dasharray="8 7"/>
+  <rect x="42" y="313" width="682" height="44" rx="5" fill="none" stroke="#38D9C5" stroke-width="2"/>
+
+  <!-- Explanation card -->
+  <rect x="758" y="92" width="404" height="486" rx="12" fill="#172033" stroke="#34435B" stroke-width="1.5"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <circle cx="790" cy="130" r="17" fill="#FFB000"/>
+    <text x="790" y="136" text-anchor="middle" font-size="16" font-weight="800" fill="#111827">1</text>
+    <text x="820" y="126" font-size="17" font-weight="700" fill="#F4F7FB">LEG-OUT range target</text>
+    <text x="820" y="151" font-size="16" fill="#FFCA4B">175.41 × 0.70 = 122.79</text>
+
+    <circle cx="790" cy="213" r="17" fill="#00B8A9"/>
+    <text x="790" y="219" text-anchor="middle" font-size="16" font-weight="800" fill="#071B1A">2</text>
+    <text x="820" y="209" font-size="17" font-weight="700" fill="#F4F7FB">LEG-OUT vs shown reference</text>
+    <text x="820" y="234" font-size="16" fill="#8CE7DD">83.2% ≥ 40%</text>
+    <text x="820" y="257" font-size="16" fill="#8CE7DD">244.45 ≥ 122.79</text>
+
+    <circle cx="790" cy="311" r="17" fill="#00B8A9"/>
+    <text x="790" y="317" text-anchor="middle" font-size="16" font-weight="800" fill="#071B1A">3</text>
+    <text x="820" y="307" font-size="17" font-weight="700" fill="#F4F7FB">BASE passes</text>
+    <text x="820" y="332" font-size="16" fill="#8CE7DD">17.8% ≤ 70%</text>
+
+    <circle cx="790" cy="388" r="17" fill="#00B8A9"/>
+    <text x="790" y="394" text-anchor="middle" font-size="16" font-weight="800" fill="#071B1A">4</text>
+    <text x="820" y="384" font-size="17" font-weight="700" fill="#F4F7FB">LEG-IN passes</text>
+    <text x="820" y="409" font-size="16" fill="#8CE7DD">66.7% ≥ 50%</text>
+    <text x="820" y="432" font-size="16" fill="#8CE7DD">103.69 ÷ 36.15 = 2.87×</text>
+
+    <circle cx="790" cy="488" r="17" fill="#FF3B57"/>
+    <text x="790" y="494" text-anchor="middle" font-size="16" font-weight="800" fill="#24060B">5</text>
+    <text x="820" y="484" font-size="17" font-weight="700" fill="#F4F7FB">No Supply selected</text>
+    <text x="820" y="509" font-size="16" fill="#FF93A5">Zero / NaN rows mean that no</text>
+    <text x="820" y="532" font-size="16" fill="#FF93A5">active Supply is available above price.</text>
+  </g>
+
+  <rect x="38" y="603" width="1124" height="34" rx="6" fill="#1B263A"/>
+  <text x="600" y="626" text-anchor="middle" fill="#DDE6F3" font-family="Inter, Arial, sans-serif" font-size="15">Stored ratios pass; the range also exceeds the shown ATR reference. Confirm Base count and historical ATR on the chart.</text>
+</svg>
