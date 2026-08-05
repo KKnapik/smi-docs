@@ -17,5 +17,5 @@ The initial documentation focuses on the input parameters that directly influenc
 
 ## Quick access
 
-- [All Settings at a Glance](all-settings.md) — every documented v2.0.0 input on one page, with its default, scope, and practical effect.
+- [Zone Detection Settings at a Glance](all-settings.md) — all seven Intraday detection inputs on one page, with their defaults, scope, and practical effect.
 - [RAW Data Table — Zone Debugging Guide](raw-data-table.md) — identify the selected zone and verify its Leg-In, Base, and Leg-Out measurements.

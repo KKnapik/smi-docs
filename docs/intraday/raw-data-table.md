@@ -139,4 +139,4 @@ Bar Replay matters because `Pure ATR` and `Min. Range (ATR*Mult)` are live refer
 - It does not explain LoL context rejection, Flip classification, HTF coverage, or trade-grade points.
 - Current `Pure ATR` does not prove the ATR value used when an old zone formed; use Bar Replay for that.
 
-For the complete input reference, open [All Settings at a Glance](all-settings.md).
+For the complete detection-input reference, open [Zone Detection Settings at a Glance](all-settings.md).

@@ -46,10 +46,6 @@ The approach move that brings price into the base.
 
 The strong departure away from the base. Its completion allows the indicator to confirm the formation.
 
-## LoL
-
-Level on top of Level. Two nearby zones of the same type that belong to one coherent price-action sequence.
-
 ## RAW Data Table
 
 A measurement table for the nearest active Demand zone below price and nearest active Supply zone above price. It shows stored body, range, open, and comparison values for the Leg-In, Base, and Leg-Out.

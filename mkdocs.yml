@@ -36,10 +36,10 @@ nav:
   - Home: index.md
   - Intraday Indicator:
       - Overview: intraday/index.md
-      - All Settings at a Glance: intraday/all-settings.md
       - RAW Data Table Guide: intraday/raw-data-table.md
       - Zone Detection:
           - Overview: intraday/zone-detection/index.md
+          - Settings at a Glance: intraday/all-settings.md
           - Min. Leg-Out Body Size (% of Range): intraday/zone-detection/erc-body-threshold.md
           - Max. Base Body Size (% of Leg-Out): intraday/zone-detection/base-vs-legout-ratio.md
           - Min. Leg-Out Range (ATR ×): intraday/zone-detection/erc-range-atr-multiplier.md
