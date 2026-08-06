@@ -20,7 +20,7 @@ This is the initial high-level structure. Detailed examples and validated graphi
 
 ### Intraday indicator
 
-The Intraday section documents lower-timeframe zone detection, higher-timeframe coverage, location analysis, zone lifecycle, and visual output.
+The Intraday section documents native lower-timeframe zone detection, zone lifecycle, local structure, and diagnostic output. Higher-timeframe context and HTF-to-LTF Coverage belong to Swing and the platform correlation engine.
 
 [Open the Intraday documentation](intraday/index.md)
 

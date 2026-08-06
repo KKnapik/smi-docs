@@ -1,11 +1,11 @@
 # Min. Leg-Out Range (ATR ×)
 
-**Default:** `0.70`
+**Default:** `1.20`
 
 !!! info "Applies to: LEG-OUT"
     **LEG-OUT — direct effect:** this setting helps decide whether the departure is large enough to be an Extended Range Candle.
 
-    **BASE — no effect:** Base candles use their own body/range and body/Leg-Out limits.
+    **BASE — no effect:** Base candles use their own body/range limit and the fixed Base-range-versus-Leg-Out-range rule.
 
     **LEG-IN — no effect:** the Leg-In does not need to pass the Extended Range Candle test.
 
@@ -18,7 +18,7 @@
 
 ## What this setting controls
 
-It controls how large a potential **Leg-Out** must be compared with recent market movement. At the default value of `0.70`, the complete candle must cover at least 70% of the current ATR reference.
+It controls how large a potential **Leg-Out** must be compared with recent market movement. At the default value of `1.20`, the complete candle must cover at least 120% of the current ATR reference.
 
 This prevents an ordinary small candle from being treated as a meaningful departure simply because its body looks clean.
 

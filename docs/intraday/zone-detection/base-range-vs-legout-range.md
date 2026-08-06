@@ -16,16 +16,15 @@ A Base candle equal in range to the Leg-Out is accepted. If any Base candle is l
 
 ## Interaction with the other Base rules
 
-Passing this range rule is not sufficient on its own. Every Base candle must simultaneously satisfy:
+Passing this range rule is not sufficient on its own. From v2.10.6, every Base candle must simultaneously satisfy:
 
 ```text
-Base Body ÷ Leg-Out Body ≤ configured maximum
 Base Body ÷ Base Range < configured maximum
 Base Range ≤ Leg-Out Range
 ```
 
-The first two rules use chart settings. The third rule is fixed and has no input.
+The body/range rule uses a chart setting. The range comparison is fixed and has no input. `Base Body ÷ Leg-Out Body` is no longer evaluated.
 
 ## Scope
 
-Version 2.3.0 applies this rule only to native LTF zones created by the Intraday indicator. Internal HTF reconstruction and Swing LTF Confirmation remain unchanged until synchronized separately.
+Version 2.3.0 introduced this rule for native LTF zones created by the Intraday indicator. Version 2.10.6 removed the redundant Base-body-versus-Leg-Out-body condition. Intraday no longer performs internal HTF reconstruction; Swing LTF Confirmation remains separate until synchronized from the Intraday changelog.

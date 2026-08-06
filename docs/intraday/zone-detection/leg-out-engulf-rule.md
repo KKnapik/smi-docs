@@ -34,4 +34,4 @@ A partial wick entry that does not reach the Base distal does not trigger this r
 
 ## Scope
 
-Version 2.2.0 applies this rule only to native LTF zones created by the Intraday indicator. It does not change internal HTF reconstruction. Swing LTF Confirmation must be synchronized separately before it can be expected to reject the same candidate.
+Version 2.2.0 introduced this rule for native LTF zones created by the Intraday indicator. From v2.10.0, Intraday no longer performs any internal HTF reconstruction. Swing LTF Confirmation must be synchronized separately before it can be expected to reject the same candidate.

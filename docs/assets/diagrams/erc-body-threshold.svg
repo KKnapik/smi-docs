@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title description">
   <title id="title">Minimum Leg-Out body size comparison</title>
-  <desc id="description">Two simplified Rally-Base-Rally formations compare a Leg-Out candle that passes a 40 percent body threshold with one that fails it.</desc>
+  <desc id="description">Two simplified Rally-Base-Rally formations compare a Leg-Out candle that passes a 70 percent body threshold with one that fails it.</desc>
 
   <defs>
     <style>
@@ -37,15 +37,15 @@
 
   <rect class="bg" width="1200" height="680" rx="20"/>
   <text class="heading" x="48" y="50">Min. Leg-Out Body Size (% of Range)</text>
-  <text class="muted" x="48" y="80">Example threshold: 40% of the candle's complete High-to-Low range</text>
+  <text class="muted" x="48" y="80">Example threshold: 70% of the candle's complete High-to-Low range</text>
 
   <rect class="chip" x="48" y="104" width="330" height="66" rx="12"/>
   <text class="chip-title" x="68" y="130">LEG-IN — NOT CHECKED</text>
   <text class="chip-copy" x="68" y="153">Uses its own Leg-In settings.</text>
 
-  <rect class="chip-indirect" x="435" y="104" width="330" height="66" rx="12"/>
-  <text class="chip-title" x="455" y="130">BASE — INDIRECT EFFECT</text>
-  <text class="chip-copy" x="455" y="153">A confirmed ERC cannot be a Base candle.</text>
+  <rect class="chip" x="435" y="104" width="330" height="66" rx="12"/>
+  <text class="chip-title" x="455" y="130">BASE — NOT CHECKED</text>
+  <text class="chip-copy" x="455" y="153">Uses its own Body ÷ Range setting.</text>
 
   <rect class="chip-direct" x="822" y="104" width="330" height="66" rx="12"/>
   <text class="chip-title" x="842" y="130">LEG-OUT — DIRECT CHECK</text>
@@ -55,9 +55,9 @@
   <rect class="panel" x="612" y="194" width="540" height="378" rx="16"/>
 
   <text class="panel-title" x="76" y="230">PASS — directional Leg-Out</text>
-  <text class="pass" x="76" y="258">60% ≥ 40%</text>
+  <text class="pass" x="76" y="258">80% ≥ 70%</text>
   <text class="panel-title" x="640" y="230">FAIL — wick-heavy Leg-Out</text>
-  <text class="fail" x="640" y="258">25% &lt; 40%</text>
+  <text class="fail" x="640" y="258">25% &lt; 70%</text>
 
   <line class="grid" x1="76" y1="300" x2="560" y2="300"/>
   <line class="grid" x1="76" y1="372" x2="560" y2="372"/>
@@ -76,12 +76,12 @@
   <rect class="base" x="222" y="428" width="24" height="18" rx="2"/>
   <line class="wick-base" x1="278" y1="400" x2="278" y2="460"/>
   <rect class="base" x="266" y="418" width="24" height="22" rx="2"/>
-  <!-- Passing formation: Leg-Out, 60% body -->
+  <!-- Passing formation: Leg-Out, 80% body -->
   <line class="wick-up" x1="374" y1="286" x2="374" y2="486"/>
-  <rect class="up" x="350" y="326" width="48" height="120" rx="3"/>
+  <rect class="up" x="350" y="306" width="48" height="160" rx="3"/>
   <line class="measure" x1="434" y1="286" x2="434" y2="486" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
   <text class="measure-text" x="446" y="378">RANGE</text>
-  <line class="measure" x1="522" y1="326" x2="522" y2="446" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <line class="measure" x1="522" y1="306" x2="522" y2="466" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
   <text class="measure-text" x="476" y="392">BODY</text>
 
   <!-- Failing formation: Leg-In -->

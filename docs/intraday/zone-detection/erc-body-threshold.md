@@ -1,11 +1,11 @@
 # Min. Leg-Out Body Size (% of Range)
 
-**Default:** `40%`
+**Default:** `70%`
 
 !!! info "Applies to: LEG-OUT"
     **LEG-OUT — direct effect:** this setting helps decide whether the departure candle is a valid Extended Range Candle.
 
-    **BASE — no effect:** Base candles use their own body/range and body/Leg-Out limits.
+    **BASE — no effect:** Base candles use their own body/range limit and the fixed Base-range-versus-Leg-Out-range rule.
 
     **LEG-IN — no effect:** the Leg-In is qualified by its own body/range setting.
 
@@ -20,7 +20,7 @@
 
 ## What this setting controls
 
-It controls how much of a potential **Leg-Out** candle must be made up of body rather than wicks. At the default value of `40`, the body must cover at least 40% of the candle's complete high-to-low range.
+It controls how much of a potential **Leg-Out** candle must be made up of body rather than wicks. At the default value of `70`, the body must cover at least 70% of the candle's complete high-to-low range.
 
 A candle with a large body and relatively small wicks shows clearer directional commitment. A candle dominated by wicks shows more hesitation.
 

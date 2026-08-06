@@ -25,12 +25,12 @@ The comparison is strict. With the default `50%`, a Base candle at exactly `50%`
 
 ## Interaction with Leg-Out
 
-This is one of two independent Base tests. Every Base candle must satisfy both:
+Every Base candle must satisfy both:
 
 1. `Base Body ÷ Base Range < 50%` by default.
-2. `Base Body ÷ Leg-Out Body ≤ 70%` by default.
+2. `Base Range ≤ Leg-Out Range` as a fixed rule.
 
-If one Base candle fails either test, the detector stops accepting candles into that Base and evaluates it as the possible Leg-In position.
+There is no longer a Base Body ÷ Leg-Out Body test. If a candle fails either current Base test, the detector stops accepting candles into that Base and evaluates it as the possible Leg-In position.
 
 ## Visual for this setting
 

@@ -47,12 +47,11 @@ On LTF, strength alone is not sufficient. The Leg-Out must also leave the comple
 
 | Parameter | Applies to | Default | What the trader controls |
 | --- | --- | ---: | --- |
-| Min. Leg-Out Body Size (% of Range) | **LEG-OUT** | `40%` | Qualifies the body shape of the departure. It does not qualify Base or Leg-In candles. |
-| Max. Base Body Size (% of Leg-Out) | **BASE** | `70%` | Controls how small each base body must be compared with the Leg-Out body. |
+| Min. Leg-Out Body Size (% of Range) | **LEG-OUT** | `70%` | Qualifies the body shape of the departure. It does not qualify Base or Leg-In candles. |
 | Max. Base Body Size (% of Range) | **BASE** | `50%` | Requires every Base candle body to occupy strictly less than half of that candle's own range. |
-| Min. Leg-Out Range (ATR ×) | **LEG-OUT** | `0.70` | Checks whether the departure is large enough compared with recent movement. |
+| Min. Leg-Out Range (ATR ×) | **LEG-OUT** | `1.20` | Checks whether the departure is large enough compared with recent movement. |
 | Avg. Price Range Period (Bars) | **LEG-OUT** | `50` | Sets how many bars are used for the recent-movement reference behind the Leg-Out range requirement. |
 | Max. Base Candles | **BASE** | `4` | Controls how long the pause may last. With the current behavior, the default accepts up to three actual base candles before the Leg-In must be found. |
 | Min. Leg-In Body Size (% of Range) | **LEG-IN** | `50%` | Requires the Leg-In body to occupy strictly more than half of its range. It is the only Leg-In size qualifier. |
 
-Every Base candle is checked independently against both Base percentages and the mandatory range rule. At the defaults, each one must satisfy `Base Body ÷ Leg-Out Body ≤ 70%`, `Base Body ÷ Base Range < 50%`, and `Base Range ≤ Leg-Out Range`.
+Every Base candle is checked independently against its own shape and the mandatory range rule. At the defaults, each one must satisfy `Base Body ÷ Base Range < 50%` and `Base Range ≤ Leg-Out Range`. Base body size is not compared with Leg-Out body size.

@@ -37,7 +37,7 @@ It controls the amount of space available for recognizing the base and the prece
 
 ## Detection versus quality
 
-The number of candles accepted by detection is separate from the quality grade. With the current default, a base may contain up to three candles. Its quality still depends on how compact those candles are compared with the departure.
+The number of candles accepted by detection is separate from the quality label. With the current default, a base may contain up to three candles. Its quality uses the least compact Base Body ÷ Range value together with the Base candle count; it does not compare Base body size with the departure body.
 
 ## Visual for this setting
 
