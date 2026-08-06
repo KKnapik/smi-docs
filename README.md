@@ -18,5 +18,14 @@ Open `http://127.0.0.1:8000` in a browser.
 ## Production build
 
 ```bash
-mkdocs build --strict
+.venv/bin/mkdocs build --strict
+```
+
+## Publish to GitHub Pages
+
+GitHub Pages serves the generated site from the `gh-pages` branch. Publication
+is performed locally and does not require GitHub Actions:
+
+```bash
+.venv/bin/mkdocs gh-deploy --force --clean
 ```
