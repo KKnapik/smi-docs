@@ -21,15 +21,17 @@ This section explains the detection settings as they appear to a trader on the c
 
 ### 1. Price approaches
 
-The Leg-In brings price into the future zone area. It should be clearly larger than the candles that will form the base, but it does not need to be as strong as the final departure.
+The Leg-In brings price into the future zone area. Its body must dominate its own candle range, but it is not compared with the size of the Base candles.
 
 ### 2. Price pauses
 
-One or more compact candles form the Base. These candles represent a temporary balance before price leaves the area.
+One or more compact candles form the Base. These candles represent a temporary balance before price leaves the area. On native LTF detection, every Base candle's complete range must be no larger than the Leg-Out range. See [Base Range vs Leg-Out Range](base-range-vs-legout-range.md).
 
 ### 3. Price departs
 
 A strong bullish or bearish Leg-Out confirms that price left the base with enough force. The indicator then draws a Demand or Supply zone around the base.
+
+On LTF, strength alone is not sufficient. The Leg-Out must also leave the complete Base zone cleanly. If its opposite wick reaches or passes the Base distal boundary, the candidate is rejected because the departure candle has already traversed the full imbalance. See the [LTF Leg-Out Engulf Rule](leg-out-engulf-rule.md).
 
 !!! note "Why a zone may appear after the move has started"
     The indicator must wait for the departure candle to close before it can confirm the formation. This prevents an unfinished candle from being treated as a completed departure.
@@ -45,10 +47,12 @@ A strong bullish or bearish Leg-Out confirms that price left the base with enoug
 
 | Parameter | Applies to | Default | What the trader controls |
 | --- | --- | ---: | --- |
-| Min. Leg-Out Body Size (% of Range) | **LEG-OUT + BASE** | `40%` | Directly qualifies the departure. Indirectly prevents an Extended Range Candle from being used as a base candle. It does not qualify the Leg-In. |
+| Min. Leg-Out Body Size (% of Range) | **LEG-OUT** | `40%` | Qualifies the body shape of the departure. It does not qualify Base or Leg-In candles. |
 | Max. Base Body Size (% of Leg-Out) | **BASE** | `70%` | Controls how small each base body must be compared with the Leg-Out body. |
-| Min. Leg-Out Range (ATR ×) | **LEG-OUT + BASE** | `0.70` | Directly checks whether the departure is large enough. Indirectly affects whether a candle can remain part of the base. It does not qualify the Leg-In. |
-| Avg. Price Range Period (Bars) | **LEG-OUT + BASE** | `50` | Sets how many bars are used for the recent-movement reference behind Extended Range Candle classification. |
+| Max. Base Body Size (% of Range) | **BASE** | `50%` | Requires every Base candle body to occupy strictly less than half of that candle's own range. |
+| Min. Leg-Out Range (ATR ×) | **LEG-OUT** | `0.70` | Checks whether the departure is large enough compared with recent movement. |
+| Avg. Price Range Period (Bars) | **LEG-OUT** | `50` | Sets how many bars are used for the recent-movement reference behind the Leg-Out range requirement. |
 | Max. Base Candles | **BASE** | `4` | Controls how long the pause may last. With the current behavior, the default accepts up to three actual base candles before the Leg-In must be found. |
-| Min. Leg-In Body Size (× Largest Base Body) | **LEG-IN** | `1.50` | Controls how distinct the Leg-In body must be from the largest base body. |
-| Min. Leg-In Body Size (% of Range) | **LEG-IN** | `50%` | Controls how directional the Leg-In candle must look. |
+| Min. Leg-In Body Size (% of Range) | **LEG-IN** | `50%` | Requires the Leg-In body to occupy strictly more than half of its range. It is the only Leg-In size qualifier. |
+
+Every Base candle is checked independently against both Base percentages and the mandatory range rule. At the defaults, each one must satisfy `Base Body ÷ Leg-Out Body ≤ 70%`, `Base Body ÷ Base Range < 50%`, and `Base Range ≤ Leg-Out Range`.

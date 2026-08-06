@@ -2,10 +2,10 @@
 
 **Default:** `50`
 
-!!! info "Applies to: LEG-OUT + BASE"
+!!! info "Applies to: LEG-OUT reference"
     **LEG-OUT — direct effect:** the lookback creates the volatility reference used to judge departure size.
 
-    **BASE — indirect effect:** it also influences whether a possible base candle is classified as an Extended Range Candle and therefore rejected from the base.
+    **BASE — no effect:** Base qualification no longer uses ERC classification or ATR.
 
     **LEG-IN — no effect:** Leg-In qualification does not use ATR.
 
@@ -17,7 +17,7 @@
 
 ## What this setting controls
 
-It controls how much recent price history the indicator uses when deciding whether a **Leg-Out** is unusually large and whether a possible **Base** candle should instead be treated as an Extended Range Candle. At the default value of `50`, the volatility reference is based on the previous 50 candles.
+It controls how much recent price history the indicator uses when deciding whether a **Leg-Out** is unusually large. At the default value of `50`, the volatility reference is based on the previous 50 candles.
 
 ## If you lower the value
 

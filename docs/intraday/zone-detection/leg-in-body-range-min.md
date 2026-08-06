@@ -16,7 +16,7 @@
 
 ## What this setting controls
 
-It controls how directional the **Leg-In** candle must look. At the default value of `50`, at least half of the candle's complete range must be body.
+It controls how directional the **Leg-In** candle must look. At the default value of `50`, the body must occupy **more than** half of the candle's complete range. A candle at exactly `50%` is rejected.
 
 ## If you lower the value
 
@@ -30,9 +30,9 @@ It controls how directional the **Leg-In** candle must look. At the default valu
 - Fewer formations qualify.
 - Wick-heavy approaches are filtered out.
 
-## Important distinction
+## Only Leg-In size qualifier
 
-This setting evaluates the shape of the Leg-In candle. **Min. Leg-In Body Size (× Largest Base Body)** separately checks whether the Leg-In is large enough compared with the base. The approach must pass both checks.
+Since v2.1.0, the Leg-In body is not compared with the largest Base body. This body-to-range test is the only Leg-In size qualifier.
 
 ## Visual for this setting
 

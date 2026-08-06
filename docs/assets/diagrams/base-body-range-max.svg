@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+  <title id="t">Base body to range maximum</title>
+  <desc id="d">Two Base candles compare a body below fifty percent of range that passes with a body equal to fifty percent that fails the strict limit.</desc>
+  <style>
+    .bg{fill:#0f172a}.panel{fill:#111c31;stroke:#334155;stroke-width:2}.h{fill:#f8fafc;font:700 30px system-ui}.sub{fill:#94a3b8;font:18px system-ui}.pt{fill:#f8fafc;font:700 23px system-ui}.txt{fill:#cbd5e1;font:16px system-ui}.lbl{fill:#e2e8f0;font:700 17px system-ui}.pass{fill:#22c55e;font:700 20px system-ui}.fail{fill:#fb7185;font:700 20px system-ui}.base{fill:#64748b;stroke:#94a3b8;stroke-width:2}.wick{stroke:#94a3b8;stroke-width:4}.measure{stroke:#fbbf24;stroke-width:3}.gold{fill:#fde68a;font:700 16px system-ui}.chip{fill:#17233a;stroke:#475569;stroke-width:1.5}.direct{fill:#382e18;stroke:#f59e0b}.note{fill:#172033;stroke:#475569;stroke-width:1.5}
+  </style>
+  <rect class="bg" width="1200" height="680" rx="20"/>
+  <text class="h" x="48" y="50">Max. Base Body Size (% of Range)</text>
+  <text class="sub" x="48" y="80">Default rule: every Base body must be strictly less than 50% of its own range</text>
+  <rect class="chip direct" x="48" y="104" width="340" height="66" rx="12"/><text class="lbl" x="68" y="132">BASE — DIRECT CHECK</text><text class="txt" x="68" y="155">Every Base candle is tested.</text>
+  <rect class="chip" x="430" y="104" width="340" height="66" rx="12"/><text class="lbl" x="450" y="132">LEG-OUT — NOT CHECKED</text><text class="txt" x="450" y="155">Uses departure conditions.</text>
+  <rect class="chip" x="812" y="104" width="340" height="66" rx="12"/><text class="lbl" x="832" y="132">LEG-IN — NOT CHECKED</text><text class="txt" x="832" y="155">Uses its own range test.</text>
+  <rect class="panel" x="48" y="194" width="540" height="380" rx="16"/><rect class="panel" x="612" y="194" width="540" height="380" rx="16"/>
+  <text class="pt" x="76" y="232">PASS — wick-dominant Base</text><text class="pass" x="76" y="262">49% &lt; 50%</text>
+  <text class="pt" x="640" y="232">FAIL — equality is rejected</text><text class="fail" x="640" y="262">50% is not &lt; 50%</text>
+  <line class="wick" x1="180" y1="292" x2="180" y2="492"/><rect class="base" x="150" y="354" width="60" height="98" rx="3"/>
+  <line class="measure" x1="256" y1="292" x2="256" y2="492"/><line class="measure" x1="246" y1="292" x2="266" y2="292"/><line class="measure" x1="246" y1="492" x2="266" y2="492"/><text class="gold" x="274" y="398">RANGE 200</text>
+  <line class="measure" x1="400" y1="354" x2="400" y2="452"/><line class="measure" x1="390" y1="354" x2="410" y2="354"/><line class="measure" x1="390" y1="452" x2="410" y2="452"/><text class="gold" x="418" y="408">BODY 98</text>
+  <text class="lbl" x="147" y="532">BASE</text>
+  <line class="wick" x1="744" y1="292" x2="744" y2="492"/><rect class="base" x="714" y="352" width="60" height="100" rx="3"/>
+  <line class="measure" x1="820" y1="292" x2="820" y2="492"/><line class="measure" x1="810" y1="292" x2="830" y2="292"/><line class="measure" x1="810" y1="492" x2="830" y2="492"/><text class="gold" x="838" y="398">RANGE 200</text>
+  <line class="measure" x1="964" y1="352" x2="964" y2="452"/><line class="measure" x1="954" y1="352" x2="974" y2="352"/><line class="measure" x1="954" y1="452" x2="974" y2="452"/><text class="gold" x="982" y="408">BODY 100</text>
+  <text class="lbl" x="711" y="532">BASE</text>
+  <rect class="note" x="48" y="594" width="1104" height="58" rx="12"/><text class="txt" x="72" y="628">The detector repeats this strict comparison for every candle accepted into the Base; one failure stops the Base sequence.</text>
+</svg>

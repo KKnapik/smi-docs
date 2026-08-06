@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
   <title id="title">RAW Data Table with an active Demand zone example</title>
-  <desc id="desc">A TradingView-style RAW Data Table showing ATR 175.41, minimum Leg-Out range 122.79, populated Demand rows, empty Supply rows, and five callouts comparing the Demand candle measurements with the default zone-detection thresholds.</desc>
+  <desc id="desc">A TradingView-style RAW Data Table showing ATR 175.41, minimum Leg-Out range 122.79, populated Demand rows, empty Supply rows, and callouts explaining the stored measurements.</desc>
 
   <rect width="1200" height="660" rx="22" fill="#111827"/>
   <text x="38" y="42" fill="#F4F7FB" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">RAW Data Table — active Demand example</text>
@@ -121,8 +121,8 @@
     <circle cx="790" cy="388" r="17" fill="#00B8A9"/>
     <text x="790" y="394" text-anchor="middle" font-size="16" font-weight="800" fill="#071B1A">4</text>
     <text x="820" y="384" font-size="17" font-weight="700" fill="#F4F7FB">LEG-IN passes</text>
-    <text x="820" y="409" font-size="16" fill="#8CE7DD">66.7% ≥ 50%</text>
-    <text x="820" y="432" font-size="16" fill="#8CE7DD">103.69 ÷ 36.15 = 2.87×</text>
+    <text x="820" y="409" font-size="16" fill="#8CE7DD">66.7% &gt; 50%</text>
+    <text x="820" y="432" font-size="16" fill="#8CE7DD">Only Body ÷ Range is required</text>
 
     <circle cx="790" cy="488" r="17" fill="#FF3B57"/>
     <text x="790" y="494" text-anchor="middle" font-size="16" font-weight="800" fill="#24060B">5</text>
@@ -132,5 +132,5 @@
   </g>
 
   <rect x="38" y="603" width="1124" height="34" rx="6" fill="#1B263A"/>
-  <text x="600" y="626" text-anchor="middle" fill="#DDE6F3" font-family="Inter, Arial, sans-serif" font-size="15">Stored ratios pass; the range also exceeds the shown ATR reference. Confirm Base count and historical ATR on the chart.</text>
+  <text x="600" y="626" text-anchor="middle" fill="#DDE6F3" font-family="Inter, Arial, sans-serif" font-size="15">Stored ratios pass. Confirm every Base Body ÷ Range, Base count, and historical ATR on the chart.</text>
 </svg>

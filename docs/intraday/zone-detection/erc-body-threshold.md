@@ -2,12 +2,12 @@
 
 **Default:** `40%`
 
-!!! info "Applies to: LEG-OUT + BASE"
+!!! info "Applies to: LEG-OUT"
     **LEG-OUT — direct effect:** this setting helps decide whether the departure candle is a valid Extended Range Candle.
 
-    **BASE — indirect effect:** a candle classified as an Extended Range Candle cannot be used as a base candle.
+    **BASE — no effect:** Base candles use their own body/range and body/Leg-Out limits.
 
-    **LEG-IN — no effect:** the Leg-In is qualified by its own two Leg-In settings.
+    **LEG-IN — no effect:** the Leg-In is qualified by its own body/range setting.
 
 ## Terms used on this page
 
@@ -29,14 +29,12 @@ A candle with a large body and relatively small wicks shows clearer directional 
 - More candles can be treated as expansion candles.
 - More potential zones may appear.
 - Wick-heavy and less decisive departures become easier to accept.
-- Some candles that could otherwise belong to a base may instead be treated as expansion candles.
 
 ## If you raise the value
 
 - Fewer candles qualify as expansion candles.
 - Departures must look cleaner and more directional.
 - The indicator may ignore valid but less visually perfect moves.
-- More small candles remain eligible to be part of a base.
 
 ## Important interaction
 
@@ -46,4 +44,4 @@ This setting evaluates the shape of the candle, not whether the candle is large 
 
 ![Minimum Leg-Out Body Size: Leg-Out pass and fail comparison](../../assets/diagrams/erc-body-threshold.svg)
 
-The highlighted **Leg-Out** is the candle directly checked by this parameter. The **Base** is affected only indirectly: if a candle passes both ERC tests, it cannot remain part of the Base. The Leg-In is not tested by this setting.
+Only the highlighted **Leg-Out** is checked by this parameter. Base and Leg-In candles are not tested by it.

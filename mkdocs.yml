@@ -39,13 +39,15 @@ nav:
       - RAW Data Table Guide: intraday/raw-data-table.md
       - Zone Detection:
           - Overview: intraday/zone-detection/index.md
+          - LTF Leg-Out Engulf Rule: intraday/zone-detection/leg-out-engulf-rule.md
+          - Base Range vs Leg-Out Range: intraday/zone-detection/base-range-vs-legout-range.md
           - Settings at a Glance: intraday/all-settings.md
           - Min. Leg-Out Body Size (% of Range): intraday/zone-detection/erc-body-threshold.md
           - Max. Base Body Size (% of Leg-Out): intraday/zone-detection/base-vs-legout-ratio.md
+          - Max. Base Body Size (% of Range): intraday/zone-detection/base-body-range-max.md
           - Min. Leg-Out Range (ATR ×): intraday/zone-detection/erc-range-atr-multiplier.md
           - Avg. Price Range Period (Bars): intraday/zone-detection/atr-lookback-period.md
           - Max. Base Candles: intraday/zone-detection/max-base-candles.md
-          - Min. Leg-In Body Size (× Largest Base Body): intraday/zone-detection/leg-in-body-vs-base.md
           - Min. Leg-In Body Size (% of Range): intraday/zone-detection/leg-in-body-range-min.md
       - Location Curve: intraday/location-curve.md
   - Swing Indicator: swing/index.md

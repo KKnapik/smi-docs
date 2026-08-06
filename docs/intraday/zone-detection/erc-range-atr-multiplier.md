@@ -2,10 +2,10 @@
 
 **Default:** `0.70`
 
-!!! info "Applies to: LEG-OUT + BASE"
+!!! info "Applies to: LEG-OUT"
     **LEG-OUT — direct effect:** this setting helps decide whether the departure is large enough to be an Extended Range Candle.
 
-    **BASE — indirect effect:** a candle that becomes an Extended Range Candle cannot be accepted as part of the base.
+    **BASE — no effect:** Base candles use their own body/range and body/Leg-Out limits.
 
     **LEG-IN — no effect:** the Leg-In does not need to pass the Extended Range Candle test.
 
@@ -42,4 +42,4 @@ This setting checks candle size. **Min. Leg-Out Body Size (% of Range)** separat
 
 ![Minimum Leg-Out Range: Leg-Out range compared with ATR](../../assets/diagrams/erc-range-atr-multiplier.svg)
 
-The complete **Leg-Out** range is checked directly against the ATR-based requirement. The Base is affected only indirectly when a candle becomes an ERC; the Leg-In is not tested.
+The complete **Leg-Out** range is checked directly against the ATR-based requirement. Base and Leg-In candles are not tested by this setting.

@@ -28,7 +28,7 @@ The outer boundary of a zone, farther from the side price is expected to reach f
 
 ## ERC
 
-Extended Range Candle. A decisive expansion candle with a meaningful body and enough size compared with recent market movement. In zone detection, ERC settings directly qualify the Leg-Out and indirectly prevent an ERC candle from being accepted as part of the Base. They do not qualify the Leg-In.
+Extended Range Candle. A decisive expansion candle with a meaningful body and enough size compared with recent market movement. In zone detection, ERC settings qualify the Leg-Out only. Base and Leg-In candles use their own shape conditions.
 
 ## Flip Zone
 

@@ -6,7 +6,7 @@ Enable it with **Visual Settings → Show RAW Data Table**. The table appears in
 
 ## Demand example
 
-![RAW Data Table showing a Demand zone whose Leg-In, Base, and Leg-Out measurements pass all five visible detection checks](../assets/diagrams/raw-data-table-demand-example.svg)
+![RAW Data Table showing stored measurements for an active Demand zone](../assets/diagrams/raw-data-table-demand-example.svg)
 
 The example contains an active Demand zone, so the three `D:` rows are populated. The Supply rows contain zeros and `NaN`, which means there is no active Supply zone available above current price.
 
@@ -55,6 +55,8 @@ This passes the default `Max. Base Body Size (% of Leg-Out) = 70%` because `17.8
 !!! note "BODY, RANGE, and OPEN in Base Max"
     `BODY` is the largest Base body. `RANGE` is the largest complete range found among all Base candles. These values can come from different candles. `OPEN` belongs to the candle with the largest body, so do not calculate `36.15 ÷ 98.27` as a Base body-to-range test.
 
+Since v2.1.0, every Base candle must also satisfy `Body ÷ its own Range < 50%`. The aggregate `D: Base Max` row does not preserve the body and range pair for every Base candle, so verify this condition candle by candle on the chart. Exactly `50%` fails.
+
 The RAW table does not show the number of Base candles. Count them on the chart. With the current scan behavior, the default `Max. Base Candles = 4` allows up to three actual Base candles before the Leg-In must appear.
 
 ## 4. Check the Leg-In
@@ -65,10 +67,11 @@ The `D: Leg-In` row shows:
 | ---: | ---: | ---: | ---: |
 | `103.69` | `155.44` | `5896.68` | `66.7%` |
 
-Both Leg-In conditions pass:
+The Leg-In condition passes:
 
-- Leg-In Body Size (% of Range): `103.69 ÷ 155.44 = 66.7%`, above the default minimum of `50%`.
-- Size versus Base: `103.69 ÷ 36.15 = 2.87×`, above the default minimum of `1.50×`.
+- Leg-In Body Size (% of Range): `103.69 ÷ 155.44 = 66.7%`, strictly above the default minimum of `50%`.
+
+Since v2.1.0, Leg-In body size is not compared with Base body size.
 
 ## Result for this example
 
@@ -77,10 +80,10 @@ Both Leg-In conditions pass:
 | **LEG-OUT** | Body ÷ Range | minimum `40%` | `83.2%` | **PASS** |
 | **LEG-OUT** | Complete range vs shown ATR reference | minimum `122.79` | `244.45` | **PASS*** |
 | **BASE** | Largest body ÷ Leg-Out body | maximum `70%` | `17.8%` | **PASS** |
-| **LEG-IN** | Body ÷ Range | minimum `50%` | `66.7%` | **PASS** |
-| **LEG-IN vs BASE** | Leg-In body ÷ largest Base body | minimum `1.50×` | `2.87×` | **PASS** |
+| **BASE** | Each body ÷ its own range | strictly below `50%` | inspect each Base candle | **NOT EXPOSED IN AGGREGATE ROW** |
+| **LEG-IN** | Body ÷ Range | strictly above `50%` | `66.7%` | **PASS** |
 
-All five comparisons pass against the values shown. The remaining chart checks are the number and order of the Base candles and, for an older zone, the ATR reference from the formation bar.
+The stored Leg-Out, Base-versus-Leg-Out, and Leg-In values pass. The remaining chart checks are every Base candle's body/range ratio, the number and order of Base candles, and, for an older zone, the historical ATR reference.
 
 `*` The range result reproduces the historical detection decision only when `122.79` is captured with the Leg-Out as the replay endpoint.
 
@@ -112,10 +115,14 @@ For an older or missing formation:
 1. Start Bar Replay before the suspected formation.
 2. Advance until its Leg-Out is the replay endpoint.
 3. Record `Pure ATR`, `Min. Range (ATR*Mult)`, and the Leg-In, Base, and Leg-Out candle values.
-4. Apply the same five calculations used in the example above.
-5. Count the Base candles on the chart.
+4. Apply the visible calculations used in the example above.
+5. Count the Base candles and verify `Body ÷ Range < 50%` separately for each one.
 6. Advance one bar and check whether the zone appears and becomes the nearest active zone in the RAW table.
 
-The table cannot display a candidate rejected before zone creation. In that case, Bar Replay and the five manual checks are the correct debugging workflow.
+The table cannot display a candidate rejected before zone creation. In that case, Bar Replay and the manual candle checks are the correct debugging workflow.
+
+Since v2.2.0, also compare the Leg-Out extreme with the original Base distal. Demand is rejected when `Leg-Out Low ≤ Base Distal`; Supply is rejected when `Leg-Out High ≥ Base Distal`. This candidate-level rejection is not exposed in the aggregate RAW table because no Zone object is created.
+
+Since v2.3.0, every native LTF Base candle must also satisfy `Base Range ≤ Leg-Out Range`. The RAW table exposes only the largest accepted Base range, so use it to inspect accepted zones; a failing candidate is rejected before a Zone object exists.
 
 For the complete detection-input reference, open [Zone Detection Settings at a Glance](all-settings.md).
