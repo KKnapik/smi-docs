@@ -25,7 +25,7 @@ The Leg-In brings price into the future zone area. Its body must dominate its ow
 
 ### 2. Price pauses
 
-One or more compact candles form the Base. These candles represent a temporary balance before price leaves the area. On native LTF detection, every Base candle's complete range must be no larger than the Leg-Out range. See [Base Range vs Leg-Out Range](base-range-vs-legout-range.md).
+One or more compact candles form the Base. These candles represent a temporary balance before price leaves the area. By default, every Base candle's complete range must be no larger than the Leg-Out range; this comparison can be disabled with [Require Base Range ≤ Leg-Out Range](base-range-vs-legout-range.md).
 
 ### 3. Price departs
 
@@ -49,9 +49,10 @@ On LTF, strength alone is not sufficient. The Leg-Out must also leave the comple
 | --- | --- | ---: | --- |
 | Min. Leg-Out Body Size (% of Range) | **LEG-OUT** | `70%` | Qualifies the body shape of the departure. It does not qualify Base or Leg-In candles. |
 | Max. Base Body Size (% of Range) | **BASE** | `50%` | Requires every Base candle body to occupy strictly less than half of that candle's own range. |
+| Require Base Range ≤ Leg-Out Range | **BASE** | **On** | Controls whether every Base candle's complete range must fit within the Leg-Out range. |
 | Min. Leg-Out Range (ATR ×) | **LEG-OUT** | `1.20` | Checks whether the departure is large enough compared with recent movement. |
 | Avg. Price Range Period (Bars) | **LEG-OUT** | `50` | Sets how many bars are used for the recent-movement reference behind the Leg-Out range requirement. |
 | Max. Base Candles | **BASE** | `4` | Controls how long the pause may last. With the current behavior, the default accepts up to three actual base candles before the Leg-In must be found. |
 | Min. Leg-In Body Size (% of Range) | **LEG-IN** | `50%` | Requires the Leg-In body to occupy strictly more than half of its range. It is the only Leg-In size qualifier. |
 
-Every Base candle is checked independently against its own shape and the mandatory range rule. At the defaults, each one must satisfy `Base Body ÷ Base Range < 50%` and `Base Range ≤ Leg-Out Range`. Base body size is not compared with Leg-Out body size.
+Every Base candle is checked independently against its own shape. At the defaults, each one must satisfy `Base Body ÷ Base Range < 50%` and, because the range checkbox is on, `Base Range ≤ Leg-Out Range`. Turning the checkbox off removes only the second condition. Base body size is never compared with Leg-Out body size.

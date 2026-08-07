@@ -1,6 +1,6 @@
 # Zone Detection Settings at a Glance
 
-This page brings together only the **Intraday zone-detection settings** from **v2.10.6 SMI — Smart Money Indicator — Intraday**.
+This page brings together only the **Intraday zone-detection settings** from **v2.10.7 SMI — Smart Money Indicator — Intraday**.
 
 ## Terms used on this page
 
@@ -17,6 +17,7 @@ This page brings together only the **Intraday zone-detection settings** from **v
 | --- | ---: | --- | --- | --- |
 | [Min. Leg-Out Body Size (% of Range)](zone-detection/erc-body-threshold.md) | `70%` | **LEG-OUT** | Requires the Leg-Out body to occupy enough of its complete range. | Requires a more body-dominant Leg-Out, so fewer departures qualify. |
 | [Max. Base Body Size (% of Range)](zone-detection/base-body-range-max.md) | `50%` | **BASE** | Requires every Base body to occupy strictly less than half of its own complete range. | Allows more body-dominant Base candles, so more formations may qualify. |
+| [Require Base Range ≤ Leg-Out Range](zone-detection/base-range-vs-legout-range.md) | **On** | **BASE** | When enabled, requires every Base candle's complete range to be no larger than the Leg-Out range. | Turning it off removes this range comparison, while Base Body/Range remains active. |
 | [Min. Leg-Out Range (ATR ×)](zone-detection/erc-range-atr-multiplier.md) | `1.20` | **LEG-OUT** | Requires the complete Leg-Out range to be large enough compared with recent movement. | Requires a larger Leg-Out, so fewer departures qualify. |
 | [Avg. Price Range Period (Bars)](zone-detection/atr-lookback-period.md) | `50` | **LEG-OUT reference** | Sets how many candles build the average movement reference used by the Leg-Out range test. | Produces a slower, smoother reference that reacts less to the newest candles. |
 | [Max. Base Candles](zone-detection/max-base-candles.md) | `4` | **BASE** | Sets the backward scan available for Base candles and the preceding Leg-In. With the current scan behavior, `4` allows up to **three actual Base candles** before the Leg-In must appear. | Allows a longer pause before departure. |

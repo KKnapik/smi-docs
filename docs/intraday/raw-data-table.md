@@ -83,7 +83,7 @@ Since v2.1.0, Leg-In body size is not compared with Base body size.
 | **OTHER BASE CANDLES** | Each body ÷ its own range | strictly below `50%` | inspect each Base candle | **NOT EXPOSED IN AGGREGATE ROW** |
 | **LEG-IN** | Body ÷ Range | strictly above `50%` | `66.7%` | **PASS** |
 
-The stored Leg-Out, selected Base, and Leg-In values pass. The remaining chart checks are the other Base candles' body/range ratios, every Base range versus the Leg-Out range, the number and order of Base candles, and, for an older zone, the historical ATR reference.
+The stored Leg-Out, selected Base, and Leg-In values pass. The remaining chart checks are the other Base candles' body/range ratios, every Base range versus the Leg-Out range when that checkbox is enabled, the number and order of Base candles, and, for an older zone, the historical ATR reference.
 
 `*` The range result reproduces the historical detection decision only when `210.49` is captured with the Leg-Out as the replay endpoint.
 
@@ -116,13 +116,13 @@ For an older or missing formation:
 2. Advance until its Leg-Out is the replay endpoint.
 3. Record `Pure ATR`, `Min. Range (ATR*Mult)`, and the Leg-In, Base, and Leg-Out candle values.
 4. Apply the visible calculations used in the example above.
-5. Count the Base candles and use Candle Metrics to verify `Body ÷ Range < 50%` and `Base Range ≤ Leg-Out Range` separately for each one.
+5. Count the Base candles and use Candle Metrics to verify `Body ÷ Range < 50%` for each one. When `Require Base Range ≤ Leg-Out Range` is enabled, also verify that range comparison separately for every Base candle.
 6. Advance one bar and check whether the zone appears and becomes the nearest active zone in the RAW table.
 
 The table cannot display a candidate rejected before zone creation. In that case, Bar Replay and the manual candle checks are the correct debugging workflow.
 
 Since v2.2.0, also compare the Leg-Out extreme with the original Base distal. Demand is rejected when `Leg-Out Low ≤ Base Distal`; Supply is rejected when `Leg-Out High ≥ Base Distal`. This candidate-level rejection is not exposed in the aggregate RAW table because no Zone object is created.
 
-Since v2.3.0, every native LTF Base candle must also satisfy `Base Range ≤ Leg-Out Range`. The RAW Base Max row exposes only the range paired with the largest Base body, so use Candle Metrics to inspect every Base candle; a failing candidate is rejected before a Zone object exists.
+Since v2.3.0, native LTF Base candles can be required to satisfy `Base Range ≤ Leg-Out Range`. From v2.10.7 this rule is controlled by an enabled-by-default checkbox. The RAW Base Max row exposes only the range paired with the largest Base body, so use Candle Metrics to inspect every Base candle; a failing candidate is rejected before a Zone object exists.
 
 For the complete detection-input reference, open [Zone Detection Settings at a Glance](all-settings.md).

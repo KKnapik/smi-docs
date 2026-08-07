@@ -2,17 +2,21 @@
 
 **Introduced:** `v2.3.0`
 
-**Configurable:** No. This is a mandatory native LTF Base qualification rule.
+**Configurable since:** `v2.10.7`
+
+**Setting:** `Require Base Range ≤ Leg-Out Range`
+
+**Default:** **On**
 
 ## Rule
 
-Every Base candle is checked independently using its complete High-to-Low range:
+When the checkbox is enabled, every Base candle is checked independently using its complete High-to-Low range:
 
 ```text
 Base Range ≤ Leg-Out Range
 ```
 
-A Base candle equal in range to the Leg-Out is accepted. If any Base candle is larger than the Leg-Out, the complete zone candidate is rejected.
+A Base candle equal in range to the Leg-Out is accepted. If any Base candle is larger than the Leg-Out, the complete zone candidate is rejected. When the checkbox is disabled, this range comparison is skipped; Base Body/Range qualification still applies.
 
 ## Interaction with the other Base rules
 
@@ -23,8 +27,8 @@ Base Body ÷ Base Range < configured maximum
 Base Range ≤ Leg-Out Range
 ```
 
-The body/range rule uses a chart setting. The range comparison is fixed and has no input. `Base Body ÷ Leg-Out Body` is no longer evaluated.
+Both current Base rules are trader-facing settings: Body/Range uses a percentage input, while the range comparison uses this checkbox. `Base Body ÷ Leg-Out Body` is no longer evaluated.
 
 ## Scope
 
-Version 2.3.0 introduced this rule for native LTF zones created by the Intraday indicator. Version 2.10.6 removed the redundant Base-body-versus-Leg-Out-body condition. Intraday no longer performs internal HTF reconstruction; Swing LTF Confirmation remains separate until synchronized from the Intraday changelog.
+Version 2.3.0 introduced this rule as mandatory for native LTF zones. Version 2.10.6 removed the redundant Base-body-versus-Leg-Out-body condition, and v2.10.7 exposed the range rule as an enabled-by-default checkbox. Intraday no longer performs internal HTF reconstruction; Swing LTF Confirmation remains separate until synchronized from the Intraday changelog.
