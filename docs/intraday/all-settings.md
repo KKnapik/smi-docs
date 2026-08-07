@@ -1,6 +1,6 @@
 # Zone Detection Settings at a Glance
 
-This page brings together only the **Intraday zone-detection settings** from **v2.10.7 SMI — Smart Money Indicator — Intraday**.
+This page brings together only the **Intraday zone-detection settings** from **v2.12.0 SMI — Smart Money Indicator — Intraday**.
 
 ## Terms used on this page
 

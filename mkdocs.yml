@@ -38,6 +38,9 @@ nav:
       - Overview: intraday/index.md
       - RAW Data Table Guide: intraday/raw-data-table.md
       - Candle Metrics Debug: intraday/candle-metrics-debug.md
+      - LoL Detection:
+          - User Guide: intraday/lol-detection.md
+          - Fallback Correlation: intraday/lol-recent-tested-zones.md
       - Zone Detection:
           - Overview: intraday/zone-detection/index.md
           - LTF Leg-Out Engulf Rule: intraday/zone-detection/leg-out-engulf-rule.md

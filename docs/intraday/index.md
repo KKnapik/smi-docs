@@ -2,7 +2,7 @@
 
 The SMI Intraday indicator looks for price areas where a clear departure suggests that buying or selling pressure was stronger than the opposing side. It then evaluates whether those areas remain relevant when price returns.
 
-**Current chart name:** `v2.10.7 SMI — Smart Money Indicator — Intraday`
+**Current chart name:** `v2.12.0 SMI — Smart Money Indicator — Intraday`
 
 ## Main areas
 
@@ -23,3 +23,4 @@ The initial documentation focuses on the input parameters that directly influenc
 - [LTF Leg-Out Engulf Rule](zone-detection/leg-out-engulf-rule.md) — the non-configurable clean-departure rule that rejects a Leg-Out wick traversing the complete Base zone.
 - [RAW Data Table — Zone Debugging Guide](raw-data-table.md) — identify the selected zone and verify its Leg-In, Base, and Leg-Out measurements.
 - [Candle Metrics Debug](candle-metrics-debug.md) — read the compact `R`, `B`, and `B%C` labels on recent candles.
+- [LoL Detection](lol-detection.md) — a simple guide to LoL rules, settings, partner priority, recently tested zones, shared candles, display modes, and lifecycle.
