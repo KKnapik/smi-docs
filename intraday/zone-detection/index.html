@@ -981,7 +981,7 @@
 <h3 id="1-price-approaches">1. Price approaches</h3>
 <p>The Leg-In brings price into the future zone area. Its body must dominate its own candle range, but it is not compared with the size of the Base candles.</p>
 <h3 id="2-price-pauses">2. Price pauses</h3>
-<p>One or more compact candles form the Base. These candles represent a temporary balance before price leaves the area. On native LTF detection, every Base candle's complete range must be no larger than the Leg-Out range. See <a href="base-range-vs-legout-range/">Base Range vs Leg-Out Range</a>.</p>
+<p>One or more compact candles form the Base. These candles represent a temporary balance before price leaves the area. By default, every Base candle's complete range must be no larger than the Leg-Out range; this comparison can be disabled with <a href="base-range-vs-legout-range/">Require Base Range ≤ Leg-Out Range</a>.</p>
 <h3 id="3-price-departs">3. Price departs</h3>
 <p>A strong bullish or bearish Leg-Out confirms that price left the base with enough force. The indicator then draws a Demand or Supply zone around the base.</p>
 <p>On LTF, strength alone is not sufficient. The Leg-Out must also leave the complete Base zone cleanly. If its opposite wick reaches or passes the Base distal boundary, the candidate is rejected because the departure candle has already traversed the full imbalance. See the <a href="leg-out-engulf-rule/">LTF Leg-Out Engulf Rule</a>.</p>
@@ -1020,6 +1020,12 @@
 <td>Requires every Base candle body to occupy strictly less than half of that candle's own range.</td>
 </tr>
 <tr>
+<td>Require Base Range ≤ Leg-Out Range</td>
+<td><strong>BASE</strong></td>
+<td style="text-align: right;"><strong>On</strong></td>
+<td>Controls whether every Base candle's complete range must fit within the Leg-Out range.</td>
+</tr>
+<tr>
 <td>Min. Leg-Out Range (ATR ×)</td>
 <td><strong>LEG-OUT</strong></td>
 <td style="text-align: right;"><code>1.20</code></td>
@@ -1045,7 +1051,7 @@
 </tr>
 </tbody>
 </table>
-<p>Every Base candle is checked independently against its own shape and the mandatory range rule. At the defaults, each one must satisfy <code>Base Body ÷ Base Range &lt; 50%</code> and <code>Base Range ≤ Leg-Out Range</code>. Base body size is not compared with Leg-Out body size.</p>
+<p>Every Base candle is checked independently against its own shape. At the defaults, each one must satisfy <code>Base Body ÷ Base Range &lt; 50%</code> and, because the range checkbox is on, <code>Base Range ≤ Leg-Out Range</code>. Turning the checkbox off removes only the second condition. Base body size is never compared with Leg-Out body size.</p>
 
 
 

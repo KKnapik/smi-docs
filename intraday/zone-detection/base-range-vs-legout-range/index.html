@@ -992,20 +992,22 @@
 
 <h1 id="base-range-vs-leg-out-range">Base Range vs Leg-Out Range</h1>
 <p><strong>Introduced:</strong> <code>v2.3.0</code></p>
-<p><strong>Configurable:</strong> No. This is a mandatory native LTF Base qualification rule.</p>
+<p><strong>Configurable since:</strong> <code>v2.10.7</code></p>
+<p><strong>Setting:</strong> <code>Require Base Range ≤ Leg-Out Range</code></p>
+<p><strong>Default:</strong> <strong>On</strong></p>
 <h2 id="rule">Rule</h2>
-<p>Every Base candle is checked independently using its complete High-to-Low range:</p>
+<p>When the checkbox is enabled, every Base candle is checked independently using its complete High-to-Low range:</p>
 <div class="highlight"><pre><span></span><code>Base Range ≤ Leg-Out Range
 </code></pre></div>
-<p>A Base candle equal in range to the Leg-Out is accepted. If any Base candle is larger than the Leg-Out, the complete zone candidate is rejected.</p>
+<p>A Base candle equal in range to the Leg-Out is accepted. If any Base candle is larger than the Leg-Out, the complete zone candidate is rejected. When the checkbox is disabled, this range comparison is skipped; Base Body/Range qualification still applies.</p>
 <h2 id="interaction-with-the-other-base-rules">Interaction with the other Base rules</h2>
 <p>Passing this range rule is not sufficient on its own. From v2.10.6, every Base candle must simultaneously satisfy:</p>
 <div class="highlight"><pre><span></span><code>Base Body ÷ Base Range &lt; configured maximum
 Base Range ≤ Leg-Out Range
 </code></pre></div>
-<p>The body/range rule uses a chart setting. The range comparison is fixed and has no input. <code>Base Body ÷ Leg-Out Body</code> is no longer evaluated.</p>
+<p>Both current Base rules are trader-facing settings: Body/Range uses a percentage input, while the range comparison uses this checkbox. <code>Base Body ÷ Leg-Out Body</code> is no longer evaluated.</p>
 <h2 id="scope">Scope</h2>
-<p>Version 2.3.0 introduced this rule for native LTF zones created by the Intraday indicator. Version 2.10.6 removed the redundant Base-body-versus-Leg-Out-body condition. Intraday no longer performs internal HTF reconstruction; Swing LTF Confirmation remains separate until synchronized from the Intraday changelog.</p>
+<p>Version 2.3.0 introduced this rule as mandatory for native LTF zones. Version 2.10.6 removed the redundant Base-body-versus-Leg-Out-body condition, and v2.10.7 exposed the range rule as an enabled-by-default checkbox. Intraday no longer performs internal HTF reconstruction; Swing LTF Confirmation remains separate until synchronized from the Intraday changelog.</p>
 
 
 

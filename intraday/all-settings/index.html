@@ -991,7 +991,7 @@
 
 
 <h1 id="zone-detection-settings-at-a-glance">Zone Detection Settings at a Glance</h1>
-<p>This page brings together only the <strong>Intraday zone-detection settings</strong> from <strong>v2.10.6 SMI — Smart Money Indicator — Intraday</strong>.</p>
+<p>This page brings together only the <strong>Intraday zone-detection settings</strong> from <strong>v2.10.7 SMI — Smart Money Indicator — Intraday</strong>.</p>
 <h2 id="terms-used-on-this-page">Terms used on this page</h2>
 <ul>
 <li><strong>Candle body</strong> — the distance between open and close.</li>
@@ -1026,6 +1026,13 @@
 <td><strong>BASE</strong></td>
 <td>Requires every Base body to occupy strictly less than half of its own complete range.</td>
 <td>Allows more body-dominant Base candles, so more formations may qualify.</td>
+</tr>
+<tr>
+<td><a href="../zone-detection/base-range-vs-legout-range/">Require Base Range ≤ Leg-Out Range</a></td>
+<td style="text-align: right;"><strong>On</strong></td>
+<td><strong>BASE</strong></td>
+<td>When enabled, requires every Base candle's complete range to be no larger than the Leg-Out range.</td>
+<td>Turning it off removes this range comparison, while Base Body/Range remains active.</td>
 </tr>
 <tr>
 <td><a href="../zone-detection/erc-range-atr-multiplier/">Min. Leg-Out Range (ATR ×)</a></td>
