@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="800" viewBox="0 0 1500 800" role="img" aria-labelledby="title desc">
+  <title id="title">Mandatory Leg-Out engulfing rejection for Demand and Supply</title>
+  <desc id="desc">Demand and Supply examples show exact Base distal levels and Leg-Out wick extremes for accepted and rejected departures.</desc>
+  <style>.bg{fill:#121820}.panel{fill:#18212b;stroke:#33404d;stroke-width:2}.bad{fill:#241b20;stroke:#a84b55;stroke-width:2}.h{fill:#f4eee7;font:700 31px system-ui}.sub{fill:#ad9f91;font:18px system-ui}.pt{fill:#f4eee7;font:700 18px system-ui}.txt{fill:#d4cbc2;font:15px system-ui}.pass{fill:#63c69f;font:700 17px system-ui}.fail{fill:#ef7d78;font:700 17px system-ui}.green{fill:#159b7e;stroke:#44b69e;stroke-width:2}.red{fill:#d65a5a;stroke:#e57b73;stroke-width:2}.base{fill:#7b6a60;stroke:#aa9687;stroke-width:2}.wickg{stroke:#44b69e;stroke-width:3}.wickr{stroke:#e57b73;stroke-width:3}.wickb{stroke:#aa9687;stroke-width:3}.zoneD{fill:#173f3c;fill-opacity:.58;stroke:#4cab9b;stroke-width:1.5}.zoneS{fill:#4c292d;fill-opacity:.58;stroke:#d26a6a;stroke-width:1.5}.dist{stroke:#e8be83;stroke-width:2;stroke-dasharray:7 5}.gold{fill:#e8be83;font:700 15px system-ui}.tag{fill:#211d1a;stroke:#806b59;stroke-width:1.5}</style>
+  <rect class="bg" width="1500" height="800" rx="22"/>
+  <text class="h" x="46" y="52">Mandatory clean departure — the Leg-Out wick must not reach Base distal</text>
+  <text class="sub" x="46" y="84">This rule has no input switch. Equality at the distal boundary is rejected.</text>
+  <rect class="panel" x="46" y="118" width="334" height="590" rx="15"/><rect class="bad" x="404" y="118" width="334" height="590" rx="15"/><rect class="panel" x="762" y="118" width="334" height="590" rx="15"/><rect class="bad" x="1120" y="118" width="334" height="590" rx="15"/>
+  <text class="pt" x="66" y="152">DEMAND — PASS</text><text class="pass" x="66" y="179">Leg-Out Low 101</text>
+  <text class="pt" x="424" y="152">DEMAND — REJECT</text><text class="fail" x="424" y="179">Leg-Out Low 100</text>
+  <text class="pt" x="782" y="152">SUPPLY — PASS</text><text class="pass" x="782" y="179">Leg-Out High 199</text>
+  <text class="pt" x="1140" y="152">SUPPLY — REJECT</text><text class="fail" x="1140" y="179">Leg-Out High 200</text>
+  <!-- Demand pass -->
+  <rect class="zoneD" x="70" y="444" width="286" height="94"/><line class="dist" x1="70" y1="538" x2="356" y2="538"/><text class="gold" x="80" y="562">BASE DISTAL = 100</text>
+  <line class="wickg" x1="106" y1="346" x2="106" y2="528"/><rect class="green" x="88" y="390" width="36" height="104"/><line class="wickb" x1="184" y1="426" x2="184" y2="538"/><rect class="base" x="166" y="458" width="36" height="32"/><line class="wickb" x1="232" y1="420" x2="232" y2="532"/><rect class="base" x="214" y="454" width="36" height="34"/><line class="wickg" x1="310" y1="252" x2="310" y2="534"/><rect class="green" x="286" y="282" width="48" height="214"/>
+  <rect class="tag" x="74" y="594" width="278" height="72" rx="9"/><text class="txt" x="88" y="620">101 stays above distal 100</text><text class="pass" x="88" y="648">IMBALANCE REMAINS CLEAN</text>
+  <!-- Demand fail -->
+  <rect class="zoneD" x="428" y="444" width="286" height="94"/><line class="dist" x1="428" y1="538" x2="714" y2="538"/><text class="gold" x="438" y="562">BASE DISTAL = 100</text>
+  <line class="wickg" x1="464" y1="346" x2="464" y2="528"/><rect class="green" x="446" y="390" width="36" height="104"/><line class="wickb" x1="542" y1="426" x2="542" y2="538"/><rect class="base" x="524" y="458" width="36" height="32"/><line class="wickb" x1="590" y1="420" x2="590" y2="532"/><rect class="base" x="572" y="454" width="36" height="34"/><line class="wickg" x1="668" y1="252" x2="668" y2="538"/><rect class="green" x="644" y="282" width="48" height="214"/>
+  <rect class="tag" x="432" y="594" width="278" height="72" rx="9"/><text class="txt" x="446" y="620">100 reaches distal 100</text><text class="fail" x="446" y="648">EQUALITY IS REJECTED</text>
+  <!-- Supply pass -->
+  <rect class="zoneS" x="786" y="286" width="286" height="94"/><line class="dist" x1="786" y1="286" x2="1072" y2="286"/><text class="gold" x="796" y="274">BASE DISTAL = 200</text>
+  <line class="wickr" x1="822" y1="292" x2="822" y2="474"/><rect class="red" x="804" y="326" width="36" height="104"/><line class="wickb" x1="900" y1="286" x2="900" y2="398"/><rect class="base" x="882" y="334" width="36" height="32"/><line class="wickb" x1="948" y1="292" x2="948" y2="404"/><rect class="base" x="930" y="336" width="36" height="34"/><line class="wickr" x1="1026" y1="290" x2="1026" y2="572"/><rect class="red" x="1002" y="332" width="48" height="214"/>
+  <rect class="tag" x="790" y="594" width="278" height="72" rx="9"/><text class="txt" x="804" y="620">199 stays below distal 200</text><text class="pass" x="804" y="648">IMBALANCE REMAINS CLEAN</text>
+  <!-- Supply fail -->
+  <rect class="zoneS" x="1144" y="286" width="286" height="94"/><line class="dist" x1="1144" y1="286" x2="1430" y2="286"/><text class="gold" x="1154" y="274">BASE DISTAL = 200</text>
+  <line class="wickr" x1="1180" y1="292" x2="1180" y2="474"/><rect class="red" x="1162" y="326" width="36" height="104"/><line class="wickb" x1="1258" y1="286" x2="1258" y2="398"/><rect class="base" x="1240" y="334" width="36" height="32"/><line class="wickb" x1="1306" y1="292" x2="1306" y2="404"/><rect class="base" x="1288" y="336" width="36" height="34"/><line class="wickr" x1="1384" y1="286" x2="1384" y2="572"/><rect class="red" x="1360" y="332" width="48" height="214"/>
+  <rect class="tag" x="1148" y="594" width="278" height="72" rx="9"/><text class="txt" x="1162" y="620">200 reaches distal 200</text><text class="fail" x="1162" y="648">EQUALITY IS REJECTED</text>
+  <text class="txt" x="46" y="752">Demand compares the Leg-Out Low with the lowest Base wick. Supply compares the Leg-Out High with the highest Base wick.</text>
+</svg>

@@ -1,6 +1,6 @@
 # LoL Fallback Correlation
 
-Intraday v2.12.0 extends Level-on-Level (LoL) correlation without changing how normal zones become active or broken.
+Intraday v2.12.1 extends Level-on-Level (LoL) correlation without changing how normal zones become active or broken.
 
 For a simple explanation of all LoL rules and settings, start with the [LoL Detection user guide](lol-detection.md).
 
@@ -28,17 +28,15 @@ Distal Leg-In -> Distal Base -> Shared candle -> Proximal Base -> Proximal Leg-O
                                       +-- Proximal Leg-In
 ```
 
-The shared candle may be clean enough to act as the proximal Leg-In while its Body/Range remains below the stricter normal Leg-Out threshold. In that case the distal formation is not a normal zone and is not retained as a candidate.
+The shared candle is qualified as the proximal Leg-In, regardless of whether it passes or fails the normal Leg-Out Body/Range and Range/ATR rules. This reconstruction is considered only when the distal formation is unavailable through the normal active or recent partner paths.
 
 After the proximal zone validates and no active or recent partner qualifies, the LoL engine performs one bounded historical reconstruction. The shared candle must be the exact proximal Leg-In bar and must:
 
 - have the correct Rally/Drop direction;
 - pass the configured strict Leg-In Body/Range threshold;
-- miss only the normal Leg-Out Body/Range threshold;
-- pass the normal Leg-Out minimum Range/ATR requirement;
 - leave a valid Base without engulfing its complete imbalance.
 
-The earlier Leg-In, every distal Base candle, distal integrity, gap, context, and Base-overlap rules remain mandatory. The reconstructed formation can exist only as part of the confirmed LoL pair; it can never become a standalone zone, Flip fact, or alert.
+The shared candle does not have to pass normal Leg-Out Body/Range or minimum Range/ATR qualification. It is also not used as the range cap for `Require Base Range ≤ Leg-Out Range`. The earlier Leg-In, every distal Base candle's own Body/Range qualification, distal integrity, gap, context, and Base-overlap rules remain mandatory. The reconstructed formation can exist only as part of the confirmed LoL pair; it can never become a standalone zone, Flip fact, or alert.
 
 ## Bounded reject memory
 

@@ -43,6 +43,7 @@ nav:
           - Fallback Correlation: intraday/lol-recent-tested-zones.md
       - Zone Detection:
           - Overview: intraday/zone-detection/index.md
+          - Debugging Workflow: intraday/zone-detection/debugging-workflow.md
           - LTF Leg-Out Engulf Rule: intraday/zone-detection/leg-out-engulf-rule.md
           - Base Range vs Leg-Out Range: intraday/zone-detection/base-range-vs-legout-range.md
           - Settings at a Glance: intraday/all-settings.md

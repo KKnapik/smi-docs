@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Every Base candle is checked against the Body Cover maximum</title>
+  <desc id="desc">Two complete Demand formations show two valid Base candles and a rejected formation where the second Base candle has exactly fifty percent Body Cover.</desc>
+  <style>.bg{fill:#121820}.panel{fill:#18212b;stroke:#33404d;stroke-width:2}.bad{fill:#241b20;stroke:#a84b55;stroke-width:2}.h{fill:#f4eee7;font:700 31px system-ui}.sub{fill:#ad9f91;font:18px system-ui}.pt{fill:#f4eee7;font:700 21px system-ui}.txt{fill:#d4cbc2;font:16px system-ui}.pass{fill:#63c69f;font:700 19px system-ui}.fail{fill:#ef7d78;font:700 19px system-ui}.green{fill:#159b7e;stroke:#44b69e;stroke-width:2}.red{fill:#d65a5a;stroke:#e57b73;stroke-width:2}.base{fill:#7b6a60;stroke:#aa9687;stroke-width:2}.wickg{stroke:#44b69e;stroke-width:3}.wickr{stroke:#e57b73;stroke-width:3}.wickb{stroke:#aa9687;stroke-width:3}.labelg{fill:#166f63;stroke:#46b9a1;stroke-width:1.5}.labelb{fill:#5d514a;stroke:#aa9687;stroke-width:1.5}.labelbad{fill:#9b3f48;stroke:#ef7d78;stroke-width:1.5}.lt{fill:#fff;font:600 13px ui-monospace,monospace}.zone{fill:#173f3c;fill-opacity:.58;stroke:#4cab9b;stroke-width:1.5}.rule{fill:#211d1a;stroke:#806b59;stroke-width:1.5}.gold{fill:#e8be83;font:700 16px system-ui}</style>
+  <rect class="bg" width="1400" height="760" rx="22"/>
+  <text class="h" x="48" y="52">Base — check B%C on every Base candle separately</text>
+  <text class="sub" x="48" y="84">Input used below: Max. Base Body Size = 50% · valid Base candles must remain below that value</text>
+  <rect class="panel" x="48" y="118" width="632" height="560" rx="16"/><rect class="bad" x="720" y="118" width="632" height="560" rx="16"/>
+  <text class="pt" x="74" y="154">A. Both Base candles are valid</text><text class="pass" x="74" y="184">BASE SCAN CONTINUES TO LEG-IN</text>
+  <text class="pt" x="746" y="154">B. One Base candle reaches 50%</text><text class="fail" x="746" y="184">THAT CANDLE IS NOT A BASE</text>
+  <!-- left formation -->
+  <rect class="zone" x="86" y="470" width="544" height="74"/>
+  <line class="wickg" x1="142" y1="328" x2="142" y2="536"/><rect class="green" x="120" y="374" width="44" height="120"/>
+  <line class="wickb" x1="278" y1="414" x2="278" y2="534"/><rect class="base" x="254" y="450" width="48" height="36"/>
+  <rect class="labelb" x="196" y="278" width="166" height="74" rx="8"/><text class="lt" x="210" y="301">R: 80.00</text><text class="lt" x="210" y="321">B: 24.00</text><text class="lt" x="210" y="341">B%C: 30.0%</text>
+  <line class="wickr" x1="410" y1="406" x2="410" y2="536"/><rect class="red" x="386" y="442" width="48" height="52"/>
+  <rect class="labelb" x="328" y="262" width="166" height="74" rx="8"/><text class="lt" x="342" y="285">R: 90.00</text><text class="lt" x="342" y="305">B: 36.00</text><text class="lt" x="342" y="325">B%C: 40.0%</text>
+  <line class="wickg" x1="566" y1="254" x2="566" y2="534"/><rect class="green" x="536" y="286" width="60" height="216"/>
+  <rect class="rule" x="86" y="570" width="544" height="76" rx="10"/><text class="gold" x="106" y="600">Base 1: 30.0% is below 50%</text><text class="gold" x="106" y="626">Base 2: 40.0% is below 50% · both are valid</text>
+  <!-- right formation -->
+  <rect class="zone" x="758" y="470" width="544" height="74"/>
+  <line class="wickg" x1="814" y1="328" x2="814" y2="536"/><rect class="green" x="792" y="374" width="44" height="120"/>
+  <line class="wickb" x1="950" y1="414" x2="950" y2="534"/><rect class="base" x="926" y="450" width="48" height="36"/>
+  <rect class="labelb" x="868" y="278" width="166" height="74" rx="8"/><text class="lt" x="882" y="301">R: 80.00</text><text class="lt" x="882" y="321">B: 24.00</text><text class="lt" x="882" y="341">B%C: 30.0%</text>
+  <line class="wickr" x1="1082" y1="406" x2="1082" y2="536"/><rect class="red" x="1058" y="432" width="48" height="65"/>
+  <rect class="labelbad" x="1000" y="262" width="166" height="74" rx="8"/><text class="lt" x="1014" y="285">R: 90.00</text><text class="lt" x="1014" y="305">B: 45.00</text><text class="lt" x="1014" y="325">B%C: 50.0%</text>
+  <line class="wickg" x1="1238" y1="254" x2="1238" y2="534"/><rect class="green" x="1208" y="286" width="60" height="216"/>
+  <rect class="rule" x="758" y="570" width="544" height="76" rx="10"/><text class="gold" x="778" y="600">Base 1 is valid</text><text class="fail" x="778" y="626">Base 2: exactly 50.0% is rejected by the strict limit</text>
+  <text class="txt" x="48" y="722">Do not use only the RAW Table “Base Max” row. It exposes one selected Base candle; Candle Metrics is required to verify every Base candle.</text>
+</svg>

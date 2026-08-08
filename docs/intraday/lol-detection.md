@@ -23,6 +23,10 @@ Both zones must be the same type:
 - Supply can pair only with Supply.
 - Demand and Supply never form LoL together.
 
+![Demand Level-on-Level example with the older distal zone below the newer proximal zone](../assets/diagrams/lol-demand-example.png)
+
+*Demand example: the older distal zone sits below the newer proximal zone, and both belong to the same clean bullish move.*
+
 ## What the indicator checks
 
 The new zone must first pass normal zone detection. LoL cannot rescue an invalid new proximal zone.
@@ -95,7 +99,11 @@ Distal Leg-In -> Distal Base -> SHARED CANDLE -> Proximal Base -> Proximal Leg-O
                                       +-- Leg-In of the proximal zone
 ```
 
-The shared candle can be a good Leg-In but fall slightly below the stricter Leg-Out Body/Range requirement.
+![Shared-candle LoL example showing one candle acting as the distal Leg-Out and proximal Leg-In](../assets/diagrams/lol-shared-candle-example.png)
+
+*Shared-candle example: the shared candle is qualified as the proximal Leg-In. It does not need to pass the normal Leg-Out Body/Range or Range/ATR requirements, while the proximal Leg-Out remains fully valid.*
+
+The shared candle can be a good Leg-In even when it fails the stricter normal Leg-Out Body/Range requirement, the minimum Leg-Out Range/ATR requirement, or both.
 
 In this special case, the indicator reconstructs the distal formation only after the proximal zone is valid. The distal formation never becomes a standalone normal zone.
 
@@ -103,11 +111,9 @@ The shared candle must still:
 
 - move in the correct direction;
 - pass `Min. Leg-In Body Size (% of Range)`;
-- pass `Min. Leg-Out Range (ATR ×)`;
-- fail only the normal Leg-Out Body/Range requirement;
 - leave the distal Base imbalance intact.
 
-The earlier Leg-In and every Base candle must also be valid. The usual gap, context, overlap, and distal-integrity policies still apply.
+The earlier Leg-In and every Base candle must also be valid. Each Base candle still has to pass its own Body/Range limit, but the shared candle is not used as a Leg-Out range cap for `Require Base Range ≤ Leg-Out Range`. The usual gap, context, overlap, and distal-integrity policies still apply.
 
 !!! important
     The shared-candle exception applies only to the distal partner. The final Leg-Out of the new proximal zone must still pass normal zone detection.
@@ -118,7 +124,7 @@ For example:
 - proximal Leg-Out Body/Range: `69.1%`;
 - configured minimum: `65%`.
 
-The shared candle fails as a normal Leg-Out, but the proximal Leg-Out passes. The pair can therefore become LoL through shared-candle reconstruction.
+The shared candle fails as a normal Leg-Out, but it passes the Leg-In rule and the proximal Leg-Out passes normal detection. The pair can therefore become LoL through shared-candle reconstruction.
 
 With a `70%` minimum, the same example does not form because the proximal Leg-Out is only `69.1%`.
 
@@ -143,6 +149,10 @@ The Style tab also contains:
 These colors do not change detection.
 
 ## Combined and separate display
+
+![Comparison of separate and combined display modes for the same valid overlapping LoL pair](../assets/diagrams/lol-combine-modes.png)
+
+*Both sides show the same valid pair. The setting changes its display and lifecycle, not whether LoL is detected.*
 
 ### Combine overlapping LoL: Off
 

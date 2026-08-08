@@ -2,6 +2,8 @@
 
 This section explains the detection settings as they appear to a trader on the chart. It does not require knowledge of Pine Script.
 
+When a formation looks valid but no zone appears, follow the illustrated [Zone Detection Debugging Workflow](debugging-workflow.md). It maps the `R`, `B`, and `B%C` labels to every detector decision in the exact order used by Intraday.
+
 ## Terms used in this section
 
 - **Candle body** — the distance between the open and close.

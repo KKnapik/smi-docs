@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Candle Metrics labels mapped to a complete Demand formation</title>
+  <desc id="desc">A complete Rally Base Rally sequence maps exact Range, Body and Body Cover labels to Leg-In, two Base candles, Leg-Out and the validation candle.</desc>
+  <defs>
+    <style>
+      .bg{fill:#121820}.panel{fill:#18212b;stroke:#33404d;stroke-width:2}.grid{stroke:#26313d;stroke-width:1}.h{fill:#f4eee7;font:700 32px system-ui}.sub{fill:#ad9f91;font:18px system-ui}.title{fill:#f4eee7;font:700 20px system-ui}.txt{fill:#d4cbc2;font:16px system-ui}.tiny{fill:#b9aea4;font:14px system-ui}.green{fill:#159b7e;stroke:#44b69e;stroke-width:2}.red{fill:#d65a5a;stroke:#e57b73;stroke-width:2}.base{fill:#7b6a60;stroke:#aa9687;stroke-width:2}.wickg{stroke:#44b69e;stroke-width:3}.wickr{stroke:#e57b73;stroke-width:3}.wickb{stroke:#aa9687;stroke-width:3}.labelg{fill:#167e6c;stroke:#46b9a1;stroke-width:1.5}.labelr{fill:#a84348;stroke:#e57b73;stroke-width:1.5}.labelb{fill:#5d514a;stroke:#aa9687;stroke-width:1.5}.lt{fill:#fff;font:600 14px ui-monospace,monospace}.zone{fill:#173f3c;fill-opacity:.58;stroke:#4cab9b;stroke-width:2}.gold{fill:#e8be83;font:700 17px system-ui}.line{stroke:#d0a66e;stroke-width:2;stroke-dasharray:6 5}.chip{fill:#211d1a;stroke:#806b59;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="760" rx="22"/>
+  <text class="h" x="48" y="54">Read the debug labels before checking the formation</text>
+  <text class="sub" x="48" y="86">Exact sequence: Leg-In → Base candle 1 → Base candle 2 → Leg-Out → validation candle</text>
+  <rect class="panel" x="48" y="118" width="1304" height="500" rx="18"/>
+  <line class="grid" x1="72" y1="250" x2="1328" y2="250"/><line class="grid" x1="72" y1="350" x2="1328" y2="350"/><line class="grid" x1="72" y1="450" x2="1328" y2="450"/><line class="grid" x1="72" y1="550" x2="1328" y2="550"/>
+  <rect class="zone" x="270" y="438" width="720" height="96"/><text class="gold" x="288" y="520">FUTURE DEMAND ZONE — BUILT FROM BASE ONLY</text>
+
+  <rect class="labelg" x="92" y="146" width="202" height="78" rx="9"/><text class="lt" x="108" y="171">R: 100.00</text><text class="lt" x="108" y="193">B: 60.00</text><text class="lt" x="108" y="215">B%C: 60.0%</text>
+  <line class="wickg" x1="194" y1="280" x2="194" y2="530"/><rect class="green" x="168" y="338" width="52" height="150" rx="3"/><text class="title" x="150" y="585">LEG-IN</text>
+
+  <rect class="labelb" x="326" y="178" width="202" height="78" rx="9"/><text class="lt" x="342" y="203">R: 80.00</text><text class="lt" x="342" y="225">B: 24.00</text><text class="lt" x="342" y="247">B%C: 30.0%</text>
+  <line class="wickb" x1="427" y1="392" x2="427" y2="512"/><rect class="base" x="403" y="430" width="48" height="36" rx="3"/><text class="title" x="355" y="585">BASE 1</text>
+
+  <rect class="labelr" x="554" y="160" width="202" height="78" rx="9"/><text class="lt" x="570" y="185">R: 90.00</text><text class="lt" x="570" y="207">B: 36.00</text><text class="lt" x="570" y="229">B%C: 40.0%</text>
+  <line class="wickr" x1="655" y1="384" x2="655" y2="519"/><rect class="red" x="631" y="421" width="48" height="54" rx="3"/><text class="title" x="584" y="585">BASE 2</text>
+
+  <rect class="labelg" x="782" y="138" width="202" height="78" rx="9"/><text class="lt" x="798" y="163">R: 150.00</text><text class="lt" x="798" y="185">B: 120.00</text><text class="lt" x="798" y="207">B%C: 80.0%</text>
+  <line class="wickg" x1="883" y1="260" x2="883" y2="516"/><rect class="green" x="851" y="285" width="64" height="205" rx="3"/><text class="title" x="837" y="585">LEG-OUT</text>
+
+  <rect class="labelg" x="1048" y="182" width="202" height="78" rx="9"/><text class="lt" x="1064" y="207">R: 70.00</text><text class="lt" x="1064" y="229">B: 35.00</text><text class="lt" x="1064" y="251">B%C: 50.0%</text>
+  <line class="wickg" x1="1149" y1="268" x2="1149" y2="418"/><rect class="green" x="1125" y="304" width="48" height="75" rx="3"/><text class="title" x="1091" y="585">VALIDATION</text>
+
+  <rect class="chip" x="48" y="646" width="404" height="78" rx="12"/><text class="gold" x="68" y="676">R — complete High-to-Low range</text><text class="txt" x="68" y="705">Use it for ATR and Base-vs-Leg-Out checks.</text>
+  <rect class="chip" x="498" y="646" width="404" height="78" rx="12"/><text class="gold" x="518" y="676">B — absolute Open-to-Close body</text><text class="txt" x="518" y="705">Useful for verification; inputs use percentages.</text>
+  <rect class="chip" x="948" y="646" width="404" height="78" rx="12"/><text class="gold" x="968" y="676">B%C — Body divided by Range</text><text class="txt" x="968" y="705">Compare this field with Body Size settings.</text>
+</svg>

@@ -20,6 +20,8 @@ For this example, `142.75 ÷ 161.25 = 88.5%`.
 
 ## How to use it
 
+For a complete illustrated procedure, use the [Zone Detection Debugging Workflow](zone-detection/debugging-workflow.md).
+
 - Compare a potential Leg-Out `B%C` with **Min. Leg-Out Body Size (% of Range)**.
 - Compare every potential Base candle `B%C` with **Max. Base Body Size (% of Range)**.
 - Compare a potential Leg-In `B%C` with **Min. Leg-In Body Size (% of Range)**.

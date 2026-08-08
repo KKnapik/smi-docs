@@ -32,3 +32,5 @@ Both current Base rules are trader-facing settings: Body/Range uses a percentage
 ## Scope
 
 Version 2.3.0 introduced this rule as mandatory for native LTF zones. Version 2.10.6 removed the redundant Base-body-versus-Leg-Out-body condition, and v2.10.7 exposed the range rule as an enabled-by-default checkbox. Intraday no longer performs internal HTF reconstruction; Swing LTF Confirmation remains separate until synchronized from the Intraday changelog.
+
+The LoL-only shared-candle fallback is an explicit exception from v2.12.1. In that pattern, the shared candle is qualified as the proximal Leg-In rather than as a normal distal Leg-Out, so it is not used as a range cap for the reconstructed distal Base. Normal zone detection continues to follow the checkbox exactly.
