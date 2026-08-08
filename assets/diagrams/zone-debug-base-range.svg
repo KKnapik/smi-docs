@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Base Range compared with Leg-Out Range</title>
+  <desc id="desc">Two complete Demand formations compare an equal Base and Leg-Out range that passes with a Base range one point larger than Leg-Out that fails when the checkbox is enabled.</desc>
+  <style>.bg{fill:#121820}.panel{fill:#18212b;stroke:#33404d;stroke-width:2}.bad{fill:#241b20;stroke:#a84b55;stroke-width:2}.h{fill:#f4eee7;font:700 31px system-ui}.sub{fill:#ad9f91;font:18px system-ui}.pt{fill:#f4eee7;font:700 21px system-ui}.txt{fill:#d4cbc2;font:16px system-ui}.pass{fill:#63c69f;font:700 19px system-ui}.fail{fill:#ef7d78;font:700 19px system-ui}.green{fill:#159b7e;stroke:#44b69e;stroke-width:2}.base{fill:#7b6a60;stroke:#aa9687;stroke-width:2}.wickg{stroke:#44b69e;stroke-width:3}.wickb{stroke:#aa9687;stroke-width:3}.labelg{fill:#166f63;stroke:#46b9a1;stroke-width:1.5}.labelb{fill:#5d514a;stroke:#aa9687;stroke-width:1.5}.labelbad{fill:#9b3f48;stroke:#ef7d78;stroke-width:1.5}.lt{fill:#fff;font:600 13px ui-monospace,monospace}.zone{fill:#173f3c;fill-opacity:.58;stroke:#4cab9b;stroke-width:1.5}.rule{fill:#211d1a;stroke:#806b59;stroke-width:1.5}.gold{fill:#e8be83;font:700 16px system-ui}.measure{stroke:#d0a66e;stroke-width:2;stroke-dasharray:5 4}</style>
+  <rect class="bg" width="1400" height="760" rx="22"/>
+  <text class="h" x="48" y="52">Base — compare each R with the Leg-Out R when the checkbox is On</text>
+  <text class="sub" x="48" y="84">Equality is accepted · one Base candle larger than the Leg-Out rejects the normal candidate</text>
+  <rect class="panel" x="48" y="118" width="632" height="560" rx="16"/><rect class="bad" x="720" y="118" width="632" height="560" rx="16"/>
+  <text class="pt" x="74" y="154">A. Equal ranges are accepted</text><text class="pass" x="74" y="184">BASE RANGE CHECK PASSES</text>
+  <text class="pt" x="746" y="154">B. Base is larger by 1.00</text><text class="fail" x="746" y="184">NORMAL ZONE IS REJECTED</text>
+  <!-- left -->
+  <rect class="zone" x="86" y="474" width="544" height="70"/><line class="wickg" x1="142" y1="330" x2="142" y2="538"/><rect class="green" x="120" y="376" width="44" height="118"/>
+  <line class="wickb" x1="320" y1="372" x2="320" y2="532"/><rect class="base" x="294" y="430" width="52" height="40"/>
+  <rect class="labelb" x="236" y="252" width="170" height="74" rx="8"/><text class="lt" x="250" y="275">R: 100.00</text><text class="lt" x="250" y="295">B: 25.00</text><text class="lt" x="250" y="315">B%C: 25.0%</text>
+  <line class="wickg" x1="540" y1="270" x2="540" y2="530"/><rect class="green" x="510" y="294" width="60" height="216"/>
+  <rect class="labelg" x="456" y="210" width="170" height="74" rx="8"/><text class="lt" x="470" y="233">R: 100.00</text><text class="lt" x="470" y="253">B: 80.00</text><text class="lt" x="470" y="273">B%C: 80.0%</text>
+  <line class="measure" x1="374" y1="372" x2="374" y2="532"/><line class="measure" x1="594" y1="270" x2="594" y2="530"/>
+  <rect class="rule" x="86" y="570" width="544" height="76" rx="10"/><text class="gold" x="106" y="600">Base R 100.00 is not larger than Leg-Out R 100.00</text><text class="pass" x="106" y="628">EQUALITY PASSES</text>
+  <!-- right -->
+  <rect class="zone" x="758" y="474" width="544" height="70"/><line class="wickg" x1="814" y1="330" x2="814" y2="538"/><rect class="green" x="792" y="376" width="44" height="118"/>
+  <line class="wickb" x1="992" y1="370" x2="992" y2="532"/><rect class="base" x="966" y="430" width="52" height="40"/>
+  <rect class="labelbad" x="908" y="252" width="170" height="74" rx="8"/><text class="lt" x="922" y="275">R: 101.00</text><text class="lt" x="922" y="295">B: 25.25</text><text class="lt" x="922" y="315">B%C: 25.0%</text>
+  <line class="wickg" x1="1212" y1="270" x2="1212" y2="530"/><rect class="green" x="1182" y="294" width="60" height="216"/>
+  <rect class="labelg" x="1128" y="210" width="170" height="74" rx="8"/><text class="lt" x="1142" y="233">R: 100.00</text><text class="lt" x="1142" y="253">B: 80.00</text><text class="lt" x="1142" y="273">B%C: 80.0%</text>
+  <line class="measure" x1="1046" y1="370" x2="1046" y2="532"/><line class="measure" x1="1266" y1="270" x2="1266" y2="530"/>
+  <rect class="rule" x="758" y="570" width="544" height="76" rx="10"/><text class="fail" x="778" y="600">Base R 101.00 is larger than Leg-Out R 100.00</text><text class="txt" x="778" y="628">Turning the checkbox Off skips only this comparison.</text>
+  <text class="txt" x="48" y="722">Shared-candle LoL exception: the shared proximal Leg-In is not used as the range cap for the reconstructed distal Base.</text>
+</svg>

@@ -827,6 +827,8 @@
       
         
       
+        
+      
     
     
     
@@ -876,6 +878,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zone-detection/debugging-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1516,6 +1546,8 @@ older Demand zone    &lt;- distal level, farther from current price
 <li>Supply can pair only with Supply.</li>
 <li>Demand and Supply never form LoL together.</li>
 </ul>
+<p><img alt="Demand Level-on-Level example with the older distal zone below the newer proximal zone" src="../../assets/diagrams/lol-demand-example.png" /></p>
+<p><em>Demand example: the older distal zone sits below the newer proximal zone, and both belong to the same clean bullish move.</em></p>
 <h2 id="what-the-indicator-checks">What the indicator checks</h2>
 <p>The new zone must first pass normal zone detection. LoL cannot rescue an invalid new proximal zone.</p>
 <p>After that, the indicator checks the following rules:</p>
@@ -1565,17 +1597,17 @@ older Demand zone    &lt;- distal level, farther from current price
                                       +-- Leg-Out of the distal zone
                                       +-- Leg-In of the proximal zone
 </code></pre></div>
-<p>The shared candle can be a good Leg-In but fall slightly below the stricter Leg-Out Body/Range requirement.</p>
+<p><img alt="Shared-candle LoL example showing one candle acting as the distal Leg-Out and proximal Leg-In" src="../../assets/diagrams/lol-shared-candle-example.png" /></p>
+<p><em>Shared-candle example: the shared candle is qualified as the proximal Leg-In. It does not need to pass the normal Leg-Out Body/Range or Range/ATR requirements, while the proximal Leg-Out remains fully valid.</em></p>
+<p>The shared candle can be a good Leg-In even when it fails the stricter normal Leg-Out Body/Range requirement, the minimum Leg-Out Range/ATR requirement, or both.</p>
 <p>In this special case, the indicator reconstructs the distal formation only after the proximal zone is valid. The distal formation never becomes a standalone normal zone.</p>
 <p>The shared candle must still:</p>
 <ul>
 <li>move in the correct direction;</li>
 <li>pass <code>Min. Leg-In Body Size (% of Range)</code>;</li>
-<li>pass <code>Min. Leg-Out Range (ATR ×)</code>;</li>
-<li>fail only the normal Leg-Out Body/Range requirement;</li>
 <li>leave the distal Base imbalance intact.</li>
 </ul>
-<p>The earlier Leg-In and every Base candle must also be valid. The usual gap, context, overlap, and distal-integrity policies still apply.</p>
+<p>The earlier Leg-In and every Base candle must also be valid. Each Base candle still has to pass its own Body/Range limit, but the shared candle is not used as a Leg-Out range cap for <code>Require Base Range ≤ Leg-Out Range</code>. The usual gap, context, overlap, and distal-integrity policies still apply.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The shared-candle exception applies only to the distal partner. The final Leg-Out of the new proximal zone must still pass normal zone detection.</p>
@@ -1586,7 +1618,7 @@ older Demand zone    &lt;- distal level, farther from current price
 <li>proximal Leg-Out Body/Range: <code>69.1%</code>;</li>
 <li>configured minimum: <code>65%</code>.</li>
 </ul>
-<p>The shared candle fails as a normal Leg-Out, but the proximal Leg-Out passes. The pair can therefore become LoL through shared-candle reconstruction.</p>
+<p>The shared candle fails as a normal Leg-Out, but it passes the Leg-In rule and the proximal Leg-Out passes normal detection. The pair can therefore become LoL through shared-candle reconstruction.</p>
 <p>With a <code>70%</code> minimum, the same example does not form because the proximal Leg-Out is only <code>69.1%</code>.</p>
 <h2 id="lol-settings">LoL settings</h2>
 <p>Open the indicator settings and use the <strong>LoL Settings</strong> group.</p>
@@ -1638,6 +1670,8 @@ older Demand zone    &lt;- distal level, farther from current price
 </ul>
 <p>These colors do not change detection.</p>
 <h2 id="combined-and-separate-display">Combined and separate display</h2>
+<p><img alt="Comparison of separate and combined display modes for the same valid overlapping LoL pair" src="../../assets/diagrams/lol-combine-modes.png" /></p>
+<p><em>Both sides show the same valid pair. The setting changes its display and lifecycle, not whether LoL is detected.</em></p>
 <h3 id="combine-overlapping-lol-off">Combine overlapping LoL: Off</h3>
 <p>This is the default behavior.</p>
 <ul>

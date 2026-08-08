@@ -655,6 +655,8 @@
       
         
       
+        
+      
     
     
     
@@ -704,6 +706,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zone-detection/debugging-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1156,7 +1186,7 @@
 
 
 <h1 id="lol-fallback-correlation">LoL Fallback Correlation</h1>
-<p>Intraday v2.12.0 extends Level-on-Level (LoL) correlation without changing how normal zones become active or broken.</p>
+<p>Intraday v2.12.1 extends Level-on-Level (LoL) correlation without changing how normal zones become active or broken.</p>
 <p>For a simple explanation of all LoL rules and settings, start with the <a href="../lol-detection/">LoL Detection user guide</a>.</p>
 <h2 id="why-this-path-exists">Why this path exists</h2>
 <p>A valid lower formation can be tested at its proximal boundary before the next stacked formation finishes. Normal lifecycle rules correctly reject or mitigate that lower zone, but the later formation may still prove that both levels belong to one LoL price-action sequence.</p>
@@ -1175,16 +1205,14 @@
                                       +-- Distal Leg-Out
                                       +-- Proximal Leg-In
 </code></pre></div>
-<p>The shared candle may be clean enough to act as the proximal Leg-In while its Body/Range remains below the stricter normal Leg-Out threshold. In that case the distal formation is not a normal zone and is not retained as a candidate.</p>
+<p>The shared candle is qualified as the proximal Leg-In, regardless of whether it passes or fails the normal Leg-Out Body/Range and Range/ATR rules. This reconstruction is considered only when the distal formation is unavailable through the normal active or recent partner paths.</p>
 <p>After the proximal zone validates and no active or recent partner qualifies, the LoL engine performs one bounded historical reconstruction. The shared candle must be the exact proximal Leg-In bar and must:</p>
 <ul>
 <li>have the correct Rally/Drop direction;</li>
 <li>pass the configured strict Leg-In Body/Range threshold;</li>
-<li>miss only the normal Leg-Out Body/Range threshold;</li>
-<li>pass the normal Leg-Out minimum Range/ATR requirement;</li>
 <li>leave a valid Base without engulfing its complete imbalance.</li>
 </ul>
-<p>The earlier Leg-In, every distal Base candle, distal integrity, gap, context, and Base-overlap rules remain mandatory. The reconstructed formation can exist only as part of the confirmed LoL pair; it can never become a standalone zone, Flip fact, or alert.</p>
+<p>The shared candle does not have to pass normal Leg-Out Body/Range or minimum Range/ATR qualification. It is also not used as the range cap for <code>Require Base Range ≤ Leg-Out Range</code>. The earlier Leg-In, every distal Base candle's own Body/Range qualification, distal integrity, gap, context, and Base-overlap rules remain mandatory. The reconstructed formation can exist only as part of the confirmed LoL pair; it can never become a standalone zone, Flip fact, or alert.</p>
 <h2 id="bounded-reject-memory">Bounded reject memory</h2>
 <p>The immediate-reject fallback retains at most:</p>
 <ul>

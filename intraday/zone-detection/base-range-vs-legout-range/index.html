@@ -553,6 +553,8 @@
       
         
       
+        
+      
     
     
     
@@ -602,6 +604,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1129,6 +1159,7 @@ Base Range ≤ Leg-Out Range
 <p>Both current Base rules are trader-facing settings: Body/Range uses a percentage input, while the range comparison uses this checkbox. <code>Base Body ÷ Leg-Out Body</code> is no longer evaluated.</p>
 <h2 id="scope">Scope</h2>
 <p>Version 2.3.0 introduced this rule as mandatory for native LTF zones. Version 2.10.6 removed the redundant Base-body-versus-Leg-Out-body condition, and v2.10.7 exposed the range rule as an enabled-by-default checkbox. Intraday no longer performs internal HTF reconstruction; Swing LTF Confirmation remains separate until synchronized from the Intraday changelog.</p>
+<p>The LoL-only shared-candle fallback is an explicit exception from v2.12.1. In that pattern, the shared candle is qualified as the proximal Leg-In rather than as a normal distal Leg-Out, so it is not used as a range cap for the reconstructed distal Base. Normal zone detection continues to follow the checkbox exactly.</p>
 
 
 
